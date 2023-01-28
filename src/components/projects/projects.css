@@ -1,0 +1,11 @@
+.component .heading{
+    padding-bottom: 3px;
+    border-bottom: 5px solid #fff;
+}
+
+.projects .card p{
+    max-height: 20vh;
+    text-align: justify;
+    padding-right: .5rem;
+    overflow-y:scroll;
+}
