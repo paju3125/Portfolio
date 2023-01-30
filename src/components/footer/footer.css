@@ -1,0 +1,25 @@
+.footer {
+    background-color: rgb(29, 29, 29, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.footer .col-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer span {
+    margin-left: 1rem;
+}
+
+.footer .social-links>span{
+    cursor: pointer;
+}

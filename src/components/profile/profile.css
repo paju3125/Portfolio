@@ -1,0 +1,65 @@
+.profile-container .card
+{
+    background-color: #fff !important;
+}
+
+
+.profile {
+    height: fit-content;
+    font-family: 'tradegothiclt-bold', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .profile-image{
+    display: block;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.profile .profile-image >div{
+    position: relative;
+    float: right;
+}
+.profile .profile-image img {
+    border-radius: 10rem;
+    float: right;
+}
+
+.profile .profile-separator {
+    margin: 0 auto;
+    width: .1rem;
+    border-right: .2rem solid #fff;
+    height: 10rem;
+}
+
+.profile h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+}
+
+.profile span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.skills {
+    margin-top: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
