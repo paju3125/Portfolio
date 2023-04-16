@@ -142,3 +142,7 @@
   font-weight: 700;
   font-size: 1.8rem !important;
 }
+
+.nav-link {
+  font-weight: 650 !important;
+}

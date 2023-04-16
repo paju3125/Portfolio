@@ -104,7 +104,7 @@ export default function Profile() {
       >
         <div className="hero-container aos-init aos-animate" data-aos="fade-in">
           <h1>Prajval Gandhi</h1>
-          <p>
+          <p style={{ fontWeight: "700" }}>
             I'm{" "}
             <span className="typewrite" data-period="2000" data-type='[ "Full Stack Web Developer.","Machine Learning Enthusiast.", "React Developer.","Django Developer" ]'></span>
 
