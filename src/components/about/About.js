@@ -9,7 +9,7 @@ export default function About() {
           <h1 className="text-light heading">
             <span>About</span>
           </h1>
-          <p className="mt-3">
+          <p className="text-justify mt-3">
             Hello, I'm a student of Web Development and
             Machine Learning. I have a deep interest in these
             fields and am dedicated to developing my skills.
@@ -77,7 +77,7 @@ export default function About() {
                 </ul>
               </div>
             </div>
-            <p>
+            <p className="text-justify">
               {" "}
               I am a Full Stack Web Developer with a passion for creating
               dynamic and engaging websites and web applications. With a strong

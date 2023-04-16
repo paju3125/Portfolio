@@ -5,11 +5,13 @@ export default function Projects() {
   return (
     <div className="component container">
       <div className="projects">
-        <h1 className="text-light heading">Projects</h1>
+        <h2 className="text-light heading">
+          <span>Projects</span>
+        </h2>
 
         <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4 mt-3 mb-5">
           <div className="col">
-            <div className="card   text-light mb-3">
+            <div className="card   text-light text-justify mb-3">
               <div className="row g-0">
                 <div className="col-md-5">
                   <video width="250" height="250" controls>

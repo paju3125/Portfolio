@@ -6,7 +6,9 @@ export default function Certifications() {
   return (
     <div className="component container mb-5">
       <div className="certifications">
-        <h1 className="text-light heading">Certifications</h1>
+        <h2 className="text-light heading">
+          <span>Certifications</span>
+        </h2>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5 mt-1">
           <div className="col">
             <CertificateCard

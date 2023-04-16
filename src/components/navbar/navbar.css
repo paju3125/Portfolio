@@ -4,9 +4,7 @@
 }
 
 @media (min-width: 1201px) {
-
-  .hero-container h1,
-  .component h1 {
+  .hero-container h1 {
     font-size: 1.5rem;
   }
 
@@ -25,8 +23,7 @@
     font-size: 2rem !important;
   }
 
-  .hero-container h1,
-  .component h1 {
+  .hero-container h1 {
     font-size: 1.5rem;
   }
 
@@ -48,8 +45,7 @@
     font-size: 1.8rem !important;
   }
 
-  .hero-container h1,
-  .component h1 {
+  .hero-container h1 {
     font-size: 1.2rem;
   }
 
@@ -71,8 +67,7 @@
     font-size: 1.6rem;
   }
 
-  .hero-container h1,
-  .component h1 {
+  .hero-container h1 {
     font-size: 1.2rem;
   }
 
@@ -103,10 +98,9 @@
     font-size: 1.2rem;
   }
 
-  .component h1 {
+  /* .component h1 {
     font-size: 1.2rem;
-  }
-
+  } */
   .skills h5 {
     font-size: .9rem;
   }

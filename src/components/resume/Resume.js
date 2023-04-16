@@ -17,7 +17,7 @@ export default function Resume() {
         >
           Download Resume
         </button>
-        <div className="row">
+        <div className="row text-justify">
           <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up">
             <h3 className="resume-title">Sumary</h3>
             <div className="resume-item pb-0">

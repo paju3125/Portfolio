@@ -4,7 +4,9 @@ export default function Internships() {
   return (
     <div className="component container">
       <div className="projects">
-        <h1 className="text-light heading">Internships / Experiences</h1>
+        <h2 className="text-light heading">
+          <span>Internships / Experiences</span>
+        </h2>
 
         <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4 mt-3 mb-5">
           <div className="col">
@@ -21,13 +23,11 @@ export default function Internships() {
                     <h5 className="card-title">PHP Developer - Intern</h5>
                   </div>
                 </div>
-                <p className="card-text mt-3">
-                  In the journey of Internship I learned PHP language and worked
-                  on a project which was based on one of company's web based
-                  live application titled
-                  <b>Notice Management System</b> which is developed using PHP
-                  and phpMyAdmin.
-                </p>
+                <ul className="card-text text-justify mt-3">
+                  <li> Developed a web-based <b>"Notice Management System"</b> during my internship using PHP language.</li><li> Gained expertise in PHP programming language while
+                    working on a live project during my internship. </li>
+                </ul>
+
                 <p className="card-text">
                   <span>
                     <span className="badge bg-info p-1 mx-1">HTML</span>
@@ -62,11 +62,13 @@ export default function Internships() {
                     <h5 className="card-title">Web Developer - Intern</h5>
                   </div>
                 </div>
-                <p className="card-text mt-3">
-                  As a first task, I've successfully build an ERP for company
-                  from which they can easily handle their excel file data, apply
-                  business logics and generate the reports.
-                </p>
+                <ul className="card-text text-justify mt-3">
+                  <li>Bug fixing in earlier developed project.
+                  </li><li>I designed and developed a custom ERP system for a
+                    company, streamlining their data management, business logic implementation, and report generation
+                    processes.
+                  </li>
+                </ul>
                 <p className="card-text">
                   <span>
                     <span className="badge bg-info p-1  mx-1">HTML</span>
