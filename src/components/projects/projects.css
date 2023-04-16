@@ -1,11 +1,11 @@
-.component .heading{
+.component .heading {
     padding-bottom: 3px;
-    border-bottom: 5px solid #fff;
+    border-bottom: 5px solid #FB8122;
 }
 
-.projects .card p{
+.projects .card p {
     max-height: 20vh;
     text-align: justify;
     padding-right: .5rem;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }

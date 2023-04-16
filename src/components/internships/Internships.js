@@ -22,7 +22,7 @@ export default function Internships() {
                   </div>
                 </div>
                 <p className="card-text mt-3">
-                  In the journey of Internship i learned PHP language and worked
+                  In the journey of Internship I learned PHP language and worked
                   on a project which was based on one of company's web based
                   live application titled
                   <b>Notice Management System</b> which is developed using PHP
@@ -30,14 +30,14 @@ export default function Internships() {
                 </p>
                 <p className="card-text">
                   <span>
-                    <span className="badge bg-info p-1">HTML</span>
-                    <span className="badge bg-success p-1">CSS</span>
-                    <span className="badge bg-danger p-1">Bootstrap</span>
-                    <span className="badge bg-light text-dark p-1">
+                    <span className="badge bg-info p-1 mx-1">HTML</span>
+                    <span className="badge bg-success p-1 mx-1">CSS</span>
+                    <span className="badge bg-danger p-1 mx-1">Bootstrap</span>
+                    <span className="badge bg-light text-dark p-1 mx-1">
                       JavaScript
                     </span>
-                    <span className="badge bg-primary p-1">PHP</span>
-                    <span className="badge bg-warning p-1">phpMyAdmin</span>
+                    <span className="badge bg-primary p-1 mx-1">PHP</span>
+                    <span className="badge bg-warning p-1 mx-1">phpMyAdmin</span>
                   </span>
                 </p>
               </div>
@@ -63,22 +63,22 @@ export default function Internships() {
                   </div>
                 </div>
                 <p className="card-text mt-3">
-                  As a first task, i've successfully build an ERP for company
+                  As a first task, I've successfully build an ERP for company
                   from which they can easily handle their excel file data, apply
                   business logics and generate the reports.
                 </p>
                 <p className="card-text">
                   <span>
-                    <span className="badge bg-info p-1">HTML</span>
-                    <span className="badge bg-success p-1">CSS</span>
-                    <span className="badge bg-danger p-1">Bootstrap</span>
-                    <span className="badge bg-light text-dark p-1">
+                    <span className="badge bg-info p-1  mx-1">HTML</span>
+                    <span className="badge bg-success p-1  mx-1">CSS</span>
+                    <span className="badge bg-danger p-1  mx-1">Bootstrap</span>
+                    <span className="badge bg-light text-dark p-1  mx-1">
                       JavaScript
                     </span>
-                    <span className="badge bg-secondary p-1">Ajax</span>
-                    <span className="badge bg-primary p-1">Flask</span>
-                    <span className="badge bg-primary p-1">Django</span>
-                    <span className="badge bg-warning p-1">MySQL</span>
+                    <span className="badge bg-secondary p-1  mx-1">Ajax</span>
+                    <span className="badge bg-primary p-1  mx-1">Flask</span>
+                    <span className="badge bg-primary p-1  mx-1">Django</span>
+                    <span className="badge bg-warning p-1  mx-1">MySQL</span>
                   </span>
                 </p>
               </div>

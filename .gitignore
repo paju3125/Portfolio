@@ -5,13 +5,18 @@
 /.pnp
 .pnp.js
 
+/public/certificates
+/public/vid
+/public/vid
+/public/paju.png
+
 # testing
 /coverage
 
 # production
 /build
 
-# misc
+# miscsd
 .DS_Store
 .env.local
 .env.development.local
