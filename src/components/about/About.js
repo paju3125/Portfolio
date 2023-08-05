@@ -59,7 +59,7 @@ export default function About() {
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Age:</strong> <span>20</span>
+                    <strong>Age:</strong> <span>{new Date().getFullYear() - 2002}</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}

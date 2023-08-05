@@ -12,7 +12,7 @@ export default function Resume() {
         <button
           className="btn btn-outline-light mt-3 px-5"
           onClick={() =>
-            (window.location.href = "/Prajval's Resume.pdf")
+            (window.location.href = "/Prajval_Gandhi Resume.pdf")
           }
           data-aos="zoom-out" data-aos-duration="2000"
         >
@@ -20,11 +20,11 @@ export default function Resume() {
         </button>
         <div className="row text-justify" data-aos="fade-up" data-aos-duration="3000">
           <div className="col-lg-6">
-            <h3 className="resume-title">Sumary</h3>
+            <h3 className="resume-title">Summary</h3>
             <div className="resume-item pb-0">
               <h4>Prajval Gandhi</h4>
               <p>
-                <em>Full Stack Developer with 3+ years of hands-on experience designing, developing, and implementing applications and
+                <em>Full Stack Developer with 3+ years of hands-on experience in designing, developing, and implementing applications and
                   solutions using a range of technologies and programming languages. Seeking to leverage broad development
                   experience and hands-on technical expertise in a challenging role as a Full-stack Developer.
                 </em>
@@ -43,7 +43,7 @@ export default function Resume() {
               <p><em>MIT Academy of Engineering, Alandi, Pune</em></p>
               <p>Major : <em>Information Technology</em> </p>
               <p>Minor : <em>AIML</em> </p>
-              <p>CGPA : <em>9.31</em> </p>
+              <p>CGPA : <em>9.25</em> </p>
             </div>
             <div className="resume-item">
               <h4>Diploma</h4>
@@ -60,15 +60,15 @@ export default function Resume() {
             </div>
           </div>
           <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <h3 className="resume-title">Internship / Work Experience</h3>
+            <h3 className="resume-title">Internship</h3>
             <div className="resume-item">
-              <h4>Web Development and Design Intern</h4>
-              <h5>January 2023 - February 2024</h5>
-              <p><em>Oasis Infobyte </em></p>
+              <h4>Lead Project Coordinator</h4>
+              <h5>June 2023 - Present
+              </h5>
+              <p><em>Result Software Development </em></p>
               <ul>
-                <li>Task 1 - Responsive landing page for a website.</li>
-                <li>Task 2 - Building Your Online Presence: Developing a Portfolio to Impress Prospective Employers.</li>
-                <li>Task 3 - Design and Implementation of a Multi-unit Temperature Conversion Application for Celsius, Fahrenheit, and Kelvin</li>
+                <li>Working on an "Automation in Recruitment Process" project.</li>
+                <li>Leading the team of interns to complete the project.</li>
               </ul>
             </div>
             <div className="resume-item">
@@ -84,7 +84,7 @@ export default function Resume() {
               </ul>
             </div>
             <div className="resume-item">
-              <h4>Web Developer Intern</h4>
+              <h4>Trainee PHP Developer</h4>
               <h5>June 2020 - Aug 2020</h5>
               <p><em>R B Tech Services </em></p>
               <ul>

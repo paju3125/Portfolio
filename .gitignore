@@ -10,11 +10,6 @@
 /public/vid
 /public/paju.png
 
-# testing
-/coverage
-
-# production
-/build
 
 # miscsd
 .DS_Store

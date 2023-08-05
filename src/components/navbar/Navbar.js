@@ -61,7 +61,7 @@ export default function Navbar() {
               <button
                 className="btn" style={{ backgroundColor: "#FB8122", color: "#fff", fontWeight: "600" }}
                 onClick={() =>
-                  (window.location.href = "/Prajval's Resume.pdf")
+                  (window.location.href = "/Prajval_Gandhi Resume.pdf")
                 }
               >
                 My Resume
