@@ -5,11 +5,6 @@
 /.pnp
 .pnp.js
 
-/public/certificates
-/public/vid
-/public/vid
-/public/paju.png
-
 
 # miscsd
 .DS_Store
