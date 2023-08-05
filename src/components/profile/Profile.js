@@ -101,8 +101,11 @@ export default function Profile() {
       <section
         id="hero"
         className="d-flex flex-column justify-content-center align-items-center"
+
       >
-        <div className="hero-container aos-init aos-animate" data-aos="fade-in">
+        <div className="hero-container " data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
           <h1>Prajval Gandhi</h1>
           <p style={{ fontWeight: "700" }}>
             I'm{" "}

@@ -6,7 +6,7 @@ export default function Certifications() {
   return (
     <div className="component container mb-5">
       <div className="certifications">
-        <h2 className="text-light heading">
+        <h2 className="text-light heading" data-aos="fade-up" data-aos-duration="500">
           <span>Certifications</span>
         </h2>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5 mt-1">

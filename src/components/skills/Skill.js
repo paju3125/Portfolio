@@ -4,7 +4,7 @@ export default function Skill() {
   return (
     <section id="skills" className="skills section-bg">
       <div className="container">
-        <h1 className="text-light heading">
+        <h1 className="text-light heading" data-aos="fade-up" data-aos-duration="500">
           <span>Skills</span>
         </h1>
         <div className="row skills-content mt-5">
@@ -23,6 +23,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "95%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -39,6 +41,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "90%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -55,6 +59,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "90%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -71,6 +77,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "80%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -93,6 +101,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "80%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -109,6 +119,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "85%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -125,6 +137,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "75%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -146,6 +160,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "90%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -162,6 +178,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "85%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -178,6 +196,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "70%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -200,6 +220,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "85%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>
@@ -216,6 +238,8 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "80%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
                 ></div>
               </div>
             </div>

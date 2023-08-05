@@ -6,7 +6,7 @@ export default function Resume() {
     <section id="resume" className="resume">
       <div className="container text-light">
 
-        <h1 className="text-light heading">
+        <h1 className="text-light heading" data-aos="fade-up" data-aos-duration="500">
           <span>Resume</span>
         </h1>
         <button
@@ -14,11 +14,12 @@ export default function Resume() {
           onClick={() =>
             (window.location.href = "/Prajval's Resume.pdf")
           }
+          data-aos="zoom-out" data-aos-duration="2000"
         >
           Download Resume
         </button>
-        <div className="row text-justify">
-          <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+        <div className="row text-justify" data-aos="fade-up" data-aos-duration="3000">
+          <div className="col-lg-6">
             <h3 className="resume-title">Sumary</h3>
             <div className="resume-item pb-0">
               <h4>Prajval Gandhi</h4>

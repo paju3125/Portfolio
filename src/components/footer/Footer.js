@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div id="footer" class="footer-dark">
       <footer>
-        <div class="container">
+        <div class="container" data-aos="zoom-in" data-aos-duration="2000">
           <div class="row">
             <div class="col-sm-6 col-md-3 item">
               <h3>Contact</h3>
