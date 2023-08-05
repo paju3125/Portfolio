@@ -10,9 +10,9 @@ export default function Footer() {
             <div class="col-sm-6 col-md-3 item">
               <h3>Contact</h3>
               <ul>
-                <li><a href="#">prajvalgandhi483@gmail.com</a></li>
-                <li><a href="#">+919665656267</a></li>
-                <li><a href="#">Pune, Maharashtra, India</a></li>
+                <li>prajvalgandhi483@gmail.com</li>
+                <li>+919665656267</li>
+                <li>Pune, Maharashtra, India</li>
               </ul>
             </div>
 
