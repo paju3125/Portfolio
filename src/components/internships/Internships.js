@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+import "./internship.css"
+
 export default function Internships() {
+
   useEffect(() => {
     AOS.init()
   }, [])
+
   return (
     <div className="component container">
       <div className="projects">
@@ -11,11 +15,10 @@ export default function Internships() {
           <span>Internships / Experiences</span>
         </h2>
 
-        <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4 mt-3 mb-5 aos-init aos-animate" >
+        <div className="row row-cols-1 row-cols-lg-2 g-4 mt-3 mb-5 aos-init aos-animate" >
           <div className="col" data-aos="zoom-in" data-aos-duration="1000">
             <div
               className="card bg-dark text-light mb-3"
-              style={{ maxWidth: "540px" }}
             >
               <div className="card-body">
                 <div>
@@ -26,7 +29,9 @@ export default function Internships() {
                   <li> Developed a web-based <b>"Notice Management System"</b> during my internship using PHP language.</li><li> Gained expertise in PHP programming language while
                     working on a live project during my internship. </li>
                 </ul>
+              </div>
 
+              <div className="card-footer my-2">
                 <p className="card-text">
                   <span>
                     <span className="badge bg-info p-1 mx-1">HTML</span>
@@ -45,7 +50,6 @@ export default function Internships() {
           <div className="col" data-aos="zoom-in" data-aos-duration="1000">
             <div
               className="card bg-dark text-light mb-3"
-              style={{ maxWidth: "540px" }}
             >
               <div className="card-body">
                 <div>
@@ -64,6 +68,9 @@ export default function Internships() {
                     processes.
                   </li>
                 </ul>
+              </div>
+
+              <div className="card-footer my-2">
                 <p className="card-text">
                   <span>
                     <span className="badge bg-info p-1  mx-1">HTML</span>
@@ -84,7 +91,6 @@ export default function Internships() {
           <div className="col" data-aos="zoom-in" data-aos-duration="1000">
             <div
               className="card bg-dark text-light mb-3"
-              style={{ maxWidth: "540px" }}
             >
               <div className="card-body">
                 <div>
@@ -99,6 +105,11 @@ export default function Internships() {
                   </li><li>Leading the team of interns to complete the project.
                   </li>
                 </ul>
+              </div>
+
+
+
+              <div className="card-footer my-2">
                 <p className="card-text">
                   <span>
                     <span className="badge bg-info p-1  mx-1">Team Leadership</span>

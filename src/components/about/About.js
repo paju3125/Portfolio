@@ -18,6 +18,7 @@ export default function About() {
             to be a part of that change.
           </p>
         </div>
+
         <div className="row mt-5">
           <div className="col-lg-4 about-img-container" data-aos="zoom-out-right" data-aos-duration="3000">
             {" "}
