@@ -110,12 +110,14 @@
   background: url(/public/bg.jpg) top center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
+  height: 100vh !important;
   bottom: 0;
   top: 0;
   left: 0;
