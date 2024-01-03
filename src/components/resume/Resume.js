@@ -12,7 +12,7 @@ export default function Resume() {
         <button
           className="btn btn-outline-light mt-3 px-5"
           onClick={() =>
-            (window.location.href = "/Prajval_Gandhi Resume.pdf")
+            (window.location.href = "/Prajval_Gandhi_Resume.pdf")
           }
           data-aos="zoom-out" data-aos-duration="2000"
         >
