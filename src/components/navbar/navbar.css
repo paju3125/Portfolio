@@ -76,11 +76,11 @@
   }
 
   .skills h5 {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .skills .container div {
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 
   .profile .profile-image img {
@@ -102,11 +102,11 @@
     font-size: 1.2rem;
   } */
   .skills h5 {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .skills .container div {
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 
   .profile .profile-image img {
@@ -133,12 +133,12 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-  background-color: #F5F5F5;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
 }
 
 .navbar-brand {
-  color: #FB8122 !important;
+  color: #fb8122 !important;
   font-weight: 700;
   font-size: 1.8rem !important;
 }

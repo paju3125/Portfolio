@@ -100,9 +100,7 @@ export default function Profile() {
 
       <section
         id="hero"
-        className="d-flex flex-column justify-content-center align-items-center"
-
-      >
+        className="d-flex flex-column justify-content-center align-items-center">
         <div className="hero-container " data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000">

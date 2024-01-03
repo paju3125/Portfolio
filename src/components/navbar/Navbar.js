@@ -11,10 +11,9 @@ export default function Navbar() {
     <Router>
       <div className="nav-comp">
         <nav
-          className="navbar navbar-expand-lg bg-body-tertiary navbar-dark fixed-top"
-          style={{ backgroundColor: "rgb(29,29,29)" }}
-        >
-          <div className="container-fluid">
+          className="navbar navbar-expand-lg bg-body-tertiary navbar-dark fixed-top px-2"
+          style={{ backgroundColor: "rgb(29,29,29)" }}>
+          <div className="container">
             <Link to="" className="navbar-brand">
               Prajval's Portfolio
             </Link>

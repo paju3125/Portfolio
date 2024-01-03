@@ -1,0 +1,11 @@
+.row > .col {
+  margin: 0;
+}
+
+.card {
+  height: 20rem;
+}
+
+.card .card-text {
+  font-size: 0.9rem;
+}

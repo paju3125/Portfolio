@@ -1,235 +1,250 @@
 .profile-container .card {
-    background-color: #fff !important;
+  background-color: #fff !important;
 }
 
 .profile {
-    height: fit-content;
-    font-family: 'tradegothiclt-bold', sans-serif;
-    justify-content: center;
-    align-items: center;
+  height: fit-content;
+  font-family: "tradegothiclt-bold", sans-serif;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile .profile-image {
-    display: block;
-    margin: 0 auto;
-    width: max-content;
+  display: block;
+  margin: 0 auto;
+  width: max-content;
 }
 
-.profile .profile-image>div {
-    position: relative;
-    float: right;
+.profile .profile-image > div {
+  position: relative;
+  float: right;
 }
 
 .profile .profile-image img {
-    border-radius: 10rem;
-    float: right;
+  border-radius: 10rem;
+  float: right;
 }
 
 .profile .profile-separator {
-    margin: 0 auto;
-    width: .1rem;
-    border-right: .2rem solid #fff;
-    height: 10rem;
+  margin: 0 auto;
+  width: 0.1rem;
+  border-right: 0.2rem solid #fff;
+  height: 10rem;
 }
 
 .profile h1 {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    word-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 2px;
 }
 
 .profile span {
-    border-right: .05em solid;
-    animation: caret 1s steps(1) infinite;
+  border-right: 0.05em solid;
+  animation: caret 1s steps(1) infinite;
 }
 
 @keyframes caret {
-    50% {
-        border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .about-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skill {
-    color: #fff;
+  color: #fff;
 }
 
 .skills .progress {
-    height: 60px;
-    display: block;
-    background: none;
-    border-radius: 0;
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
 }
 
 .skills .progress .skill {
-    padding: 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 
 .skills .progress-bar-wrap {
-    background: #dce8f8;
-    height: 10px;
+  background: #dce8f8;
+  height: 10px;
 }
 
 .skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: 0.9s;
-    background-color: #f5954d;
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #f5954d;
 }
 
 .skills .progress .skill .val {
-    float: right;
-    font-style: normal;
+  float: right;
+  font-style: normal;
 }
 
 .heading {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 .heading span {
-    border-bottom: 5px solid #FB8122;
-    padding: 0rem 0rem;
-    font-weight: 700;
+  border-bottom: 5px solid #fb8122;
+  padding: 0rem 0rem;
+  font-weight: 700;
 }
 
 #hero {
-    width: 100%;
-    height: 100vh;
-    background: url(/public/bg.jpg) top center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background: url(/public/bg.jpg) top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100vh !important;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 @media (min-width: 1024px) {
-    #hero {
-        background-attachment: fixed;
-    }
+  #hero {
+    background-attachment: fixed;
+  }
 }
 
 #hero .hero-container {
-    position: relative;
-    z-index: 2;
-    min-width: 300px;
+  position: relative;
+  z-index: 2;
+  min-width: 450px;
 }
 
 #hero h1 {
-    margin: 0 0 10px 0;
-    /* font-size: 64px; */
-    font-weight: 700;
-    line-height: 56px;
-    color: #fff;
+  margin: 0 0 10px 0;
+  /* font-size: 64px; */
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
 }
 
 .typewrite::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: #4FC3F7;
-    animation: cursorBlink 0.8s steps(3) infinite;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: #4fc3f7;
+  animation: cursorBlink 0.8s steps(3) infinite;
 }
 
 @keyframes cursorBlink {
+  0%,
+  75% {
+    opacity: 1;
+  }
 
-    0%,
-    75% {
-        opacity: 1;
-    }
-
-    76%,
-    100% {
-        opacity: 0;
-    }
+  76%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .typewrite {
-    position: relative;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #3333);
+  position: relative;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #3333);
 }
 
 .typewrite h2 {
-    position: relative;
-    color: #4FC3F7;
-    letter-spacing: 5px;
-    font-size: 4rem;
-    overflow: hidden;
-    margin-bottom: 0;
-    animation: type 5s steps(11) infinite;
+  position: relative;
+  color: #4fc3f7;
+  letter-spacing: 5px;
+  font-size: 4rem;
+  overflow: hidden;
+  margin-bottom: 0;
+  animation: type 5s steps(11) infinite;
 }
 
 @keyframes type {
+  0%,
+  100% {
+    width: 0px;
+  }
 
+  30%,
+  60% {
+    width: 394.09px;
+  }
+}
+
+@media (max-width: 330px) {
+  .typing h2 {
+    font-size: 3rem;
+    animation: type 5s steps(10) infinite;
+  }
+
+  @keyframes type {
     0%,
     100% {
-        width: 0px;
+      width: 0px;
     }
 
     30%,
     60% {
-        width: 394.09px;
+      width: 305px;
     }
-}
-
-@media(max-width: 330px) {
-    .typing h2 {
-        font-size: 3rem;
-        animation: type 5s steps(10) infinite;
-    }
-
-    @keyframes type {
-
-        0%,
-        100% {
-            width: 0px;
-        }
-
-        30%,
-        60% {
-            width: 305px;
-        }
-    }
+  }
 }
 
 @media (min-width: 1201px) {
-    .hero-container h1 {
-        font-size: 3.5rem;
-    }
+  .hero-container h1 {
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 1200px) {
-    .hero-container h1 {
-        font-size: 3rem;
-    }
+  .hero-container h1 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 1024px) {
-    .hero-container h1 {
-        font-size: 3rem;
-    }
+  .hero-container h1 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .hero-container h1 {
-        font-size: 3rem;
-    }
+  .hero-container h1 {
+    font-size: 3rem;
+  }
+
+  #hero .hero-container {
+    /* position: relative; */
+    /* z-index: 2; */
+    min-width: 350px;
+  }
 }
 
 @media (max-width: 480px) {
-    .hero-container h1 {
-        font-size: 2.5rem;
-    }
+  .hero-container h1 {
+    font-size: 2.5rem;
+  }
 }

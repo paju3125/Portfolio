@@ -14,12 +14,12 @@ export default function CertificateCard({ params }) {
   const handleClose = () => setShow(false);
   return (
     <>
-      <div className="card  text-light" data-aos="fade-up" data-aos-duration="2000">
+      <div className="card text-light" data-aos="fade-up" data-aos-duration="2000">
         <div className="card-header">{params.certificate_name}</div>
         <div className="card-body">
           <img
             src={params.certificate}
-            className="card-img-top"
+            className="card-img"
             alt="Item not found :("
             onClick={() =>
               showCertificate(
@@ -29,10 +29,8 @@ export default function CertificateCard({ params }) {
               )
             }
           />
-          <h5 className="card-title">{params.organization}</h5>
-          <p className="card-text"></p>
         </div>
-        <div className="card-footer"></div>
+        <h5 className="card-footer">{params.organization}</h5>
       </div>
 
       {currentCertificate && show && (
