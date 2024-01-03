@@ -63,59 +63,6 @@ export default function Projects() {
               </div>
             </div>
           </div>
-          <div className="col" data-aos="fade-left" data-aos-duration="1000">
-            <div className="card   text-light mb-3">
-              <div className="row g-0">
-                <div className="col-md-5">
-                  <video width="250" height="250" controls>
-                    <source src="/vid/PixelStat ERP.mp4" type="video/mp4" />
-                    <source src="movie.ogg" type="video/ogg" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div className="col-md-7">
-                  <div className="card-body">
-                    <h5 className="card-title">
-                      PixelStat ERP System{" "}
-                      <span className="badge bg-success p-1">Sponsored</span>
-                    </h5>
-                    <p className="card-text">
-                      Flask Project developed for Pixelstat eSolutions
-                      Development Pvt. Ltd. <br />
-                      <br />
-                      Users: Admin and Manager. <br />
-                      Purpose: Handling the membership details. <br />
-                      <br />
-                      <ul>
-                        <li>
-                          Retrieving data from excel files and storing in
-                          database.{" "}
-                        </li>
-                        <li>Able to add/edit/delete data.</li>
-                        <li>
-                          Apply business logics and make reports available to
-                          download.
-                        </li>
-                      </ul>
-                    </p>
-                    <p className="card-text">
-                      <span>
-                        <span className="badge bg-info p-1">HTML</span>
-                        <span className="badge bg-success p-1">CSS</span>
-                        <span className="badge bg-danger p-1">Bootstrap</span>
-                        <span className="badge bg-light text-dark p-1">
-                          JavaScript
-                        </span>
-                        <span className="badge bg-secondary p-1">Excel</span>
-                        <span className="badge bg-primary p-1">Flask</span>
-                        <span className="badge bg-warning p-1">SQL</span>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="col" data-aos="fade-right" data-aos-duration="1000">
             <div className="card   text-light mb-3">
               <div className="row g-0">

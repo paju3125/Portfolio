@@ -22,12 +22,90 @@ export default function Internships() {
             >
               <div className="card-body">
                 <div>
-                  <img src="/rbtechLogo.png" alt="" width={200} />
-                  <h5 className="card-title mt-3">PHP Developer - Intern</h5>
+                  <h5>
+                    <strong>Result Software Development Pvt. Ltd.</strong>
+                  </h5>
+                  <strong><h6 className="card-title mt-3">Lead Coordinator - Internship
+                  </h6></strong>
                 </div>
                 <ul className="card-text text-justify mt-3">
-                  <li> Developed a web-based <b>"Notice Management System"</b> during my internship using PHP language.</li><li> Gained expertise in PHP programming language while
-                    working on a live project during my internship. </li>
+                  <li>Led intern team in completing "Automation in Recruitment Process" project.
+                  </li>
+                  <li>Utilized Flask, ReactJS, and Machine Learning for efficient project execution.
+                  </li>
+                </ul>
+              </div>
+
+
+
+              <div className="card-footer my-2">
+                <p className="card-text">
+                  <span>
+                    <span className="badge bg-success p-1  mx-1">ReactJS</span>
+                    <span className="badge bg-danger p-1  mx-1">Flask</span>
+                    <span className="badge bg-light text-dark p-1  mx-1">
+                      Machine Learning
+                    </span>
+                    <span className="badge bg-info p-1  mx-1">Team Leadership</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col" data-aos="zoom-in" data-aos-duration="1000">
+            <div
+              className="card bg-dark text-light mb-3"
+            >
+              <div className="card-body">
+                <div>
+                  <img
+                    src="/pixelstatLogo.jpg"
+                    alt=""
+                    width={200}
+                    height={40}
+                  />
+                  <h5 className="card-title mt-3">Full Stack Intern</h5>
+                </div>
+                <ul className="card-text text-justify mt-3">
+                  <li>Remedied project bugs, fortifying system stability.</li>
+                  <li>Engineered a web app for "AKHIL BHARATIYA MARATHI CHITRAPAT MAHAMANDAL."</li>
+                  <li>Enhanced data management, business logic, and reporting using Flask, SQL, and JavaScript.</li>
+                </ul>
+              </div>
+
+              <div className="card-footer my-2">
+                <p className="card-text">
+                  <span>
+                    <span className="badge bg-primary p-1  mx-1">Flask</span>
+                    <span className="badge bg-primary p-1  mx-1">Django</span>
+                    <span className="badge bg-warning p-1  mx-1">MySQL</span>
+                    <span className="badge bg-light text-dark p-1  mx-1">
+                      JavaScript
+                    </span>
+                    <span className="badge bg-danger p-1  mx-1">Bootstrap</span>
+                    <span className="badge bg-info p-1  mx-1">HTML</span>
+                    <span className="badge bg-success p-1  mx-1">CSS</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col" data-aos="zoom-in" data-aos-duration="1000">
+            <div
+              className="card bg-dark text-light mb-3"
+            >
+              <div className="card-body">
+                <div>
+                  <img src="/rbtechLogo.png" alt="" width={200} />
+                  <h5 className="card-title mt-3">Trainee PHP Developer</h5>
+                </div>
+                <ul className="card-text text-justify mt-3">
+                  <li>Engineered a web-based "Notice Management System" using PHP language.
+                  </li>
+                  <li>Acquired proficiency in PHP programming through hands-on experience on a live project during the internship.
+                  </li>
                 </ul>
               </div>
 
@@ -47,82 +125,8 @@ export default function Internships() {
               </div>
             </div>
           </div>
-          <div className="col" data-aos="zoom-in" data-aos-duration="1000">
-            <div
-              className="card bg-dark text-light mb-3"
-            >
-              <div className="card-body">
-                <div>
-                  <img
-                    src="/pixelstatLogo.jpg"
-                    alt=""
-                    width={200}
-                    height={40}
-                  />
-                  <h5 className="card-title mt-3">Web Developer - Intern</h5>
-                </div>
-                <ul className="card-text text-justify mt-3">
-                  <li>Bug fixing in earlier developed project.
-                  </li><li>I designed and developed a custom ERP system for a
-                    company, streamlining their data management, business logic implementation, and report generation
-                    processes.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="card-footer my-2">
-                <p className="card-text">
-                  <span>
-                    <span className="badge bg-info p-1  mx-1">HTML</span>
-                    <span className="badge bg-success p-1  mx-1">CSS</span>
-                    <span className="badge bg-danger p-1  mx-1">Bootstrap</span>
-                    <span className="badge bg-light text-dark p-1  mx-1">
-                      JavaScript
-                    </span>
-                    <span className="badge bg-secondary p-1  mx-1">Ajax</span>
-                    <span className="badge bg-primary p-1  mx-1">Flask</span>
-                    <span className="badge bg-primary p-1  mx-1">Django</span>
-                    <span className="badge bg-warning p-1  mx-1">MySQL</span>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col" data-aos="zoom-in" data-aos-duration="1000">
-            <div
-              className="card bg-dark text-light mb-3"
-            >
-              <div className="card-body">
-                <div>
-                  <h5>
-                    <strong>Result Software Development Pvt. Ltd.</strong>
-                  </h5>
-                  <strong><h6 className="card-title mt-3">Lead Project Coordinator - Internship
-                  </h6></strong>
-                </div>
-                <ul className="card-text text-justify mt-3">
-                  <li>Working on an "Automation in Recruitment Process" project.
-                  </li><li>Leading the team of interns to complete the project.
-                  </li>
-                </ul>
-              </div>
 
 
-
-              <div className="card-footer my-2">
-                <p className="card-text">
-                  <span>
-                    <span className="badge bg-info p-1  mx-1">Team Leadership</span>
-                    <span className="badge bg-success p-1  mx-1">ReactJS</span>
-                    <span className="badge bg-danger p-1  mx-1">Flask</span>
-                    <span className="badge bg-light text-dark p-1  mx-1">
-                      Machine Learning
-                    </span>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div >
