@@ -6,10 +6,10 @@ export default function About() {
     <section id="about" className="about">
       <div className="container text-light">
         <div className="section-title">
-          <h1 className="text-light heading" data-aos="fade-up" data-aos-duration="500">
+          <h1 className="text-light heading" data-aos="fade-up" data-aos-duration="200">
             <span>About</span>
           </h1>
-          <p className="text-justify mt-3" data-aos="zoom-in" data-aos-duration="1000">
+          <p className="text-justify mt-3" data-aos="zoom-in" data-aos-duration="300">
             Hello, I'm a student of Web Development and
             Machine Learning. I have a deep interest in these
             fields and am dedicated to developing my skills.
@@ -20,7 +20,7 @@ export default function About() {
         </div>
 
         <div className="row mt-5">
-          <div className="col-lg-4 about-img-container" data-aos="zoom-out-right" data-aos-duration="3000">
+          <div className="col-lg-4 about-img-container" data-aos="zoom-out-right" data-aos-duration="1000">
             {" "}
             <img src="paju.png" className="img-fluid about-img" alt="" />
           </div>
@@ -28,14 +28,14 @@ export default function About() {
             className="col-lg-8 pt-4 pt-lg-0 content"
 
           >
-            <h3 data-aos="fade-left" data-aos-duration="1000">Web Developer &amp; AIML Enthusiast</h3>
-            <hr style={{ height: "5px", backgroundColor: "#fff" }} data-aos="fade-right" data-aos-duration="2000" />
+            <h3 data-aos="fade-left" data-aos-duration="300">Web Developer &amp; AIML Enthusiast</h3>
+            <hr style={{ height: "5px", backgroundColor: "#fff" }} data-aos="fade-right" data-aos-duration="200" />
             <p className="fst-italic">
               {" "}
               Designing & Developing Dynamic Websites with a Focus on User
               Experience
             </p>
-            <div className="row" data-aos="fade-left" data-aos-duration="2000">
+            <div className="row" data-aos="fade-left" data-aos-duration="200">
               <div className="col-lg-6">
                 <ul>
                   <li>
@@ -78,7 +78,7 @@ export default function About() {
                 </ul>
               </div>
             </div>
-            <p className="text-justify" data-aos="zoom-in" data-aos-duration="2000">
+            <p className="text-justify" data-aos="zoom-in" data-aos-duration="200">
               {" "}
               I am a Full Stack Web Developer with a passion for creating
               dynamic and engaging websites and web applications. With a strong
