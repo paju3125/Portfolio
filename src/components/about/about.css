@@ -5,15 +5,13 @@
 }
 
 .about-img {
-  width: 20em;
-  height: 25em;
+  width: 18em;
+  height: 22em;
   border: 4px solid #ec9552;
   padding: 2px;
   border-radius: 10%;
   border-top-color: #fb8122;
   border-left-color: #fb8122;
   object-fit: cover;
-  box-shadow: 0px 1px 2px 0px rgba(37, 37, 37, 0.7),
-    1px 2px 4px 0px rgba(52, 52, 52, 0.7), 2px 4px 8px 0px rgba(37, 37, 37, 0.7),
-    2px 4px 16px 0px rgba(44, 43, 43, 0.7);
+  box-shadow: 0px 1px 2px 0px rgba(37, 37, 37, 0.7), 1px 2px 4px 0px rgba(52, 52, 52, 0.7), 2px 4px 8px 0px rgba(37, 37, 37, 0.7), 2px 4px 16px 0px rgba(44, 43, 43, 0.7);
 }
