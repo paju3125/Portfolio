@@ -10,7 +10,7 @@ export default function About() {
             <span>About</span>
           </h1>
           <p className="text-justify mt-3" data-aos="zoom-in" data-aos-duration="200">
-            Hello, I'm an aspiring IT student passionate about Web Development and Machine Learning. Eager to contribute and embrace the transformative potential of technology.
+            Hello, I'm an aspiring IT student passionate about Web Development and Machine Learning. Committed to honing skills for impactful contributions. Believes in technology's power to drive positive change and eager to be at the forefront of it.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export default function About() {
             </div>
             <p className="text-justify" data-aos="zoom-in" data-aos-duration="100">
               {" "}
-              Full Stack Web Developer adept in HTML, CSS, JavaScript, Bootstrap, React, Django, Flask, PHP, MySQL, and MongoDB. Focused on crafting user-friendly interfaces and scalable, secure web solutions.
+              Passionate Full Stack Web Developer skilled in the art of HTML, CSS, and JavaScript sorcery. Weaving the spells of Bootstrap and React for enchanting user interfaces. Mastering the realms of Django, Flask, PHP, MySQL, and MongoDB for crafting scalable, secure web wonders. Let's turn your digital dreams into captivating realities! ✨💻🚀
             </p>
           </div>
         </div>

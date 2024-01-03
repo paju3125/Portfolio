@@ -186,24 +186,7 @@ export default function Skill() {
                 ></div>
               </div>
             </div>
-            <div className="progress">
-              {" "}
-              <span className="skill">
-                NodeJS <i className="val">70%</i>
-              </span>
-              <div className="progress-bar-wrap">
-                <div
-                  className="progress-bar"
-                  role="progressbar"
-                  aria-valuenow="70"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  style={{ width: "70%" }}
-                  data-aos="fade-right"
-                  data-aos-duration="3000"
-                ></div>
-              </div>
-            </div>
+
           </div>
           <div
             className="col-lg-6 aos-init aos-animate"
@@ -241,6 +224,24 @@ export default function Skill() {
                   aria-valuemin="0"
                   aria-valuemax="100"
                   style={{ width: "80%" }}
+                  data-aos="fade-right"
+                  data-aos-duration="3000"
+                ></div>
+              </div>
+            </div>
+            <div className="progress">
+              {" "}
+              <span className="skill">
+                NodeJS <i className="val">70%</i>
+              </span>
+              <div className="progress-bar-wrap">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style={{ width: "70%" }}
                   data-aos="fade-right"
                   data-aos-duration="3000"
                 ></div>
