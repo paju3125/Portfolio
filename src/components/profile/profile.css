@@ -15,7 +15,7 @@
   width: max-content;
 }
 
-.profile .profile-image > div {
+.profile .profile-image>div {
   position: relative;
   float: right;
 }
@@ -99,7 +99,7 @@
 }
 
 .heading span {
-  border-bottom: 5px solid #fb8122;
+  border-bottom: 5px solid #F1801F;
   padding: 0rem 0rem;
   font-weight: 700;
 }
@@ -156,6 +156,7 @@
 }
 
 @keyframes cursorBlink {
+
   0%,
   75% {
     opacity: 1;
@@ -183,6 +184,7 @@
 }
 
 @keyframes type {
+
   0%,
   100% {
     width: 0px;
@@ -201,6 +203,7 @@
   }
 
   @keyframes type {
+
     0%,
     100% {
       width: 0px;
