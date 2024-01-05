@@ -9,13 +9,13 @@ export default function About() {
           <h1 className="text-light heading" data-aos="fade-up" data-aos-duration="200">
             <span>About</span>
           </h1>
-          <p className="text-justify mt-3" data-aos="zoom-in" data-aos-duration="200">
+          <p className="text-justify mt-3" data-aos="zoom-in" data-aos-duration="400">
             Hello, I'm an aspiring IT student passionate about Web Development and Machine Learning. Committed to honing skills for impactful contributions. Believes in technology's power to drive positive change and eager to be at the forefront of it.
           </p>
         </div>
 
         <div className="row mt-5">
-          <div className="col-lg-4 about-img-container" data-aos="zoom-out-right" data-aos-duration="200">
+          <div className="col-lg-4 d-flex justify-content-center about-img-container" data-aos="zoom-out-right" data-aos-duration="500">
             <div className="profile-card card">
               <div className="circle"></div>
               <div className="circle"></div>
@@ -29,14 +29,14 @@ export default function About() {
             className="col-lg-8 pt-4 pt-lg-0 content"
 
           >
-            <h3 data-aos="fade-left" data-aos-duration="200">Web Developer &amp; AIML Enthusiast</h3>
-            <hr style={{ height: "5px", backgroundColor: "#fff" }} data-aos="fade-right" data-aos-duration="200" />
+            <h3 data-aos="fade-left" data-aos-duration="500">Web Developer &amp; AIML Enthusiast</h3>
+            <hr style={{ height: "5px", backgroundColor: "#fff" }} data-aos="fade-right" data-aos-duration="500" />
             <p className="fst-italic">
               {" "}
               Designing & Developing Dynamic Websites with a Focus on User
               Experience
             </p>
-            <div className="row" data-aos="fade-left" data-aos-duration="200">
+            <div className="row" data-aos="fade-left" data-aos-duration="500">
               <div className="col-lg-6">
                 <ul>
                   <li>

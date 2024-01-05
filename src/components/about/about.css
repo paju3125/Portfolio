@@ -25,7 +25,7 @@
   transition: all 0.2s;
   position: relative;
   cursor: pointer;
-  float: left !important;
+  /* float: auto !important; */
   padding: 0 !important;
 }
 
@@ -51,7 +51,7 @@
 .circle {
   width: 100px;
   height: 100px;
-  background: radial-gradient(#b0e633, #53ef7d);
+  background: radial-gradient(#ff8c00, #ff4500);
   border-radius: 50%;
   position: absolute;
   animation: move-up6 2s ease-in infinite alternate-reverse;
