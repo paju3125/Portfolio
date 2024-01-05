@@ -56,9 +56,10 @@
   margin-bottom: 0;
 }
 
-.footer-dark .item.social {
+
+/* .footer-dark .item.social {
   text-align: end;
-}
+} */
 
 @media (max-width: 991px) {
   .footer-dark .item.social {
@@ -67,7 +68,8 @@
   }
 }
 
-.footer-dark .item.social > a {
+
+/* .footer-dark .item.social>a {
   font-size: 20px;
   width: 36px;
   height: 36px;
@@ -79,10 +81,43 @@
   margin: 0 8px;
   color: #fff;
   opacity: 0.75;
+} */
+
+
+/* .footer-dark .item.social>a:hover {
+  opacity: 0.9;
+} */
+
+.iconContainer {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  margin-right: 10px;
 }
 
-.footer-dark .item.social > a:hover {
-  opacity: 0.9;
+.fa-envelope {
+  color: #ff6347;
+  /* Tomato color */
+}
+
+.fa-phone {
+  color: #32cd32;
+  /* LimeGreen color */
+}
+
+.fa-map-marker-alt {
+  color: #1e90ff;
+  /* DodgerBlue color */
+}
+
+.iconFontAwesome {
+  font-size: 1.5em;
+}
+
+.contactInfo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
 .footer-dark .copyright {
@@ -91,4 +126,110 @@
   opacity: 0.3;
   font-size: 1rem;
   margin-bottom: 0;
+}
+
+.card {
+  background-color: transparent !important;
+  width: max-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 2em;
+  border-color: transparent !important;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055); */
+  float: right;
+}
+
+
+/* for all social containers*/
+
+.socialContainer {
+  width: 3em;
+  height: 3em;
+  background-color: rgb(49, 49, 49);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+
+/* instagram*/
+
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+
+
+/* twitter*/
+
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+
+
+/* linkdin*/
+
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+
+
+/* Whatsapp*/
+
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+
+/* GitHub */
+
+.containerFive:hover {
+  background-color: #333;
+  transition-duration: .3s;
+}
+
+
+/* Facebook */
+
+.containerSix:hover {
+  background-color: #3b5998;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

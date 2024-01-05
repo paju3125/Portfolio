@@ -16,8 +16,14 @@ export default function About() {
 
         <div className="row mt-5">
           <div className="col-lg-4 about-img-container" data-aos="zoom-out-right" data-aos-duration="200">
-            {" "}
-            <img src="paju.png" className="img-fluid about-img" alt="" />
+            <div className="profile-card card">
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="card-inner">
+                {" "}
+                <img src="paju.png" className="img-fluid about-img" alt="" />
+              </div>
+            </div>
           </div>
           <div
             className="col-lg-8 pt-4 pt-lg-0 content"
