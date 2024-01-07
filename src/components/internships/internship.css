@@ -1,9 +1,10 @@
-.row > .col {
+.row>.col {
   margin: 0;
 }
 
 .card {
   height: 20rem;
+  /* overflow: hidden; */
 }
 
 .card .card-text {

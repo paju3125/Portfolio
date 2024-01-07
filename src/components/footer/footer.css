@@ -128,7 +128,7 @@
   margin-bottom: 0;
 }
 
-.card {
+footer .card {
   background-color: transparent !important;
   width: max-content;
   height: fit-content;

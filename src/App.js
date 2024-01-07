@@ -1,19 +1,26 @@
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import Preloader from "./components/preloader/Preloader";
 import AOS from "aos"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
 
+  const [isLoading, setLoading] = useState(true);
+
   useEffect(() => {
     AOS.init();
+    setLoading(false);
   }, [])
 
   return (
+
     <>
-      <Navbar />
-      <Footer />
+      {isLoading ? <Preloader /> : <>
+        <Navbar />
+        <Footer />
+      </>}
     </>
   );
 }

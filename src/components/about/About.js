@@ -45,11 +45,11 @@ export default function About() {
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Website:</strong> <span>www.example.com</span>
+                    <strong>Profile:</strong> <a href="https://github.com/paju3125/" className="text-light" >https://github.com/paju3125/</a>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Phone:</strong> <span>+919665656267</span>
+                    <strong>Phone:</strong> <span>+91-9665656267</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
