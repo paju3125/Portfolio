@@ -16,6 +16,13 @@
     box-shadow: 0 0 0 5px #ffffff80;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin: 1em !important;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .projects .card img {
@@ -38,11 +45,19 @@
     width: 100%;
     height: 100%;
     padding: 20px;
+    font-weight: 600;
     box-sizing: border-box;
     background-color: #f2f2f2;
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* From https://css.glass */
+    background: rgba(213, 211, 211, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .projects .card__title {
@@ -59,6 +74,23 @@
     font-size: 24px;
     color: #333;
     font-weight: 700;
+}
+
+.projects .card-img-overlay .card-title {
+    width: fit-content;
+    height: fit-content;
+    font-weight: 600;
+    padding: .6em;
+    /* color: rgb(241, 128, 31); */
+    color: #f2f2f2;
+    background: rgba(241, 129, 31, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(0px);
+    -moz-backdrop-filter: blur(5px);
+    /* Firefox */
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
