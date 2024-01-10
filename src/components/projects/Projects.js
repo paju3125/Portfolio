@@ -10,7 +10,7 @@ export default function Projects() {
           <span>Projects</span>
         </h2>
 
-        <div className="row row-cols-1 row-cols-lg-2 g-4 mt-3" data-aos-duration="2000">
+        <div className="row row-cols-1 row-cols-lg-2 g-2 mt-3" data-aos-duration="2000">
 
           <div className="col">
             <ProjectCard img="/project-thumbnails/pixelstat-erp.png" title="PixelStat ERP System" desc="Flask Project developed for Pixelstat eSolutions Development Pvt. Ltd. <br /><br />Users: Admin and Manager. <br />Purpose: Handling the membership details. <br /><ul><li>Retrieving data from excel files and storing in database.</li><li>Able to add/edit/delete data.</li><li>Apply business logics and make reports available to download.</li></ul>" techs={[["Flask", "info"], ["SQL", "success"], ["Pandas", "danger"], ["JavaScript", "secondary"], ["Bootstrap", "primary"]]} link="https://github.com/paju3125/PixelStat_ERP" />

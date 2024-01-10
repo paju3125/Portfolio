@@ -30,7 +30,7 @@ export default function About() {
 
           >
             <h3 data-aos="fade-left" data-aos-duration="500">Web Developer &amp; AIML Enthusiast</h3>
-            <hr style={{ height: "5px", backgroundColor: "#fff" }} data-aos="fade-right" data-aos-duration="500" />
+            <hr style={{ height: "5px", backgroundColor: "#F1801F" }} data-aos="fade-right" data-aos-duration="500" />
             <p className="fst-italic">
               {" "}
               Designing & Developing Dynamic Websites with a Focus on User
