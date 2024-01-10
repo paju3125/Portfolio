@@ -11,8 +11,10 @@
     height: calc(2 * var(--offset) + var(--square));
     padding: 0px;
     position: absolute;
-    top: 45%;
-    left: 45%;
+    top: 50%;
+    left: 50%;
+    /* translate: .2s linear; */
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .loadingspinner div {
