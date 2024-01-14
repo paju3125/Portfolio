@@ -94,7 +94,7 @@ export default function Journey() {
                             </div>
                             <Carousel.Caption>
                                 <h5>BlackBook Submission</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+
                             </Carousel.Caption>
                         </Carousel.Item>
 
@@ -109,7 +109,7 @@ export default function Journey() {
                             </div>
                             <Carousel.Caption>
                                 <h5>Apna Adda Memories</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+
                             </Carousel.Caption>
                         </Carousel.Item>
 
@@ -124,7 +124,7 @@ export default function Journey() {
                             </div>
                             <Carousel.Caption>
                                 <h5>Apna Adda Memories</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+
                             </Carousel.Caption>
                         </Carousel.Item>
 
