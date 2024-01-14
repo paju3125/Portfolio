@@ -1,13 +1,6 @@
-import React, { useEffect } from 'react'
 import './journey.css'
 import { Carousel } from 'react-bootstrap';
-import CarouselItem from './CarouselItem';
 export default function Journey() {
-
-    useEffect(() => {
-
-
-    }, []);
     return (
         <section id="journey">
             <div className="container">
@@ -17,7 +10,7 @@ export default function Journey() {
             </div>
             <div className='journey d-flex align-items-center justify-content-center'>
                 <div style={{ margin: '20px', maxHeight: '700px', width: '80%' }}>
-                    <Carousel className='carousel-fade' style={{}}>
+                    <Carousel className='carousel-fade'>
                         <Carousel.Item interval={2000}>
                             <img
                                 className="d-block w-100"
