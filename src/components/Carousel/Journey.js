@@ -20,7 +20,7 @@ export default function Journey() {
                             />
                             <Carousel.Caption>
                                 <h5>Carrom Competition</h5>
-                                <p>Intercollege Carrom Competition - Ahmednagar.</p>
+                                {/* <p>Intercollege Carrom Competition - Ahmednagar.</p> */}
                             </Carousel.Caption>
                         </Carousel.Item>
 
@@ -34,8 +34,8 @@ export default function Journey() {
                                 />
                             </div>
                             <Carousel.Caption>
-                                <h5>Runner's Up</h5>
-                                <p>Intercollege Carrom Competition - Ahmednagar.</p>
+                                <h5>Runner's Up - Carrom Competition</h5>
+                                {/* <p>Intercollege Carrom Competition - Ahmednagar.</p> */}
                             </Carousel.Caption>
                         </Carousel.Item>
 
@@ -64,7 +64,7 @@ export default function Journey() {
                             </div>
                             <Carousel.Caption>
                                 <h5>Project Handover</h5>
-                                <p>The project was successfully completed and delivered to the company.</p>
+                                {/* <p>The project was successfully completed and delivered to the company.</p> */}
                             </Carousel.Caption>
                         </Carousel.Item>
 
