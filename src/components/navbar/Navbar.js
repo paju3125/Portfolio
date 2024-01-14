@@ -5,18 +5,19 @@ import Profile from "../profile/Profile";
 import Internships from "../internships/Internships";
 import Projects from "../projects/Projects";
 import Certifications from "../certifications/Certifications";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <Router>
       <div className="nav-comp">
         <nav
-          className="navbar navbar-expand-lg bg-body-tertiary navbar-dark fixed-top px-2"
-          style={{ backgroundColor: "rgb(29,29,29)" }}>
+          className="navbar navbar-expand-lg bg-body-tertiary navbar-dark fixed-top px-2" data-bs-theme="dark"
+        >
           <div className="container">
-            <Link to="" className="navbar-brand">
+            <NavLink to="" className="navbar-brand">
               Prajval's Portfolio
-            </Link>
+            </NavLink>
             {/* <a className="navbar-brand" href='/'>Prajval's Portfolio</a> */}
             <button
               className="navbar-toggler"
@@ -32,24 +33,24 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03" >
               <ul className="navbar-nav w-100 mb-2 mb-lg-0  justify-content-center">
                 <li className="nav-item mx-3">
-                  <Link to="/" className="nav-link active">
+                  <NavLink to="/" className="nav-link ">
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item mx-3">
-                  <Link to="/certifications" className="nav-link">
+                  <NavLink to="/certifications" className="nav-link">
                     Courses & Certifications
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item mx-3">
-                  <Link to="/projects" className="nav-link">
+                  <NavLink to="/projects" className="nav-link">
                     Projects
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item mx-3">
-                  <Link to="/internships" className="nav-link">
+                  <NavLink to="/internships" className="nav-link">
                     Internships
-                  </Link>
+                  </NavLink>
                 </li>
                 {/* <li className="nav-item">
                   <Link className="nav-link" to="#footer">
@@ -60,7 +61,7 @@ export default function Navbar() {
               <button
                 className="btn" style={{ backgroundColor: "#FB8122", color: "#fff", fontWeight: "600" }}
                 onClick={() =>
-                  (window.location.href = "/Prajval_Gandhi_Resume.pdf")
+                  (window.open("/Prajval_Gandhi_Resume.pdf", "_blank"))
                 }
               >
                 My Resume

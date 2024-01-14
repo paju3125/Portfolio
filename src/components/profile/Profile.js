@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import About from "../about/About";
 import Skill from "../skills/Skill";
 import Resume from "../resume/Resume";
+import Journey from "../Carousel/Journey";
 
 export default function Profile() {
   var TxtType = function (el, toRotate, period) {
@@ -115,7 +116,10 @@ export default function Profile() {
 
       <About />
       <hr className="text-light" />
+      <Journey />
+      <hr className="text-light" />
       <Skill />
+      <hr className="text-light" />
       <Resume />
     </>
   );
