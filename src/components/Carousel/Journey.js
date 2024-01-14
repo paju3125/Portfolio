@@ -42,10 +42,10 @@ export default function Journey() {
                         <Carousel.Item interval={2000}>
                             <div style={{ overflow: 'hidden' }}>
                                 <img
-                                    className="d-block w-100"
+                                    className="d-block "
                                     src="/slider/stall.jpg"
                                     alt="First slide"
-                                    style={{ height: "600px", width: "auto", objectFit: 'cover' }}
+                                    style={{ maxHeight: "600px", width: "100%", objectFit: 'cover' }}
                                 />
                             </div>
                             <Carousel.Caption>
