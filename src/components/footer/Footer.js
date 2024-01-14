@@ -13,20 +13,20 @@ export default function Footer() {
                 <li>
                   <a href="mailto:prajvalgandhi483@gmail.com" class="iconContainer">
                     <i class="fas fa-envelope iconFontAwesome"></i>
+                    <span class="contactInfo">prajvalgandhi483@gmail.com</span>
                   </a>
-                  <span class="contactInfo">prajvalgandhi483@gmail.com</span>
                 </li>
                 <li>
                   <a href="tel:+919665656267" class="iconContainer">
                     <i class="fas fa-phone iconFontAwesome"></i>
+                    <span class="contactInfo">+91-9665656267</span>
                   </a>
-                  <span class="contactInfo">+91-9665656267</span>
                 </li>
                 <li>
                   <a href="https://www.google.com/maps?q=Pune,Maharashtra,India" class="iconContainer">
                     <i class="fas fa-map-marker-alt iconFontAwesome"></i>
+                    <span class="contactInfo">Pune, Maharashtra, India</span>
                   </a>
-                  <span class="contactInfo">Pune, Maharashtra, India</span>
                 </li>
               </ul>
             </div>
