@@ -98,7 +98,7 @@ export default function Journey() {
                             </Carousel.Caption>
                         </Carousel.Item>
 
-                        <Carousel.Item interval={2000}>
+                        {/* <Carousel.Item interval={2000}>
                             <div style={{ overflow: 'hidden' }}>
                                 <img
                                     className="d-block w-100"
@@ -126,7 +126,7 @@ export default function Journey() {
                                 <h5>Apna Adda Memories</h5>
 
                             </Carousel.Caption>
-                        </Carousel.Item>
+                        </Carousel.Item> */}
 
                     </Carousel>
                 </div>
