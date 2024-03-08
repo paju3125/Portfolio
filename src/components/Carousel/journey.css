@@ -32,11 +32,19 @@
     object-fit: fill
 }
 
+.journey {
+    width: 80%;
+}
+
 @media only screen and (max-width: 1024px) {
     .journey img {
         height: 350px;
         width: auto;
         object-fit: cover
+    }
+
+    .journey {
+        width: 100%;
     }
 }
 
