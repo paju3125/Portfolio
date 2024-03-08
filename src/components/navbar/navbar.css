@@ -62,6 +62,12 @@
     }
 }
 
+@media (max-width: 991px) {
+    .nav-link {
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-brand {
         font-size: 1.6rem;

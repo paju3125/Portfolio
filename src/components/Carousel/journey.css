@@ -29,30 +29,26 @@
 .journey img {
     height: 550px;
     width: 100%;
-    object-fit: fill
+    object-fit: cover
 }
 
-.journey {
+.journey>div {
     width: 80%;
 }
 
 @media only screen and (max-width: 1024px) {
     .journey img {
-        height: 350px;
-        width: auto;
-        object-fit: cover
+        height: 24rem;
     }
 
-    .journey {
+    .journey>div {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .journey img {
-        height: 200px;
-        width: auto;
-        object-fit: cover
+        height: 16rem;
     }
 
     .carousel-caption h5 {

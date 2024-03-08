@@ -39,7 +39,7 @@ export default function Navbar() {
                 </li>
                 <li className="nav-item mx-3">
                   <NavLink to="/certifications" className="nav-link">
-                    Courses & Certifications
+                    Certifications
                   </NavLink>
                 </li>
                 <li className="nav-item mx-3">
@@ -58,14 +58,16 @@ export default function Navbar() {
                   </Link>
                 </li> */}
               </ul>
-              <button
-                className="btn" style={{ backgroundColor: "#dba622", color: "#fff", fontWeight: "600" }}
-                onClick={() =>
-                  (window.open("/Prajval_Gandhi_Resume.pdf", "_blank"))
-                }
-              >
-                My Resume
-              </button>
+              <div className="d-flex justify-content-center">
+                <button
+                  className="btn" style={{ backgroundColor: "#dba622", color: "#fff", fontWeight: "600", width: "fit-content" }}
+                  onClick={() =>
+                    (window.open("/Prajval_Gandhi_Resume.pdf", "_blank"))
+                  }
+                >
+                  Get Resume
+                </button>
+              </div>
             </div>
           </div>
         </nav>
