@@ -1,25 +1,30 @@
 html,
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
+}
+
+:root {
+    --text-color: rgb(219, 166, 34);
+    --bg-color: #181818;
 }
 
 body {
-  background-color: #121212;
-  /* user-select: none; */
-  font-family: "Raleway", sans-serif;
-  width: 100vw;
+    background-color: var(--bg-color);
+    /* user-select: none; */
+    font-family: "Lexend", sans-serif;
+    width: 100vw;
 }
 
 #hero p {
-  color: #fff;
-  margin-bottom: 50px;
-  font-size: 26px;
-  font-family: "Poppins", sans-serif;
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  color: #F1801F;
-  padding-bottom: 4px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+    color: #dba622;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #149ddd;
 }

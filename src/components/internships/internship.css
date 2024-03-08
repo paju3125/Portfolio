@@ -60,7 +60,7 @@
   width: 60%;
   border-radius: 1rem;
   border: none;
-  background-color: #f1811f80;
+  background-color: var(--text-color);
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
@@ -89,14 +89,14 @@
   text-align: center;
   width: fit-content;
   margin: auto;
-  border-bottom: 3px solid #F1801F;
+  border-bottom: 3px solid var(--text-color);
 }
 
 
 /*Hover*/
 
 .internship .card:hover {
-  border-color: #F1801F;
+  border-color: var(--text-color);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 

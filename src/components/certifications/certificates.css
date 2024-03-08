@@ -1,4 +1,4 @@
-.row > .col {
+.row>.col {
   padding: 0.5rem;
 }
 
@@ -33,16 +33,39 @@
   height: 20%;
   font-weight: 700;
 }
+
 .component .certifications .card .card-body {
   height: 60%;
   overflow: hidden;
   display: flex;
   align-items: center;
 }
+
 .component .certifications .card .card-footer {
   height: 20%;
 }
 
 .component .certifications .card .card-title {
   font-size: 1.2rem;
+}
+
+.component .certifications .card .card-footer {
+  color: var(--text-color);
+}
+
+.modal-content {
+  background-color: var(--bg-color) !important;
+  color: #fff !important;
+  text-align: center;
+}
+
+.modal-header button {
+  color: var(--text-color) !important;
+  background-color: var(--text-color) !important;
+  opacity: 1;
+}
+
+.modal-footer button {
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
 }

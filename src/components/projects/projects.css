@@ -19,7 +19,7 @@
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -47,14 +47,14 @@
     padding: 20px;
     font-weight: 600;
     box-sizing: border-box;
-    background-color: #f2f2f2;
+    background-color: var(--bg-color);
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     /* From https://css.glass */
-    background: rgba(213, 211, 211, 0.8);
+    /* background: rgba(213, 211, 211, 0.8); */
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -63,6 +63,7 @@
 .projects .card__title {
     font-size: 1.2em !important;
     text-wrap: pretty;
+    color: var(--text-color) !important;
 }
 
 .projects .card:hover .card__content {
@@ -72,7 +73,6 @@
 .projects .card__title {
     margin: 0;
     font-size: 24px;
-    color: #333;
     font-weight: 700;
 }
 
@@ -82,10 +82,10 @@
     font-weight: 600;
     padding: .6em;
     /* color: rgb(241, 128, 31); */
-    color: #f2f2f2;
-    background: rgba(241, 129, 31, 0.15);
+    color: var(--text-color);
+    background: rgba(28, 28, 27, 0.103);
     border-radius: 8px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.194);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(0px);
     -moz-backdrop-filter: blur(5px);
@@ -101,7 +101,7 @@
 .projects .card__description {
     margin: 10px 0 0;
     font-size: 14px;
-    color: #2e2d2d;
+    color: #ffffffc0;
     line-height: 1.4;
     max-height: 16vh;
     text-align: justify;
@@ -121,10 +121,12 @@
 }
 
 .rounded-md {
-    border-radius: 0.375rem;
+    border-radius: 50%;
     /* 6px */
 }
 
+
+/* 
 .bg-slate-300 {
     background-color: #718096;
 }
@@ -135,7 +137,7 @@
 
 .hover\:text-slate-200:hover {
     color: #a0aec0;
-}
+} */
 
 .duration-300 {
     transition-duration: 0.3s;
@@ -144,4 +146,22 @@
 .p-2 {
     padding: 0.5rem;
     /* 8px */
+}
+
+.icon-container {
+    background-color: #ffffff;
+    padding: 2px;
+    display: block;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.icon-container:hover {
+    box-shadow: 0px 3px 5px #000000;
+    transition: .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.icon-container:hover .gh-mark {
+    fill: url(#gh-mark-grad);
 }

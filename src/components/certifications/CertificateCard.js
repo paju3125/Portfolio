@@ -15,7 +15,7 @@ export default function CertificateCard({ params }) {
   return (
     <>
       <div className="card text-light" data-aos="fade-up" data-aos-duration="2000">
-        <div className="card-header">{params.certificate_name}</div>
+        <div className="card-header text-center">{params.certificate_name}</div>
         <div className="card-body">
           <img
             src={params.certificate}
@@ -30,7 +30,7 @@ export default function CertificateCard({ params }) {
             }
           />
         </div>
-        <h5 className="card-footer">{params.organization}</h5>
+        <h5 className="card-footer text-center">{params.organization}</h5>
       </div>
 
       {currentCertificate && show && (

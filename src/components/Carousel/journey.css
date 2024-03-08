@@ -1,9 +1,8 @@
 .carousel-control-next span,
 .carousel-control-prev span {
     font-weight: 800;
-    /* background: rgba(255, 255, 255, 0.2); */
-    background-color: rgba(15, 15, 15, 0.564);
-    color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color) !important;
+    background-color: var(--bg-color);
     border-radius: 6px;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.374);
     backdrop-filter: blur(15px);
@@ -13,9 +12,9 @@
 
 .carousel-caption {
     padding: .5em !important;
-    color: #F1801F !important;
+    color: var(--text-color) !important;
     font-weight: 700;
-    background: rgba(15, 15, 15, 0.091);
+    background-color: var(--bg-color);
     border-radius: 6px;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
     backdrop-filter: blur(20px);

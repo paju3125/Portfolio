@@ -9,7 +9,7 @@
 .resume .resume-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid #F1801F;
+    border-left: 2px solid var(--text-color);
     position: relative;
 }
 
@@ -22,7 +22,7 @@
     left: -9px;
     top: 0;
     background: #fff;
-    border: 2px solid #F1801F;
+    border: 2px solid var(--text-color);
 }
 
 .resume .resume-item h4 {
@@ -51,4 +51,8 @@
 
 .resume .resume-item ul li {
     padding-bottom: 10px;
+}
+
+.highlight {
+    color: var(--text-color);
 }

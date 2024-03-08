@@ -12,7 +12,7 @@ export default function Navbar() {
     <Router>
       <div className="nav-comp">
         <nav
-          className="navbar navbar-expand-lg bg-body-tertiary navbar-dark fixed-top px-2" data-bs-theme="dark"
+          className="navbar navbar-expand-lg fixed-top px-2" data-bs-theme="dark"
         >
           <div className="container">
             <NavLink to="" className="navbar-brand">
@@ -59,7 +59,7 @@ export default function Navbar() {
                 </li> */}
               </ul>
               <button
-                className="btn" style={{ backgroundColor: "#FB8122", color: "#fff", fontWeight: "600" }}
+                className="btn" style={{ backgroundColor: "#dba622", color: "#fff", fontWeight: "600" }}
                 onClick={() =>
                   (window.open("/Prajval_Gandhi_Resume.pdf", "_blank"))
                 }
@@ -76,6 +76,6 @@ export default function Navbar() {
           <Route path="internships" element={<Internships />} />
         </Routes>
       </div>
-    </Router>
+    </Router >
   );
 }

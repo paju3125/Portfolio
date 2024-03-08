@@ -52,7 +52,7 @@
 .about .circle {
   width: 100px;
   height: 100px;
-  background: radial-gradient(#ff8c00, #ff4500);
+  background: radial-gradient(rgba(201, 166, 78, 0.799), #ffb700);
   border-radius: 50%;
   position: absolute;
   animation: move-up6 2s ease-in infinite alternate-reverse;

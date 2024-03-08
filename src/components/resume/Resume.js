@@ -10,7 +10,7 @@ export default function Resume() {
           <span>Resume</span>
         </h1>
         <button
-          className="btn btn-outline-light mt-3 px-5"
+          className="btn btn-outline-warning mt-3 px-5"
           onClick={() =>
             (window.open("/Prajval_Gandhi_Resume.pdf", "_blank"))
           }
@@ -39,7 +39,7 @@ export default function Resume() {
             <div className="resume-item">
               <h4>Bachelor of Technology (IT)</h4>
               <h5>2021 - 2024</h5>
-              <p><em>MIT Academy of Engineering, Alandi, Pune</em></p>
+              <p className="highlight"><em>MIT Academy of Engineering, Alandi, Pune</em></p>
               <p>Major : <em>Information Technology</em> </p>
               <p>Minor : <em>AI/ML</em> </p>
               <p>CGPA : <em>9.25</em> </p>
@@ -47,14 +47,14 @@ export default function Resume() {
             <div className="resume-item">
               <h4>Diploma</h4>
               <h5>2018 - 2021</h5>
-              <p><em>Government Polytechnic Ahmednagar</em></p>
+              <p className="highlight"><em>Government Polytechnic Ahmednagar</em></p>
               <p>Major : <em>Computer Engineering</em> </p>
               <p>Percentage : <em>94.69%</em> </p>
             </div>
             <div className="resume-item">
               <h4>SSC</h4>
               <h5>2018</h5>
-              <p><em>Dr. N. J. Paulbudhe M. V.</em></p>
+              <p className="highlight"><em>Dr. N. J. Paulbudhe M. V.</em></p>
               <p>Percentage : <em>89.4%</em> </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Resume() {
               <h4>Lead Coordinator</h4>
               <h5>Jun 2023 - Aug 2023
               </h5>
-              <p><em>Result Software Development </em></p>
+              <p className="highlight"><em>Result Software Development </em></p>
               <ul>
                 <li>Led intern team in completing "Automation in Recruitment Process" project.
                 </li>
@@ -75,7 +75,7 @@ export default function Resume() {
             <div className="resume-item">
               <h4>Full Stack Web Developer</h4>
               <h5>Jul 2022 - Sept 2022</h5>
-              <p><em>PixelStat eSolutions Development Pvt. Ltd.</em></p>
+              <p className="highlight"><em>PixelStat eSolutions Development Pvt. Ltd.</em></p>
               <ul>
                 <li>Remedied project bugs, fortifying system stability.</li>
                 <li>Engineered a web app for "AKHIL BHARATIYA MARATHI CHITRAPAT MAHAMANDAL."</li>
@@ -85,7 +85,7 @@ export default function Resume() {
             <div className="resume-item">
               <h4>Trainee PHP Developer</h4>
               <h5>June 2020 - Aug 2020</h5>
-              <p><em>R B Tech Services </em></p>
+              <p className="highlight"><em>R B Tech Services </em></p>
               <ul>
                 <li>Engineered a web-based "Notice Management System" using PHP language.
                 </li>

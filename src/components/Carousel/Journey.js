@@ -98,36 +98,6 @@ export default function Journey() {
                             </Carousel.Caption>
                         </Carousel.Item>
 
-                        {/* <Carousel.Item interval={2000}>
-                            <div style={{ overflow: 'hidden' }}>
-                                <img
-                                    className="d-block w-100"
-                                    src="/slider/apnaadda1.jpg"
-                                    alt="First slide"
-                                    style={{ maxHeight: '600px', width: "auto", objectFit: 'cover' }}
-                                />
-                            </div>
-                            <Carousel.Caption>
-                                <h5>Apna Adda Memories</h5>
-
-                            </Carousel.Caption>
-                        </Carousel.Item>
-
-                        <Carousel.Item interval={2000}>
-                            <div style={{ overflow: 'hidden' }}>
-                                <img
-                                    className="d-block w-100"
-                                    src="/slider/apnaadda2.jpg"
-                                    alt="First slide"
-                                    style={{ maxHeight: '600px', width: "auto", objectFit: 'cover' }}
-                                />
-                            </div>
-                            <Carousel.Caption>
-                                <h5>Apna Adda Memories</h5>
-
-                            </Carousel.Caption>
-                        </Carousel.Item> */}
-
                     </Carousel>
                 </div>
             </div>
