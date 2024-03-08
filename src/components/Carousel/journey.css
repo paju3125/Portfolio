@@ -25,3 +25,33 @@
 .carousel-caption h5 {
     font-weight: 700;
 }
+
+.journey img {
+    height: 550px;
+    width: 100%;
+    object-fit: fill
+}
+
+@media only screen and (max-width: 1024px) {
+    .journey img {
+        height: 400px;
+        width: auto;
+        object-fit: cover
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .journey img {
+        height: 200px;
+        width: auto;
+        object-fit: cover
+    }
+
+    .carousel-caption h5 {
+        font-size: .6rem;
+    }
+
+    .carousel-caption {
+        font-size: 0.5rem;
+    }
+}

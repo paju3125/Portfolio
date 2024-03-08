@@ -8,7 +8,7 @@ export default function Journey() {
                     <span>Journey</span>
                 </h1>
             </div>
-            <div className='journey d-flex align-items-center justify-content-center'>
+            <div className='journey container d-flex align-items-center justify-content-center p-2'>
                 <div style={{ margin: '20px', maxHeight: '700px', width: '80%' }}>
                     <Carousel className='carousel-fade'>
                         <Carousel.Item interval={2000}>
@@ -16,26 +16,22 @@ export default function Journey() {
                                 className="d-block w-100"
                                 src="/slider/carrom_comp.jpg"
                                 alt="First slide"
-                                style={{ maxHeight: '650px', objectFit: 'cover' }}
                             />
                             <Carousel.Caption>
                                 <h5>Carrom Competition</h5>
-                                {/* <p>Intercollege Carrom Competition - Ahmednagar.</p> */}
                             </Carousel.Caption>
                         </Carousel.Item>
 
                         <Carousel.Item interval={2000}>
-                            <div style={{ maxHeight: '650px', overflow: 'hidden' }}>
+                            <div style={{ overflow: 'hidden' }}>
                                 <img
                                     className="d-block"
                                     src="/slider/runnerup3.jpg"
                                     alt="First slide"
-                                    style={{ maxHeight: '700px', width: "100%", objectFit: 'cover' }}
                                 />
                             </div>
                             <Carousel.Caption>
                                 <h5>Runner's Up - Carrom Competition</h5>
-                                {/* <p>Intercollege Carrom Competition - Ahmednagar.</p> */}
                             </Carousel.Caption>
                         </Carousel.Item>
 
@@ -45,7 +41,6 @@ export default function Journey() {
                                     className="d-block "
                                     src="/slider/stall.jpg"
                                     alt="First slide"
-                                    style={{ maxHeight: "600px", width: "100%", objectFit: 'cover' }}
                                 />
                             </div>
                             <Carousel.Caption>
@@ -59,7 +54,6 @@ export default function Journey() {
                                     className="d-block w-100"
                                     src="/slider/internship_cert.jpg"
                                     alt="First slide"
-                                    style={{ maxHeight: '600px', width: "auto", objectFit: 'cover' }}
                                 />
                             </div>
                             <Carousel.Caption>
@@ -74,7 +68,6 @@ export default function Journey() {
                                     className="d-block w-100"
                                     src="/slider/product_audit.jpg"
                                     alt="First slide"
-                                    style={{ maxHeight: '600px', width: "auto", objectFit: 'cover' }}
                                 />
                             </div>
                             <Carousel.Caption>
@@ -89,7 +82,6 @@ export default function Journey() {
                                     className="d-block w-100"
                                     src="/slider/blackbook3.jpg"
                                     alt="First slide"
-                                    style={{ maxHeight: '600px', width: "auto", objectFit: 'cover' }}
                                 />
                             </div>
                             <Carousel.Caption>
