@@ -106,7 +106,6 @@
     max-height: 16vh;
     text-align: justify;
     padding-right: .5rem;
-    overflow-y: scroll;
 }
 
 .projects .card-footer {
