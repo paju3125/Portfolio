@@ -21,7 +21,7 @@ export default function Projects() {
           </div>
 
           <div className="col">
-            <ProjectCard img="/project-thumbnails/pixelstat-erp.png" title="PixelStat ERP System" desc="Flask Project developed for Pixelstat eSolutions Development Pvt. Ltd. <br />Purpose: Handling the membership details. <br /><ul><li>Retrieving data from excel files and storing in database.</li><li>Able to add/edit/delete data.</li><li>Apply business logics and make reports available to download.</li></ul>" techs={[["Flask", "info"], ["SQL", "success"], ["Pandas", "danger"], ["JavaScript", "secondary"], ["Bootstrap", "primary"]]} link="https://github.com/paju3125/PixelStat_ERP" />
+            <ProjectCard img="/project-thumbnails/pixelstat-erp.png" title="PixelStat ERP System" desc="Purpose: Handling the membership details. <br /><ul><li>Retrieving data from excel files and storing in database.</li><li>Able to add/edit/delete data.</li><li>Apply business logics and make reports available to download.</li></ul>" techs={[["Flask", "info"], ["SQL", "success"], ["Pandas", "danger"], ["JavaScript", "secondary"], ["Bootstrap", "primary"]]} link="https://github.com/paju3125/PixelStat_ERP" />
           </div>
 
           <div className="col">
