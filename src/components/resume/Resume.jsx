@@ -61,6 +61,18 @@ export default function Resume() {
           <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
             <h3 className="resume-title">Internship</h3>
             <div className="resume-item">
+              <h4>Software Engineer Intern</h4>
+              <h5>Jan 2024 - Present
+              </h5>
+              <p className="highlight"><em>Ignite Solutions </em></p>
+              <ul>
+                <li>Serving as a Backend Developer for the development of an Onboarding Automation App.
+                </li>
+                <li>Utilizing Django, Django-Rest-Framework for creating secure and efficient rest APIs.
+                </li>
+              </ul>
+            </div>
+            <div className="resume-item">
               <h4>Lead Coordinator</h4>
               <h5>Jun 2023 - Aug 2023
               </h5>
@@ -93,21 +105,20 @@ export default function Resume() {
                 </li>
               </ul>
             </div>
-            <h3 className="resume-title">Key Skills</h3>
+            {/* <h3 className="resume-title">Key Skills</h3>
             <div className="resume-item pb-0">
-              {/* <h4>Prajval Gandhi</h4> */}
 
-              <ul>
-                <li>Well Known Languages: C++, Python, JavaScript, Java, PHP</li>
-                <li>Hands on practice of MySQL and MongoDB</li>
-                <li>Frontend Development skills: HTML | CSS | JS | Bootstrap | ReactJS</li>
-                <li>Familiar with Flask, Django frameworks</li>
-              </ul>
-            </div>
+            <ul>
+              <li>Well Known Languages: C++, Python, JavaScript, Java, PHP</li>
+              <li>Hands on practice of MySQL and MongoDB</li>
+              <li>Frontend Development skills: HTML | CSS | JS | Bootstrap | ReactJS</li>
+              <li>Familiar with Flask, Django frameworks</li>
+            </ul>
+          </div> */}
           </div>
         </div>
 
       </div>
-    </section>
+    </section >
   )
 }
