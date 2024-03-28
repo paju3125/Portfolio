@@ -21,7 +21,7 @@ export default function About() {
               <div className="circle"></div>
               <div className="card-inner">
                 {" "}
-                <img src="paju.png" className="img-fluid about-img" alt="" />
+                <img src="paju1.png" className="img-fluid about-img" alt="" />
               </div>
             </div>
           </div>
