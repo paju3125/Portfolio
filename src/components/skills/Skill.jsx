@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './skill.css'
 export default function Skill() {
   return (
     <section id="skills" className="skills section-bg">
