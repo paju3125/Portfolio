@@ -4,7 +4,7 @@ import "./Error.css";
 export default function Error() {
   return (
     <>
-      <section id="error-page" className="mt-5">
+      <section id="error-page">
         <div className="container component content">
           <h2 className="header">404</h2>
           <h4>Sorry! Page Not Found</h4>
