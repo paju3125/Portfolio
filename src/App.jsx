@@ -10,6 +10,7 @@ import Certifications from "./components/certifications/Certifications";
 import Internships from "./components/internships/Internships";
 import Projects from "./components/projects/Projects";
 import Error from "./components/Error";
+import GraduationBook from "./components/GraduationBook";
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ function App() {
               <Route path="certifications" element={<Certifications />} />
               <Route path="projects" element={<Projects />} />
               <Route path="internships" element={<Internships />} />
+              <Route path="graduation-book" element={<GraduationBook />} />
               <Route path="*" element={<Error />} />
             </Routes>
             <Footer />
