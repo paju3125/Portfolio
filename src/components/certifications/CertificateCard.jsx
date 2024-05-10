@@ -11,10 +11,15 @@ export default function CertificateCard({ params }) {
     console.log(image);
     console.log(currentCertificate);
   }
+  console.log(params);
   const handleClose = () => setShow(false);
   return (
     <>
-      <div className="card text-light" data-aos="fade-up" data-aos-duration="2000">
+      <div
+        className="card text-light"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div className="card-header text-center">{params.certificate_name}</div>
         <div className="card-body">
           <img
