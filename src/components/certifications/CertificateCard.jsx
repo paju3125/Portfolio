@@ -11,7 +11,7 @@ export default function CertificateCard({ params }) {
     console.log(image);
     console.log(currentCertificate);
   }
-  console.log(params);
+  // console.log(params);
   const handleClose = () => setShow(false);
   return (
     <>
