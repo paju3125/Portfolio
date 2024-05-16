@@ -50,8 +50,6 @@ export default function Profile() {
     }, delta);
   };
 
-
-
   useEffect(() => {
     var elements = document.getElementsByClassName("typewrite");
     for (var i = 0; i < elements.length; i++) {
@@ -66,8 +64,6 @@ export default function Profile() {
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #FB8122}";
     document.body.appendChild(css);
-
-
   });
 
   return (
@@ -101,15 +97,22 @@ export default function Profile() {
 
       <section
         id="hero"
-        className="d-flex flex-column justify-content-center align-items-center">
-        <div className="hero-container " data-aos="flip-left"
+        className="d-flex flex-column justify-content-center align-items-center"
+      >
+        <div
+          className="hero-container "
+          data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000">
+          data-aos-duration="2000"
+        >
           <h1>Prajval Gandhi</h1>
           <p style={{ fontWeight: "700" }}>
-            I'm{" "}
-            <span className="typewrite" data-period="2000" data-type='[ "Full Stack Web Developer.","Machine Learning Enthusiast.", "React Developer.","Django Developer" ]'></span>
-
+            {/* I'm{" "} */}
+            <span
+              className="typewrite d-block"
+              data-period="2000"
+              data-type='[ "Software Engineer.","Web Developer.","ML Engineer.", "React Developer.","Django Developer" ]'
+            ></span>
           </p>
         </div>
       </section>
