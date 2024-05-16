@@ -113,6 +113,7 @@ export default function Profile() {
               data-period="2000"
               data-type='[ "Software Engineer.","Web Developer.","ML Engineer.", "React Developer.","Django Developer" ]'
             ></span>
+            &nbsp;
           </p>
         </div>
       </section>
