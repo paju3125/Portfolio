@@ -109,7 +109,7 @@ export default function Profile() {
           <p style={{ fontWeight: "700" }}>
             {/* I'm{" "} */}
             <span
-              className="typewrite d-block"
+              className="typewrite"
               data-period="2000"
               data-type='[ "Software Engineer.","Web Developer.","ML Engineer.", "React Developer.","Django Developer" ]'
             ></span>
