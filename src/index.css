@@ -23,7 +23,11 @@ body {
 }
 
 #hero p span {
-    color: #dba622;
+    color: var(--text-color);
     padding-bottom: 4px;
     letter-spacing: 1px;
+}
+
+.name-title {
+    color: var(--text-color);
 }

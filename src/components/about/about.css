@@ -1,82 +1,96 @@
 .about-img-container {
-  padding: 2em 0;
-  /* overflow: hidden;
+    padding: 2em 0;
+    /* overflow: hidden;
   text-align: center; */
 }
 
 .about-img {
-  width: 16em;
-  height: 20em;
-  border-radius: 15px;
-  /* background: #e0e0e0;
+    width: 16em;
+    height: 20em;
+    border-radius: 15px;
+    /* background: #e0e0e0;
   box-shadow: 5px 5px 7px #868686, -5px -5px 7px #ffffff;  */
-  /* border: 4px solid #ec9552; */
-  /* padding: 2px; */
-  /* border-radius: 10%; */
-  /* border-top-color: #fb8122;
+    /* border: 4px solid #ec9552; */
+    /* padding: 2px; */
+    /* border-radius: 10%; */
+    /* border-top-color: #fb8122;
   border-left-color: #fb8122; */
-  /* object-fit: cover; */
-  /* box-shadow: 0px 1px 2px 0px rgba(37, 37, 37, 0.7), 1px 2px 4px 0px rgba(52, 52, 52, 0.7), 2px 4px 8px 0px rgba(37, 37, 37, 0.7), 2px 4px 16px 0px rgba(44, 43, 43, 0.7); */
+    /* object-fit: cover; */
+    /* box-shadow: 0px 1px 2px 0px rgba(37, 37, 37, 0.7), 1px 2px 4px 0px rgba(52, 52, 52, 0.7), 2px 4px 8px 0px rgba(37, 37, 37, 0.7), 2px 4px 16px 0px rgba(44, 43, 43, 0.7); */
 }
 
 .about .card {
-  width: fit-content !important;
-  height: fit-content !important;
-  transition: all 0.2s;
-  position: relative;
-  cursor: pointer;
-  background-color: transparent;
-  /* float: auto !important; */
-  padding: 0 !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    /* float: auto !important; */
+    padding: 0 !important;
 }
 
 .about .card-inner {
-  width: fit-content;
-  height: fit-content;
-  background: rgba(255, 255, 255, .05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
+    width: fit-content;
+    height: fit-content;
+    background: rgba(255, 255, 255, .05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
 }
 
 .about .card-inner img {
-  width: 12em;
-  height: 13em;
-  padding: 5px;
+    width: 12em;
+    height: 13em;
+    padding: 5px;
 }
 
 .about .card:hover {
-  transform: scale(1.04) rotate(1deg);
-}
-
-.about .circle {
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(rgba(201, 166, 78, 0.799), #ffb700);
-  border-radius: 50%;
-  position: absolute;
-  animation: move-up6 2s ease-in infinite alternate-reverse;
-}
-
-.about .circle:nth-child(1) {
-  top: -25px;
-  left: -25px;
-}
-
-.about .circle:nth-child(2) {
-  bottom: -25px;
-  right: -25px;
-  animation-name: move-down1;
+    transform: scale(1.04) rotate(1deg);
 }
 
 @keyframes move-up6 {
-  to {
-    transform: translateY(-10px);
-  }
+    to {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes move-down1 {
-  to {
-    transform: translateY(10px);
-  }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.bg-dark-custom {
+    background-color: #121212;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-dark-custom::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    top: 10%;
+    left: 20%;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+.bg-dark-custom::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    bottom: 15%;
+    right: 10%;
+    border-radius: 50%;
+    filter: blur(120px);
+}
+
+#about .photo-frame {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37)
 }

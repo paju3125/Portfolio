@@ -58,7 +58,7 @@ export default function Navbar() {
                   </Link>
                 </li> */}
             </ul>
-            <div className="d-flex justify-content-center">
+            {/* <div className="d-flex justify-content-center">
               <button
                 className="btn"
                 style={{
@@ -73,7 +73,7 @@ export default function Navbar() {
               >
                 Get Resume
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>

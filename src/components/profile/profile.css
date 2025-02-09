@@ -137,10 +137,11 @@
 }
 
 #hero h1 {
-    margin: 0 0 10px 0;
+    /* margin: 0 0 10px 0; */
     font-weight: 700;
     line-height: 56px;
     color: #fff;
+    height: 60px;
 }
 
 .typewrite::before {
@@ -148,6 +149,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    /* Adjusted to ensure it stays next to the content */
     width: 2px;
     height: 100%;
     background: white;
@@ -155,12 +157,10 @@
 }
 
 @keyframes cursorBlink {
-
     0%,
     75% {
         opacity: 1;
     }
-
     76%,
     100% {
         opacity: 0;
@@ -170,6 +170,9 @@
 .typewrite {
     position: relative;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #3333);
+    display: inline-block;
+    min-height: 1em;
+    /* Ensure consistent height */
 }
 
 .typewrite h2 {
@@ -180,15 +183,16 @@
     overflow: hidden;
     margin-bottom: 0;
     animation: type 5s steps(11) infinite;
+    display: inline-block;
+    min-height: 1.5em;
+    /* Ensure the cursor stays next to the content and prevent fluctuations */
 }
 
 @keyframes type {
-
     0%,
     100% {
         width: 0px;
     }
-
     30%,
     60% {
         width: 394.09px;
@@ -200,14 +204,11 @@
         font-size: 3rem;
         animation: type 5s steps(10) infinite;
     }
-
     @keyframes type {
-
         0%,
         100% {
             width: 0px;
         }
-
         30%,
         60% {
             width: 305px;
@@ -237,7 +238,6 @@
     .hero-container h1 {
         font-size: 3rem;
     }
-
     #hero .hero-container {
         /* position: relative; */
         /* z-index: 2; */
@@ -249,4 +249,36 @@
     .hero-container h1 {
         font-size: 2.5rem;
     }
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    /* background: url('/public/bg.jpg') no-repeat center center/cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-container {
+    /* background: rgba(255, 255, 255, 0.1); */
+    padding: 30px;
+    /* backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); */
+    /* From https://css.glass */
+    background: rgba( 0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+#hero p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #eee;
 }

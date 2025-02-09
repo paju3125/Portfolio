@@ -68,60 +68,30 @@ export default function Profile() {
 
   return (
     <>
-      {/* <div className="container profile-container component">
-        <div className="profile row">
-          <div className="profile-image col-lg-3 col-md-4 col-sm-3 col-xs-3">
-            <div>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsF8AvRvrqeqePzr-tROaiGLdXQewNMZz0A&usqp=CAU"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="profile-separator col-lg-2 col-md-2 col-xs-1 col-sm-1"></div>
-          <div className="col-lg-7 col-md-6 col-sm-6 col-xs-6">
-            <h1>
-              <a
-                href="/"
-                className="typewrite text-light"
-                data-period="2000"
-                data-type='[ "Hi, Im Prajval.", "I Love to Develop.","I am a Web Developer." ]'
-                style={{ wordWrap: "break-word" }}
-              >
-                <span className="wrap">HI, IM PRAJVAL.</span>
-              </a>
-            </h1>
-          </div>
-        </div>
-      </div> */}
-
       <section
         id="hero"
         className="d-flex flex-column justify-content-center align-items-center"
       >
         <div
-          className="hero-container "
+          className="hero-container d-flex flex-column justify-content-center align-items-center"
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
         >
-          <h1>Prajval Gandhi</h1>
-          <p style={{ fontWeight: "700" }}>
-            {/* I'm{" "} */}
-            <span
-              className="typewrite"
-              data-period="2000"
-              data-type='[ "Software Engineer.","Web Developer.","ML Engineer.", "React Developer.","Django Developer" ]'
-            ></span>
-            &nbsp;
-          </p>
+        <h3 className="text-secondary text-left w-100  mt-3 mt-md-1">Hey folks,</h3>
+          <h1 className="d-inline-flex"><p>I'm &nbsp;</p>Prajval Gandhi</h1>
+          <p
+            className="typewrite"
+            data-period="2000"
+            data-type='[ "Software Engineer.", "ML Enthusiat.", "React Developer.","Full Stack Developer" ]'
+          ></p>
         </div>
       </section>
 
       <About />
       <hr className="text-light" />
-      <Journey />
-      <hr className="text-light" />
+      {/* <Journey />
+      <hr className="text-light" /> */}
       <Skill />
       <hr className="text-light" />
       <Resume />
