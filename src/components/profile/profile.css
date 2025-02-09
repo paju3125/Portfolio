@@ -136,12 +136,12 @@
     min-width: 450px;
 }
 
-#hero h1 {
+#hero h2 {
     /* margin: 0 0 10px 0; */
     font-weight: 700;
     line-height: 56px;
     color: #fff;
-    height: 60px;
+    height: 50px;
 }
 
 .typewrite::before {

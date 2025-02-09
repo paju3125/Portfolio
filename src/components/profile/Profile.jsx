@@ -78,7 +78,7 @@ export default function Profile() {
           data-aos-duration="2000"
         >
         <h3 className="text-secondary text-left w-100  mt-3 mt-md-1">Hey folks,</h3>
-          <h1 className="d-inline-flex"><p>I'm &nbsp;</p>Prajval Gandhi</h1>
+          <h2 className="text-left d-inline-flex w-100"><p>I'm &nbsp;</p>Prajval Gandhi</h2>
           <p
             className="typewrite"
             data-period="2000"
