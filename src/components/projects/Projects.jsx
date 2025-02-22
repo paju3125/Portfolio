@@ -1,10 +1,12 @@
 import React from "react";
 import "./projects.css";
 import ProjectCard from "./ProjectCard";
+import Particle from "../Particle";
 
 export default function Projects() {
   return (
     <div className="component container">
+    <Particle />
       <div className="projects">
         <h2 className="text-light heading" data-aos="fade-up" data-aos-duration="500">
           <span>Projects</span>

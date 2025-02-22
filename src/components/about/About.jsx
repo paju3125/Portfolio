@@ -2,7 +2,7 @@ import React from "react";
 import "./about.css";
 export default function About() {
   return (
-    <section id="about" className="text-light ">
+    <section id="about" className="text-light">
       <div className="container">
         <div className="" >
           <h1
@@ -21,7 +21,7 @@ export default function About() {
           />
         </div>
 
-        <div className="row align-items-center">
+        <div className="row align-items-center" style={{zIndex: 1}}>
           <div
             className="col-lg-4 text-center mb-4"
             data-aos="zoom-out-right"
@@ -33,8 +33,8 @@ export default function About() {
                 src="paju3.jpg"
                 className="img-fluid rounded-circle"
                 alt="Profile"
-                width="200"
-                style={{ objectFit: 'cover', height: '200px' }}
+                width="300"
+                style={{ objectFit: 'cover', height: '300px' }}
               />
               <div className="position-absolute top-0 start-0 translate-middle bg-warning rounded-circle p-2"></div>
               <div className="position-absolute bottom-0 end-0 bg-primary rounded-circle p-2" style={{ transform: 'translate(50%, 50%)' }}></div>

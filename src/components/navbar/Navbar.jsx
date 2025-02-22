@@ -47,11 +47,11 @@ export default function Navbar() {
                   Internships
                 </NavLink>
               </li>
-              <li className="nav-item mx-3">
+              {/* <li className="nav-item mx-3">
                 <NavLink to="/graduation-book" className="nav-link">
                   Graduation Book
                 </NavLink>
-              </li>
+              </li> */}
               {/* <li className="nav-item">
                   <Link className="nav-link" to="#footer">
                     Reach Me

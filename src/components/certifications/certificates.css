@@ -1,71 +1,72 @@
 .row>.col {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .component .certifications {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 .component .certifications ::-webkit-scrollbar {
-  scrollbar-width: 0;
+    scrollbar-width: 0;
 }
 
 .component .certifications .card {
-  width: 100%;
-  height: 30rem;
+    width: 100%;
+    height: 30rem;
+    z-index: 1;
 }
 
 .component .certifications .card .card-header,
 .component .certifications .card .card-footer {
-  height: 12% !important;
+    height: 12% !important;
 }
 
 .component .card {
-  background-color: rgb(40, 40, 40);
+    background-color: rgb(40, 40, 40);
 }
 
 .component .certifications .card img {
-  width: 100%;
-  cursor: pointer;
+    width: 100%;
+    cursor: pointer;
 }
 
 .component .certifications .card .card-header {
-  height: 20%;
-  font-weight: 700;
+    height: 20%;
+    font-weight: 700;
 }
 
 .component .certifications .card .card-body {
-  height: 60%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+    height: 60%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .component .certifications .card .card-footer {
-  height: 20%;
+    height: 20%;
 }
 
 .component .certifications .card .card-title {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .component .certifications .card .card-footer {
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
 .modal-content {
-  background-color: var(--bg-color) !important;
-  color: #fff !important;
-  text-align: center;
+    background-color: var(--bg-color) !important;
+    color: #fff !important;
+    text-align: center;
 }
 
 .modal-header button {
-  color: var(--text-color) !important;
-  background-color: var(--text-color) !important;
-  opacity: 1;
+    color: var(--text-color) !important;
+    background-color: var(--text-color) !important;
+    opacity: 1;
 }
 
 .modal-footer button {
-  color: var(--text-color) !important;
-  background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    background-color: var(--bg-color) !important;
 }

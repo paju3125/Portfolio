@@ -5,7 +5,7 @@
 
 .projects .card {
     position: relative;
-    height: 20em;
+    height: 25em;
     background-color: #f2f2f2;
     border-radius: 10px;
     display: flex;
@@ -23,6 +23,7 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 1;
 }
 
 .projects .card img {
@@ -35,7 +36,8 @@
 
 .projects .card,
 .certifications .card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+    background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -73,6 +75,9 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .projects .card__title {

@@ -1,61 +1,172 @@
-.carousel-control-next span,
-.carousel-control-prev span {
-    font-weight: 800;
-    color: var(--text-color) !important;
-    background-color: var(--bg-color);
-    border-radius: 6px;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.374);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    /* border: 2px solid rgba(26, 26, 26, 0.438); */
+#journey {
+    /* text-align: center; */
+    /* padding: 50px 20px; */
+    /* background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); */
+    /* color: white; */
+    /* font-family: 'Arial', sans-serif; */
+    position: relative;
+    min-height: 100vh;
+    user-select: none;
+    z-index: 1;
 }
 
-.carousel-caption {
-    padding: .5em !important;
-    color: var(--text-color) !important;
-    font-weight: 700;
-    background-color: var(--bg-color);
-    border-radius: 6px;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(5px);
-    /* border: 1px solid rgba(26, 26, 26, 0.438); */
+.container .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.carousel-caption h5 {
-    font-weight: 700;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-.journey img {
-    height: 550px;
+.carousel-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 400px; */
     width: 100%;
-    object-fit: cover
+    max-width: 800px;
+    /* background: rgba(0, 0, 0, 0.3); */
+    border-radius: 15px;
+    /* padding: 20px; */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
-.journey>div {
-    width: 80%;
+.main-carousel {
+    display: flex;
+    /* gap: 20px; */
+    width: 90%;
+    /* height: 100%; */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    /* overflow: hidden; */
 }
 
-@media only screen and (max-width: 1024px) {
-    .journey img {
-        height: 24rem;
-    }
-
-    .journey>div {
-        width: 100%;
-    }
+.carousel__item {
+    /* background: white; */
+    border-radius: 15px;
+    /* padding: 30px; */
+    text-align: center;
+    min-width: 100%;
+    height: 100%;
+    /* transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s; */
+    margin: auto;
+    /* margin-left: 2.5%;
+    margin-right: 2.5%; */
+    /* background: rgba(255, 255, 255, 0.3); */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
-    .journey img {
-        height: 16rem;
-    }
+.carousel__item.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s;
+    width: 100%;
+    cursor: auto;
+}
 
-    .carousel-caption h5 {
-        font-size: .6rem;
-    }
+.carousel__item-head {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #203a43;
+    margin-bottom: 10px;
+}
 
-    .carousel-caption {
-        font-size: 0.5rem;
-    }
+.carousel__item-head img {
+    object-fit: cover;
+    width: 100%;
+    pointer-events: none;
+}
+
+.carousel__item-body {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 80%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #203a43;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    margin-top: 60px;
+    padding: 10px;
+    width: 100%;
+    /* max-width: 600px; */
+    position: relative;
+    z-index: 1;
+    /* bottom: -70px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+
+.thumbnail {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.thumbnail img {
+    object-fit: contain;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.thumbnail:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.thumbnail.active {
+    background: #007bff;
+    color: white;
+    transform: scale(1.2);
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
 }
