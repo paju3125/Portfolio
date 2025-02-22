@@ -84,7 +84,8 @@ function App() {
     if (window.particlesJS) {
       window.particlesJS('particles-js', particlesConfig);
     }
-  }, []);
+    
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
