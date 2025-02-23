@@ -83,7 +83,7 @@
     /* justify-content: center; */
 }
 
-.carousel__item {
+.internship .carousel__item {
     min-width: 100%;
     flex-shrink: 0;
     padding: 1rem;
