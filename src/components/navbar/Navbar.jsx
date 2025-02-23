@@ -1,19 +1,38 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 export default function Navbar() {
+  const navbarCollapse = useRef(null);
+
+  const closeNavbar = () => {
+    if (window.innerWidth < 992) {
+      document.querySelector('.navbar-toggler')?.click();
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarCollapse.current && 
+          !navbarCollapse.current.contains(event.target) &&
+          !event.target.classList.contains('navbar-toggler') &&
+          window.innerWidth < 992 &&
+          document.querySelector('.navbar-collapse.show')) {
+        closeNavbar();
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
   return (
     <div className="nav-comp">
-      <nav
-        className="navbar navbar-expand-lg fixed-top px-2"
-        data-bs-theme="dark"
-      >
+      <nav className="navbar navbar-expand-lg fixed-top px-2" data-bs-theme="dark">
         <div className="container">
           <NavLink to="" className="navbar-brand">
             Prajval's Portfolio
           </NavLink>
-          {/* <a className="navbar-brand" href='/'>Prajval's Portfolio</a> */}
           <button
             className="navbar-toggler"
             type="button"
@@ -25,40 +44,30 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo03" ref={navbarCollapse}>
             <ul className="navbar-nav w-100 mb-2 mb-lg-0  justify-content-center">
               <li className="nav-item mx-3">
-                <NavLink to="/" className="nav-link ">
+                <NavLink to="/" className="nav-link" onClick={closeNavbar}>
                   Home
                 </NavLink>
               </li>
               <li className="nav-item mx-3">
-                <NavLink to="/certifications" className="nav-link">
+                <NavLink to="/certifications" className="nav-link" onClick={closeNavbar}>
                   Certifications
                 </NavLink>
               </li>
               <li className="nav-item mx-3">
-                <NavLink to="/projects" className="nav-link">
+                <NavLink to="/projects" className="nav-link" onClick={closeNavbar}>
                   Projects
                 </NavLink>
               </li>
               <li className="nav-item mx-3">
-                <NavLink to="/internships" className="nav-link">
+                <NavLink to="/internships" className="nav-link" onClick={closeNavbar}>
                   Internships
                 </NavLink>
               </li>
-              {/* <li className="nav-item mx-3">
-                <NavLink to="/graduation-book" className="nav-link">
-                  Graduation Book
-                </NavLink>
-              </li> */}
-              {/* <li className="nav-item">
-                  <Link className="nav-link" to="#footer">
-                    Reach Me
-                  </Link>
-                </li> */}
             </ul>
-            {/* <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <button
                 className="btn"
                 style={{
@@ -73,7 +82,7 @@ export default function Navbar() {
               >
                 Get Resume
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
       </nav>

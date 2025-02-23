@@ -15,28 +15,84 @@
   font-size: 0.9rem;
 } */
 
+.internship {
+    user-select: none;
+}
+
 .internship .row {
     height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    padding: 0 2rem;
 }
 
 .internship .card {
-    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .internship .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        min-width: unset;
+    }
+}
+
+.internship .carousel__item {
+    width: fit-content;
     height: 100%;
     border-radius: 20px;
     background: #f5f5f5;
     position: relative;
-    padding: 1.8rem;
-    border: 2px solid #c3c6ce;
+    /* padding: 1.8rem; */
+    /* border: 2px solid #c3c6ce; */
     transition: 0.5s ease-out;
     /* overflow-y: scroll; */
     /* From https://css.glass */
-    background: rgba(49, 48, 48, 0.6) !important;
+    /* background: rgba(49, 48, 48, 0.6) !important; */
+    background: transparent;
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 1;
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    /* backdrop-filter: blur(15px); */
+    /* -webkit-backdrop-filter: blur(5px); */
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    z-index: 2;
+}
+
+.internship .carousel-container {
+    margin-top: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.main-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    /* justify-content: center; */
+}
+
+.carousel__item {
+    min-width: 100%;
+    flex-shrink: 0;
+    padding: 1rem;
+}
+
+.internship .card {
+    background: transparent;
+    border: none;
+    box-shadow: 0 4px 12px rgba(219, 166, 34, 0.2);
 }
 
 .internship .card .img {
@@ -106,11 +162,452 @@
 /*Hover*/
 
 .internship .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(219, 166, 34, 0.2);
     border-color: var(--text-color);
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
 .internship .card:hover .card-button {
     transform: translate(-50%, 50%);
     opacity: 1;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.15rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0.75rem;
+    &:has(:focus-visible) {
+        outline: 3px solid rgb(17 21 36 / 50%);
+    }
+}
+
+.tabs-marker {
+    position: absolute;
+    z-index: -1;
+    background: var(--text-color);
+    top: 0.4rem;
+    bottom: 0.4rem;
+    left: 0;
+    border-radius: 0.4rem;
+    transition: 0.15s;
+}
+
+.tabs-tab {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    transition: all 150ms;
+    outline-width: 2px;
+    outline-offset: 2px;
+    padding: 0px;
+    border-width: 0;
+    color: inherit;
+    font-weight: 500;
+    padding: 1rem;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    &:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+    &.ui-active {
+        pointer-events: none;
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+.tabpanels {
+    /* background-color: white; */
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.tabpanel {
+    padding: 1rem 1.25rem;
+    /* text-align: center; */
+    /* min-height: 5rem; */
+    /* display: grid;
+    place-content: center; */
+    border-radius: 0.5rem;
+    &:focus-visible {
+        outline: 3px solid rgb(17 21 36 / 50%);
+    }
+    &.ui-enter-active {
+        transition: all 200ms;
+        transform-origin: center top;
+    }
+    &.ui-enter-from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+}
+
+.internship .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.internship .company-logo {
+    width: 120px;
+    height: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.internship .company-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.internship .logo-placeholder {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.internship .company-info {
+    flex: 1;
+}
+
+.internship .company-name {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.internship .job-title {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.internship .duration {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.internship .card-content {
+    margin: 1.5rem 0;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.internship .card-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.internship .card-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.internship .card-content::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+    border-radius: 3px;
+}
+
+.internship .responsibilities {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+}
+
+.internship .responsibilities li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.internship .responsibilities li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--text-color);
+}
+
+.internship .project-title {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 1.5rem 0 1rem 0;
+    padding: 0;
+}
+
+.internship .project-title:first-child {
+    margin-top: 0;
+}
+
+.internship .responsibilities br {
+    display: block;
+    margin: 0.5rem 0;
+    content: "";
+}
+
+.internship .responsibilities li:empty {
+    height: 0.8rem;
+    margin-bottom: 0.3rem;
+    padding: 0;
+}
+
+.internship .responsibilities li[class*="emoji"]::before {
+    content: none;
+}
+
+.internship .responsibilities li:first-child,
+.internship .responsibilities li[class*="emoji"],
+.internship .responsibilities li:matches([data-type="header"]) {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.8rem;
+    padding-left: 0;
+}
+
+.internship .responsibilities li:not(:first-child):not([class*="emoji"]):not(:empty):not([data-type="header"])::before {
+    content: "•";
+    color: var(--text-color);
+    position: absolute;
+    left: 0;
+}
+
+.internship .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.internship .tech-tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.internship .card-footer {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.internship .view-project {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.internship .view-project:hover {
+    background: var(--text-color);
+    color: #000;
+}
+
+.swipe-hint {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    animation: fadeInOut 2s infinite;
+    z-index: 10;
+}
+
+@keyframes fadeInOut {
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.carousel-indicators {
+    position: relative !important;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--text-color);
+    transform: scale(1.2);
+}
+
+
+/* ...existing styles... */
+
+.experience-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 800px;
+    transition: all 0.3s ease;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1;
+    animation: countUp 1s ease-out forwards;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .experience-stats {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .stat-item {
+        min-width: 100px;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+@keyframes countUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* ...rest of existing styles... */
+
+
+/* Make hint responsive */
+
+@media (max-width: 768px) {
+    .swipe-hint {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .internship .card {
+        padding: 1rem;
+    }
+    .internship .card-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .internship .company-logo {
+        width: 100px;
+        height: 40px;
+    }
+    .internship .job-title {
+        font-size: 1.1rem;
+    }
+    .internship .company-name {
+        font-size: 1rem;
+    }
+    .internship .duration {
+        font-size: 0.8rem;
+    }
+    .internship .card-content {
+        margin: 1rem 0;
+        max-height: 350px;
+    }
+    .internship .responsibilities li {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    .internship .tech-stack {
+        justify-content: center;
+    }
+    .internship .tech-tag {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.75rem;
+    }
+    .internship .card-footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .internship .row {
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+    .internship .card {
+        padding: 0.8rem;
+    }
 }
