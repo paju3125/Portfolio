@@ -31,7 +31,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg fixed-top px-2" data-bs-theme="dark">
         <div className="container">
           <NavLink to="" className="navbar-brand">
-            Prajval's Portfolio
+            Prajval
           </NavLink>
           <button
             className="navbar-toggler"
