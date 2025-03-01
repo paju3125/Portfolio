@@ -3,10 +3,8 @@ import React from 'react';
 export default function InternshipCard(props) {
     const formatDescription = (desc) => {
         if (desc.some(item => item.includes('🤖') || item.includes('🚀') || item.includes('🔬'))) {
-            let currentProject = '';
             return desc.map((item, idx) => {
                 if (item.includes('🤖') || item.includes('🚀') || item.includes('🔬')) {
-                    currentProject = item;
                     return (
                         <div key={idx} className="project-section">
                             <h4 className="project-title">{item}</h4>
