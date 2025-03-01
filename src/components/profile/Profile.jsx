@@ -74,16 +74,20 @@ export default function Profile() {
       >
         <div
           className="hero-container d-flex flex-column justify-content-center align-items-center"
-          data-aos="flip-left"
+          data-aos="fade-up"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
+          data-aos-duration="1500"
         >
-        <h3 className="text-secondary text-left w-100  mt-3 mt-md-1">Hey folks,</h3>
-          <h2 className="text-left d-inline-flex w-100"><p>I'm &nbsp;</p>Prajval Gandhi</h2>
+          <h3 className="text-secondary text-left w-100 mt-3 mt-md-1" data-aos="fade-right" data-aos-delay="200">
+            Hey folks<span className="wave-emoji">👋</span>
+          </h3>
+          <h2 className="text-left d-inline-flex w-100" data-aos="fade-right" data-aos-delay="400"><p>I'm &nbsp;</p>Prajval Gandhi</h2>
           <p
             className="typewrite"
             data-period="2000"
             data-type='[ "Software Engineer.", "ML Enthusiat.", "React Developer.","Full Stack Developer" ]'
+            data-aos="fade-up"
+            data-aos-delay="600"
           ></p>
         </div>
       </section>

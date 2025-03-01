@@ -6,3 +6,12 @@
     left: 0;
     z-index: -1;
 }
+
+section {
+    padding: 1rem 0rem 4rem 0rem;
+}
+
+section .container {
+    position: relative;
+    z-index: 1;
+}

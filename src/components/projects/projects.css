@@ -3,35 +3,31 @@
     border-bottom: 5px solid #FB8122;
 } */
 
+.projects {
+    position: relative;
+    z-index: 5;
+}
+
 .projects .card {
     position: relative;
     height: 25em;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    perspective: 1000px;
-    box-shadow: 0 0 0 5px #ffffff80;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    transform: perspective(1000px) rotateX(10deg);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(255, 255, 255, 0.05);
     margin: 1em !important;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 1;
 }
 
 .projects .card img {
     /* width: 48px; */
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     fill: #333;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 24px;
 }
 
 .projects .card,
@@ -48,11 +44,12 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
 }
 
 .projects .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    transform: perspective(1000px) rotateX(0deg) scale(1.02);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4), 0 3px 10px rgba(255, 255, 255, 0.1);
 }
 
 .projects .card__content {
@@ -61,33 +58,36 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 10%;
     font-weight: 600;
     box-sizing: border-box;
-    background-color: var(--bg-color);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform-origin: top;
     transform: rotateX(-90deg);
-    transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* From https://css.glass */
-    /* background: rgba(213, 211, 211, 0.8); */
-    border-radius: 16px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .projects .card__title {
-    font-size: 1.2em !important;
+    font-size: 1.5em !important;
     text-wrap: pretty;
-    color: var(--text-color) !important;
+    background: linear-gradient(45deg, rgb(236, 197, 106), var(--text-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
 }
 
 .projects .card:hover .card__content {
-    transform: rotateX(0deg);
+    transform: rotateX(0) translateZ(1px);
 }
 
 .projects .card__title {
@@ -126,6 +126,7 @@
     max-height: 16vh;
     text-align: justify;
     padding-right: .5rem;
+    text-shadow: 0 5px 8px rgba(231, 201, 129, 0.2);
 }
 
 .projects .card-footer {

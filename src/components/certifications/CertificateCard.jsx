@@ -18,9 +18,21 @@ export default function CertificateCard({ params }) {
       <div
         className="card text-light"
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
+        data-aos-delay={Math.random() * 300}
       >
-        <div className="card-header text-center">{params.certificate_name}</div>
+        <div className="card-header text-center">
+          <span style={{
+            background: 'linear-gradient(45deg, rgb(231 201 129), var(--text-color))',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            fontWeight: '700',
+            letterSpacing: '0.5px'
+          }}>
+            {params.certificate_name}
+          </span>
+        </div>
         <div className="card-body">
           <img
             src={params.certificate}
@@ -33,6 +45,12 @@ export default function CertificateCard({ params }) {
                 params.organization
               )
             }
+            style={{
+              transition: 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
+              transform: 'translateZ(0)',
+            }}
+            onMouseEnter={(e) => e.target.style.transform = 'translateZ(30px)'}
+            onMouseLeave={(e) => e.target.style.transform = 'translateZ(0)'}
           />
         </div>
         <h5 className="card-footer text-center">{params.organization}</h5>

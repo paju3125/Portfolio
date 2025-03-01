@@ -32,26 +32,45 @@ export default function Journey() {
     return (
         <section id="journey">
             <div className="container">
-                <h1 className="text-light heading" data-aos="fade-up" data-aos-duration="300">
+                <h1 className="text-light heading" 
+                    data-aos="fade-up" 
+                    data-aos-duration="800">
                     <span>Projects</span>
                 </h1>
             </div>
-            <div className="wrapper">
-                <div
-                    className="carousel-container"
+            <div className="wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div className="carousel-container"
                     {...handlers}
                 >
                     <div className="main-carousel projects" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {projects.map((project, index) => (
-                            <div className="carousel__item" key={index}>
-                                <ProjectCard img={project.thumbnail} title={project.title} desc={project.description} techs={project.techs} link={project.link} />
+                            <div 
+                                className={`carousel__item ${index === currentIndex ? 'active' : ''}`}
+                                key={index}
+                                style={{
+                                    transform: index === currentIndex ? 
+                                        'translateZ(50px)' : 'translateZ(0) scale(0.95)'
+                                }}>
+                                <ProjectCard 
+                                    img={project.thumbnail} 
+                                    title={project.title} 
+                                    desc={project.description} 
+                                    techs={project.techs} 
+                                    link={project.link} 
+                                />
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="thumbnail-container">
+                <div className="thumbnail-container" data-aos="fade-up" data-aos-delay="400">
                     {projects.map((project, index) => (
-                        <div key={index} className={`thumbnail ${index === currentIndex ? "active" : ""}`} onClick={() => selectProject(index)}>
+                        <div 
+                            key={index} 
+                            className={`thumbnail ${index === currentIndex ? "active" : ""}`} 
+                            onClick={() => selectProject(index)}
+                            style={{
+                                transform: `translateZ(${index === currentIndex ? 20 : 0}px)`
+                            }}>
                             <img src={project.thumbnail} alt="" />
                         </div>
                     ))}

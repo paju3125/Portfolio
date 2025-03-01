@@ -1,5 +1,5 @@
 .component {
-    margin-top: 15vh;
+    /* margin-top: 15vh; */
     min-height: 85vh;
 }
 
@@ -119,7 +119,7 @@
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    background-color: #212529;
+    background-color: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -141,4 +141,223 @@
 
 .nav-link {
     font-weight: 650 !important;
+}
+
+
+/* Reset existing styles */
+
+.nav-comp,
+.navbar {
+    display: none;
+}
+
+
+/* New side navigation styles */
+
+.side-nav-container {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.menu-trigger {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    z-index: 1002;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.menu-trigger:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hamburger {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text-color);
+    margin: 24px auto;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -6px;
+}
+
+.hamburger::after {
+    bottom: -6px;
+}
+
+.hamburger.active {
+    background: transparent;
+}
+
+.hamburger.active::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger.active::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.side-nav {
+    position: fixed;
+    left: -300px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: auto;
+    max-height: 90vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 0 20px 20px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001;
+}
+
+.side-nav.open {
+    left: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.nav-content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav-header {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.nav-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, rgb(231 201 129), var(--text-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.nav-links li {
+    margin: 1rem 0;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    transform-origin: left;
+    display: block;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+}
+
+.nav-footer {
+    margin-top: auto;
+}
+
+.resume-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, rgb(231 201 129), var(--text-color));
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.side-nav-container .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* width: 100vw; */
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.brand-icon {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 1.2rem;
+    animation: sparkle 1.5s infinite;
+    transform-origin: center;
+    color: black;
+}
+
+@keyframes sparkle {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
 }

@@ -14,7 +14,7 @@ export default function ProjectCard(props) {
         <p className="card__title">{props.title}</p>
         <p className="card__description" dangerouslySetInnerHTML={{ __html: props.desc }}></p>
 
-        <p className="card-footer mt-1">
+        <p className="card-footer mt-1 p-0 pt-3">
           <span>
             {props.techs.map((tech, index) => (
               <span key={index} className={`badge bg-${tech[1]} p-1 m-1`} > {tech[0]}</span>

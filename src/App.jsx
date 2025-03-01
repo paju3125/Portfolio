@@ -11,6 +11,7 @@ import Internships from "./components/internships/Internships";
 import Projects from "./components/projects/Projects";
 import Error from "./components/Error";
 import GraduationBook from "./components/GraduationBook";
+import ScrollToTop from "./components/ScrollToTop";
 // import Particle from "./components/Particle";
 
 function App() {
@@ -95,12 +96,13 @@ function App() {
       ) : (
         <>
           <BrowserRouter>
+          <ScrollToTop/>
             <Navbar />
             <Routes>
               <Route exact path="" element={<Profile />} />
               <Route path="certifications" element={<Certifications />} />
               <Route path="projects" element={<Projects />} />
-              <Route path="internships" element={<Internships />} />
+              <Route path="experience" element={<Internships />} />
               <Route path="graduation-book" element={<GraduationBook />} />
               <Route path="*" element={<Error />} />
             </Routes>

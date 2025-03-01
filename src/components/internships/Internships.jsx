@@ -16,7 +16,7 @@ const internshipsData = [
     techs: [["Flask", "primary"], ["ReactJS", "success"], ["NLP", "warning"], 
             ["SQL", "info"], ["HTML", "danger"], ["CSS", "secondary"]],
     link: null,
-    duration: "Jan 2024 - present"
+    duration: "Jan 2024 - Jun 2024"
   },
   {
     logo: null,
@@ -187,104 +187,118 @@ export default function Internships() {
   });
 
   return (
-    <div className="component container">
-      <h2 className="text-light heading" data-aos="fade-up" data-aos-duration="500">
+    <section className="component">
+    <div className="container">
+
+      <h2 className="text-light heading" data-aos="fade-up">
         <span>Experience</span>
       </h2>
 
-      <div className="experience-stats mb-4" data-aos="fade-up" data-aos-duration="500">
-        {(isFirstTab ? professionalStats : internshipStats).map((stat, index) => (
-          <div 
-            className="stat-item" 
-            key={index}
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-          >
-            <h3 className="stat-number">{stat.number}</h3>
-            <p className="stat-label">{stat.label}</p>
+      <div className="experience-container">
+        <div className="experience-main">
+          <div className="tabs-section">
+            <div data-ui-tablist="navigation" className="tabs">
+              <div className="tabs-marker" ref={markerRef}></div>
+              <button 
+                className={`tabs-tab ${isFirstTab ? 'ui-active' : ''}`}
+                onClick={handleTabClick}
+              >Professional Experience</button>
+              <button 
+                className={`tabs-tab ${!isFirstTab ? 'ui-active' : ''}`}
+                onClick={handleTabClick}
+              >Internship</button>
+            </div>
           </div>
-        ))}
-      </div>
 
-      <div>
-        <div data-ui-tablist="navigation" className="tabs">
-          <div className="tabs-marker" ref={markerRef}></div>
-          <button 
-            className={`tabs-tab ${isFirstTab ? 'ui-active' : ''}`}
-            onClick={handleTabClick}
-          >Professional Experience</button>
-          <button 
-            className={`tabs-tab ${!isFirstTab ? 'ui-active' : ''}`}
-            onClick={handleTabClick}
-          >Internship</button>
-        </div>
-        <div className="tabpanels">
-          <div className={`tabpanel ${isFirstTab ? 'ui-enter-active' : ''}`} 
-               hidden={!isFirstTab}>
-            <div className="internship d-flex justify-content-center mb-5">
-              <div className="carousel-container" {...expHandlers}>
-              {experienceData.length > 1 &&
-                <div className="swipe-hint">
-                  <span>← Swipe to explore more →</span>
+          <div className="tabpanels">
+            <div className={`tabpanel ${isFirstTab ? 'ui-enter-active' : ''}`} 
+                 hidden={!isFirstTab}>
+              <div className="internship d-flex justify-content-center mb-5">
+                <div className="carousel-container" {...expHandlers}>
+                {experienceData.length > 1 &&
+                  <div className="swipe-hint">
+                    <span>← Swipe to explore more →</span>
+                  </div>
+                }
+                  <div 
+                    className="main-carousel"
+                    style={{ transform: `translateX(-${expIndex * 100}%)` }}
+                  >
+                    {experienceData.map((experience, index) => (
+                      <div className="carousel__item py-4" key={index}>
+                        <InternshipCard {...experience} />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="carousel-indicators">
+                    {experienceData.map((_, index) => (
+                      <button
+                        key={index}
+                        className={`indicator ${index === expIndex ? 'active' : ''}`}
+                        onClick={() => setExpIndex(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
-              }
-                <div 
-                  className="main-carousel"
-                  style={{ transform: `translateX(-${expIndex * 100}%)` }}
-                >
-                  {experienceData.map((experience, index) => (
-                    <div className="carousel__item py-4" key={index}>
-                      <InternshipCard {...experience} />
-                    </div>
-                  ))}
-                </div>
-                <div className="carousel-indicators">
-                  {experienceData.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`indicator ${index === expIndex ? 'active' : ''}`}
-                      onClick={() => setExpIndex(index)}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
+              </div>
+            </div>
+            <div className={`tabpanel ${!isFirstTab ? 'ui-enter-active' : ''}`}
+                 hidden={isFirstTab}>
+              <div className="internship d-flex justify-content-center mb-5">
+                <div className="carousel-container" {...internHandlers}>
+                  {internshipsData.length > 1 &&
+                  <div className="swipe-hint">
+                    <span>← Swipe to explore more →</span>
+                  </div>
+                }
+                  <div 
+                    className="main-carousel"
+                    style={{ transform: `translateX(-${internIndex * 100}%)` }}
+                  >
+                    {internshipsData.map((internship, index) => (
+                      <div className="carousel__item py-4" key={index}>
+                        <InternshipCard {...internship} />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="carousel-indicators">
+                    {internshipsData.map((_, index) => (
+                      <button
+                        key={index}
+                        className={`indicator ${index === internIndex ? 'active' : ''}`}
+                        onClick={() => setInternIndex(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className={`tabpanel ${!isFirstTab ? 'ui-enter-active' : ''}`}
-               hidden={isFirstTab}>
-            <div className="internship d-flex justify-content-center mb-5">
-              <div className="carousel-container" {...internHandlers}>
-                {internshipsData.length > 1 &&
-                <div className="swipe-hint">
-                  <span>← Swipe to explore more →</span>
-                </div>
-              }
-                <div 
-                  className="main-carousel"
-                  style={{ transform: `translateX(-${internIndex * 100}%)` }}
-                >
-                  {internshipsData.map((internship, index) => (
-                    <div className="carousel__item py-4" key={index}>
-                      <InternshipCard {...internship} />
-                    </div>
-                  ))}
-                </div>
-                <div className="carousel-indicators">
-                  {internshipsData.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`indicator ${index === internIndex ? 'active' : ''}`}
-                      onClick={() => setInternIndex(index)}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
-                </div>
+        </div>
+
+        <div className="experience-stats my-lg-5" data-aos="fade-left">
+          <h3 className="stats-title">Experience Overview</h3>
+          <div className="experience-stats-grid">
+
+          {(isFirstTab ? professionalStats : internshipStats).map((stat, index) => (
+            <div 
+              className="stat-item" 
+              key={index}
+              data-aos="fade-left"
+              data-aos-delay={index * 100}
+            >
+              <div className="stat-content">
+                <div className="stat-number">{stat.number}</div>
+                <div className="stat-label">{stat.label}</div>
               </div>
             </div>
+          ))}
           </div>
         </div>
       </div>
     </div>
+    </section>
   );
 }

@@ -4,7 +4,8 @@ import CertificateCard from "./CertificateCard";
 
 export default function Certifications() {
   return (
-    <div className="component container mb-5">
+    <section className="component">
+    <div className="container">
       <div className="certifications">
         <h2
           className="text-light heading"
@@ -85,6 +86,7 @@ export default function Certifications() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </section>
   );
 }

@@ -6,6 +6,7 @@ body {
 :root {
     --text-color: rgb(219, 166, 34);
     --bg-color: #181818;
+    --text-color-rgb: 219, 166, 34;
 }
 
 body {
