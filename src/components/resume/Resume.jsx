@@ -34,7 +34,7 @@ export default function Resume() {
             <h3 className="resume-title">Education</h3>
             <div className="resume-item">
               <h4>B.Tech. - Information Technology</h4>
-              <h5>2020 - 2024</h5>
+              <h5>2021 - 2024</h5>
               <p className='name-title'><em>MIT Academy of Engineering, Pune</em></p>
               <p>CGPA: 9.37 / 10</p>
             </div>
