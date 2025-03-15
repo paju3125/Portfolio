@@ -1,66 +1,913 @@
+/* Modern developer-themed resume styling */
+
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #252526;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8;
+    --accent-secondary: #a78bfa;
+    --success-color: #4ade80;
+    --error-color: #f87171;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --folder-color: #e8c17d;
+    --file-color: #80dbff;
+    --line-number-color: #606060;
+}
+
 #resume {
     position: relative;
     z-index: 1;
 }
 
-.resume .resume-title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #fff;
+
+/* Editor header styling */
+
+#resume .editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
 }
 
-.resume .resume-item {
-    padding: 0 0 20px 20px;
-    margin-top: -2px;
-    border-left: 2px solid var(--text-color);
+.workspace-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.workspace-path {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: 'Fira Code', monospace;
+}
+
+.workspace-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-button:hover {
+    background: rgba(56, 189, 248, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover {
+    background: rgba(56, 189, 248, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Code editor layout */
+
+.code-editor {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    min-height: 600px;
+}
+
+
+/* Sidebar styling */
+
+.editor-sidebar {
+    background: var(--bg-tertiary);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.explorer-panel {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.panel-header {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.file-tree {
+    padding: 8px 0;
+}
+
+.folder {
+    margin-bottom: 6px;
+}
+
+.folder-name {
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.folder-name i {
+    margin-right: 6px;
+}
+
+.folder-icon {
+    color: var(--folder-color);
+}
+
+.file-list {
+    padding-left: 24px;
+}
+
+.file {
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    margin: 2px 0;
+    transition: all 0.2s ease;
+}
+
+.file.active {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+}
+
+.file:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.file-icon {
+    margin-right: 6px;
+    width: 16px;
+    color: var(--file-color);
+}
+
+
+/* Terminal panel styling */
+
+.terminal-panel {
+    height: 180px;
+    background: #1a1a1a;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.terminal-content {
+    padding: 8px 12px;
+    height: calc(100% - 32px);
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+.terminal-line {
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.terminal-line.command {
+    color: #e4e4e4;
+}
+
+.terminal-line.output {
+    color: #b9bbbe;
+}
+
+.terminal-line.success {
+    color: var(--success-color);
+}
+
+.terminal-line.error {
+    color: var(--error-color);
+}
+
+.prompt {
+    color: #3cdf3c;
+    margin-right: 8px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: #fff;
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Editor content styling */
+
+.editor-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.editor-tabs {
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.editor-tab {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
     position: relative;
 }
 
-.resume .resume-item::before {
+.editor-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+
+/* Editor body with different layout options */
+
+#resume .editor-body {
+    max-height: 600px;
+    flex: 1;
+    padding: 16px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    display: flex;
+    overflow: hidden;
+    /* Hide scrollbars by default */
+}
+
+.editor-body.scrollable {
+    overflow-y: auto;
+    /* Enable scrolling for large content */
+}
+
+.editor-body.full-height {
+    overflow: hidden;
+    /* No scroll for smaller content */
+}
+
+
+/* JSON content styling with dynamic line numbers */
+
+.json-content {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+}
+
+.json-content pre {
+    margin: 0;
+    white-space: pre-wrap;
+    position: relative;
+    width: 100%;
+    color: var(--text-primary);
+    padding: 0;
+}
+
+.json-content pre.with-line-numbers {
+    padding-left: 3rem;
+}
+
+
+/* Dynamic line numbers based on content */
+
+.json-content pre.with-line-numbers::before {
     content: "";
     position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50px;
-    left: -9px;
+    left: 0;
     top: 0;
-    background: #fff;
-    border: 2px solid var(--text-color);
+    width: 2rem;
+    text-align: right;
+    color: var(--line-number-color);
+    white-space: pre;
+    padding-right: 0.5rem;
+    border-right: 1px solid var(--border-color);
+    user-select: none;
+    counter-reset: line;
 }
 
-.resume .resume-item h4 {
-    line-height: 18px;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-    margin-bottom: 10px;
+.json-content pre.with-line-numbers::before {
+    content: "";
+    white-space: pre-line;
 }
 
-.resume .resume-item h5,
-.internship h5 {
-    font-size: 16px;
-    background: #f8f5f4;
-    padding: 5px 15px;
+
+/* Line numbers generated using CSS counters */
+
+.json-content pre.with-line-numbers {
+    counter-reset: line;
+}
+
+.json-content pre.with-line-numbers::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    border-right: 1px solid var(--border-color);
+}
+
+.json-content pre.with-line-numbers>span {
     display: inline-block;
+    width: 100%;
+    counter-increment: line;
+}
+
+.json-content pre.with-line-numbers>span::before {
+    content: counter(line);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    text-align: right;
+    color: var(--line-number-color);
+    padding-right: 0.5rem;
+}
+
+
+/* Markdown styling */
+
+.markdown-content {
+    width: 100%;
+    height: 100%;
+}
+
+.markdown-body {
+    line-height: 1.6;
+}
+
+.markdown-body h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.markdown-body h2 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.8rem;
+    color: var(--accent-secondary);
+}
+
+.markdown-body blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+    margin-left: 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.markdown-body ul {
+    padding-left: 1.5rem;
+}
+
+.markdown-body li {
+    margin-bottom: 0.5rem;
+}
+
+.markdown-body {
+    color: var(--text-primary);
+}
+
+.markdown-body strong {
+    color: var(--accent-secondary);
     font-weight: 600;
-    margin-bottom: 10px;
-    color: #000;
-    border-radius: 15px;
 }
 
-.resume .resume-item ul {
-    padding-left: 20px;
-    text-align: left;
+
+/* Line number generator using ::after for individual lines */
+
+.json-content pre.with-line-numbers::after {
+    content: attr(data-line-numbers);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    text-align: right;
+    color: var(--line-number-color);
+    white-space: pre;
+    padding-right: 0.5rem;
+    pointer-events: none;
 }
 
-.resume .resume-item ul li {
-    padding-bottom: 10px;
+
+/* Generate line numbers for each JSON file */
+
+.json-content pre.with-line-numbers {
+    counter-reset: line;
 }
 
-.highlight {
-    color: var(--text-color);
+.json-content pre.with-line-numbers::before {
+    width: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--bg-tertiary);
+    border-right: 1px solid var(--border-color);
+    z-index: 0;
+    content: "";
+}
+
+
+/* Create line numbers using JS-generated content */
+
+.line-number {
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    text-align: right;
+    color: var(--line-number-color);
+    padding-right: 0.5rem;
+    user-select: none;
+}
+
+
+/* Efficient line number implementation */
+
+.json-content pre {
+    counter-reset: line;
+}
+
+.json-content pre.with-line-numbers {
+    position: relative;
+}
+
+.json-content pre.with-line-numbers::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    border-right: 1px solid var(--border-color);
+    text-align: right;
+    padding: 0 0.5rem 0 0;
+}
+
+
+/* Generate line numbers on the fly */
+
+.json-content pre.with-line-numbers::before {
+    counter-reset: line;
+    content: counter(line);
+}
+
+.json-content pre.with-line-numbers>br {
+    counter-increment: line;
+}
+
+.json-content pre.with-line-numbers>br::before {
+    content: counter(line);
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    color: var(--line-number-color);
+}
+
+
+/* Status bar styling */
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 6px 16px;
+    background: var(--bg-tertiary);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.line-info {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+}
+
+
+/* Entry animations */
+
+.resume-section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 992px) {
+    .code-editor {
+        grid-template-columns: 1fr;
+    }
+    .editor-sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .workspace-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .workspace-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .line-info {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .resume-section {
+        padding: 3rem 0;
+    }
+    .workspace-label {
+        font-size: 1.2rem;
+    }
+    .editor-body {
+        font-size: 0.8rem;
+        padding: 12px;
+    }
+    #resume .editor-header {
+        display: block;
+    }
+}
+
+
+/* JSON content styling with proper line numbers */
+
+.code-container {
+    width: 100%;
+    font-family: 'Fira Code', monospace;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.code-line {
+    position: relative;
+    padding-left: 3rem;
+    white-space: pre;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.line-number {
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    color: var(--line-number-color);
+    text-align: right;
+    padding-right: 0.5rem;
+    user-select: none;
+    opacity: 0.6;
+}
+
+.line-content {
+    color: var(--text-primary);
+}
+
+
+/* Add syntax highlighting for JSON */
+
+.line-content .string {
+    color: #ce9178;
+}
+
+.line-content .number {
+    color: #b5cea8;
+}
+
+.line-content .boolean {
+    color: #569cd6;
+}
+
+.line-content .null {
+    color: #569cd6;
+}
+
+.line-content .key {
+    color: #9cdcfe;
+}
+
+
+/* Modern scrollbar styling */
+
+
+/* Custom scrollbar styling */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(30, 30, 40, 0.2);
+    border-radius: 4px;
+    margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.5);
+    border-radius: 4px;
+    border: 2px solid rgba(30, 30, 40, 0.8);
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 189, 248, 0.7);
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+/* Terminal-specific scrollbar */
+
+.terminal-content::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.terminal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.terminal-content::-webkit-scrollbar-thumb {
+    background: #3cdf3c;
+    opacity: 0.6;
+    border: none;
+}
+
+.terminal-content::-webkit-scrollbar-thumb:hover {
+    background: #4ade80;
+    opacity: 1;
+}
+
+
+/* Code container scrollbar styling */
+
+.json-content::-webkit-scrollbar,
+.code-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.json-content::-webkit-scrollbar-track,
+.code-container::-webkit-scrollbar-track {
+    background: rgba(20, 20, 30, 0.2);
+    border-radius: 4px;
+}
+
+.json-content::-webkit-scrollbar-thumb,
+.code-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--accent-color), var(--accent-secondary));
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.json-content::-webkit-scrollbar-thumb:hover,
+.code-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #64D2FF, #a78bfa);
+}
+
+
+/* Firefox scrollbar styling */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) rgba(30, 30, 40, 0.2);
+}
+
+
+/* Editor body scrollbar animation */
+
+.editor-body.scrollable:hover::-webkit-scrollbar-thumb {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        background: rgba(56, 189, 248, 0.5);
+    }
+    50% {
+        background: rgba(56, 189, 248, 0.8);
+    }
+}
+
+
+/* Remove any existing boring scrollbars */
+
+
+/* JSON content scrollbars */
+
+.json-content {
+    /* ...existing code... */
+    scrollbar-gutter: stable;
+}
+
+
+/* Make scrollbars invisible by default but still functional */
+
+.editor-body,
+.terminal-content,
+.json-content,
+.code-container,
+.explorer-panel {
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.editor-body::-webkit-scrollbar,
+.terminal-content::-webkit-scrollbar,
+.json-content::-webkit-scrollbar,
+.code-container::-webkit-scrollbar,
+.explorer-panel::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* Show scrollbars on hover or while scrolling (using a class we'll add with JS) */
+
+.editor-body:hover::-webkit-scrollbar,
+.terminal-content:hover::-webkit-scrollbar,
+.json-content:hover::-webkit-scrollbar,
+.code-container:hover::-webkit-scrollbar,
+.explorer-panel:hover::-webkit-scrollbar,
+.scrolling::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+}
+
+
+/* Minimal track style that's always present but nearly invisible */
+
+.editor-body::-webkit-scrollbar-track,
+.terminal-content::-webkit-scrollbar-track,
+.json-content::-webkit-scrollbar-track,
+.code-container::-webkit-scrollbar-track,
+.explorer-panel::-webkit-scrollbar-track {
+    background: rgba(30, 30, 40, 0.05);
+    border-radius: 4px;
+}
+
+
+/* Scrollbar thumb styling */
+
+.editor-body:hover::-webkit-scrollbar-thumb,
+.terminal-content:hover::-webkit-scrollbar-thumb,
+.json-content:hover::-webkit-scrollbar-thumb,
+.code-container:hover::-webkit-scrollbar-thumb,
+.explorer-panel:hover::-webkit-scrollbar-thumb,
+.scrolling::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.5);
+    border-radius: 4px;
+    border: 2px solid rgba(30, 30, 40, 0.8);
+}
+
+
+/* Specific style for terminal scrollbar */
+
+.terminal-content:hover::-webkit-scrollbar-thumb,
+.terminal-content.scrolling::-webkit-scrollbar-thumb {
+    background: #3cdf3c;
+    opacity: 0.6;
+}
+
+
+/* Firefox scrollbar auto-hiding */
+
+@supports (scrollbar-width: auto) {
+    .editor-body,
+    .terminal-content,
+    .json-content,
+    .code-container,
+    .explorer-panel {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        transition: scrollbar-color 0.3s ease;
+    }
+    .editor-body:hover,
+    .terminal-content:hover,
+    .json-content:hover,
+    .code-container:hover,
+    .explorer-panel:hover {
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-color) rgba(30, 30, 40, 0.2);
+    }
+    .terminal-content:hover {
+        scrollbar-color: #3cdf3c rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+/* Animation for scrollbar appearance */
+
+@keyframes fadeInScrollbar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.editor-body:hover::-webkit-scrollbar-thumb,
+.terminal-content:hover::-webkit-scrollbar-thumb,
+.json-content:hover::-webkit-scrollbar-thumb,
+.code-container:hover::-webkit-scrollbar-thumb,
+.explorer-panel:hover::-webkit-scrollbar-thumb {
+    animation: fadeInScrollbar 0.3s ease forwards;
 }

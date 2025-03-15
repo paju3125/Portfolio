@@ -1,304 +1,375 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import AOS from "aos";
-import "./internship.css"
-import InternshipCard from "./InternshipCard";
-import { useSwipeable } from "react-swipeable";
+import "./internship.css";
 
-const internshipsData = [
+// Experience data
+const experienceData = [
   {
+    id: "exp-1",
+    company: "Ignite Solutions",
+    title: "Software Engineer",
+    period: "Jul 2024 - Present",
     logo: "/ignite_logo.png",
-    companyName: "Ignite Solutions",
-    title: "Software Engineer Intern",
-    desc: [
-      "Serving as a Backend Developer for the development of an Onboarding Automation App.",
-      "Utilizing Django, Django-Rest-Framework for creating secure and efficient rest APIs."
+    projects: [
+      {
+        name: "AI Chatbot",
+        tasks: [
+          "Designed and implemented a chatbot using React and Bootstrap",
+          "Integrated external AI endpoints and internal databases",
+          "Utilized Markdown for rendering user-friendly output"
+        ]
+      },
+      {
+        name: "Chaturji - AI-Based Companion",
+        tasks: [
+          "Built and improved browser extension and PWA interface",
+          "Implemented real-time chat and knowledge base features",
+          "Optimized routing reducing load time by 55%",
+          "Maintained web vital standards for responsive UX"
+        ]
+      },
+      {
+        name: "Pathology Web Platform",
+        tasks: [
+          "Developed UI using Next.js and React for medical professionals",
+          "Designed interface for high-resolution pathology slides",
+          "Implemented SSR and optimized data fetching"
+        ]
+      }
     ],
-    techs: [["Flask", "primary"], ["ReactJS", "success"], ["NLP", "warning"], 
-            ["SQL", "info"], ["HTML", "danger"], ["CSS", "secondary"]],
-    link: null,
-    duration: "Jan 2024 - Jun 2024"
-  },
-  {
-    logo: null,
-    companyName: "Result Software Development",
-    title: "Lead Coordinator",
-    desc: [
-      'Led intern team in completing "Automation in Recruitment Process" project.',
-      "Utilized Flask, ReactJS, and Machine Learning for efficient project execution."
-    ],
-    techs: [["Flask", "primary"], ["ReactJS", "success"], ["NLP", "warning"], 
-            ["SQL", "info"], ["HTML", "danger"], ["CSS", "secondary"]],
-    link: "https://github.com/answersindustries/recruitment-automation-system/tree/recruitment-automation-v1.0",
-    duration: "Jun 2023 - Aug 2023"
-  },
-  {
-    logo: "/pixelstatLogo.jpg",
-    companyName: "PixelStat eSolutions Development",
-    title: "Full Stack Intern",
-    desc: [
-      'Engineered a web app for "AKHIL BHARATIYA MARATHI CHITRAPAT MAHAMANDAL".',
-      "Enhanced data management, business logic, and reporting using Flask, SQL, and JavaScript."
-    ],
-    techs: [["Flask", "primary"], ["MySQL", "success"], ["JavaScript", "warning"], 
-            ["Bootstrap", "info"], ["HTML", "danger"], ["CSS", "secondary"]],
-    link: "https://github.com/paju3125/PixelStat_ERP",
-    duration: "Jul 2022 - Sept 2022"
-  },
-  {
-    logo: "/rbtechLogo.png",
-    companyName: "R B Tech Services",
-    title: "Trainee PHP Developer",
-    desc: [
-      'Engineered a web-based "Notice Management System" using PHP language.',
-      "Acquired proficiency in PHP programming through hands-on experience on a live project during the internship."
-    ],
-    techs: [["PHP", "primary"], ["SQL", "success"], ["JavaScript", "warning"], 
-            ["Bootstrap", "info"], ["HTML", "danger"], ["CSS", "secondary"]],
-    link: null,
-    duration: "Jun 2020 - Aug 2020"
+    technologies: [
+      "React", "Next.js", "JavaScript", "Python", "Flask", "AWS", "HTML", "CSS"
+    ]
   }
 ];
 
-const experienceData = [
+// Internship data
+const internshipData = [
   {
+    id: "intern-1",
+    company: "Ignite Solutions",
+    title: "Software Engineer Intern",
+    period: "Jan 2024 - Jun 2024",
     logo: "/ignite_logo.png",
-    companyName: "Ignite Solutions",
-    title: "Software Engineer",
-    desc: [
-      "🤖 AI Chatbot (Customer Confidential)",
-      "Designed and implemented a chatbot using React and Bootstrap",
-      "Integrated external AI endpoints and internal databases",
-      "Utilized Markdown for rendering user-friendly output",
-      "🚀 Chaturji - AI-Based Companion",
-      "Built and improved browser extension and PWA interface",
-      "Implemented real-time chat and knowledge base features",
-      "Optimized routing reducing load time by 55%",
-      "Maintained web vital standards for responsive UX",
-      "",
-      "🔬 Pathology Web Platform (Customer Confidential",
-      "Developed UI using Next.js and React for medical professionals",
-      "Designed interface for high-resolution pathology slides",
-      "Implemented SSR and optimized data fetching",
+    description: [
+      "Managed backend for 'Onboarding Automation' application using Django and MySQL",
+      "Integrated GPT-4 and Gemini 1.5 via APIs for LLM enhancements"
     ],
-    techs: [
-      ["ReactJS", "primary"], 
-      ["NextJS", ""], 
-      ["Javascript", "success"], 
-      ["Python", "warning"],
-      ["Flask", "info"],
-      ["AWS", ""], 
-      ["HTML", "danger"], 
-      ["CSS", "secondary"]
+    technologies: [
+      "Django", "MySQL", "Python", "REST API", "GPT-4", "Gemini"
     ],
-    link: null,
-    duration: "Jul 2024 - present"
-  },
-]
-
-const professionalStats = [
-  {
-    number: "1+",
-    label: "Years Professional Experience"
+    repoLink: null
   },
   {
-    number: "3",
-    label: "Major Projects"
+    id: "intern-2",
+    company: "Result Software Development",
+    title: "Lead Coordinator",
+    period: "Jun 2023 - Aug 2023",
+    logo: null,
+    description: [
+      "Led intern team in completing 'Automation in Recruitment Process' project",
+      "Utilized Flask, ReactJS, and Machine Learning for efficient project execution"
+    ],
+    technologies: [
+      "Flask", "ReactJS", "NLP", "SQL", "HTML", "CSS"
+    ],
+    repoLink: "https://github.com/answersindustries/recruitment-automation-system/tree/recruitment-automation-v1.0"
   },
   {
-    number: "8+",
-    label: "Technologies"
+    id: "intern-3",
+    company: "PixelStat eSolutions",
+    title: "Full Stack Intern",
+    period: "Jun 2022 - Oct 2022",
+    logo: "/pixelstatLogo.jpg",
+    description: [
+      "Engineered a web app for 'AKHIL BHARATIYA MARATHI CHITRAPAT MAHAMANDAL'",
+      "Enhanced data management, business logic, and reporting using Flask, SQL, and JavaScript"
+    ],
+    technologies: [
+      "Flask", "MySQL", "JavaScript", "Bootstrap", "HTML", "CSS"
+    ],
+    repoLink: "https://github.com/paju3125/PixelStat_ERP"
   },
   {
-    number: "1",
-    label: "Company"
+    id: "intern-4",
+    company: "R B Tech Services",
+    title: "Trainee PHP Developer",
+    period: "Jun 2020 - Aug 2020",
+    logo: "/rbtechLogo.png",
+    description: [
+      "Engineered a web-based 'Notice Management System' using PHP",
+      "Acquired proficiency in PHP programming through hands-on experience on a live project"
+    ],
+    technologies: [
+      "PHP", "SQL", "JavaScript", "Bootstrap", "HTML", "CSS"
+    ],
+    repoLink: null
   }
+];
+
+// Stats for each section
+const professionalStats = [
+  { metric: "1+", label: "Years Experience" },
+  { metric: "3", label: "Major Projects" },
+  { metric: "8+", label: "Technologies" },
+  { metric: "1", label: "Companies" }
 ];
 
 const internshipStats = [
-  {
-    number: "1.5+",
-    label: "Years Internship"
-  },
-  {
-    number: "4",
-    label: "Internships"
-  },
-  {
-    number: "5+",
-    label: "Technologies"
-  },
-  {
-    number: "4",
-    label: "Companies"
-  }
+  { metric: "1.5+", label: "Years Internship" },
+  { metric: "4", label: "Internships" },
+  { metric: "5+", label: "Technologies" },
+  { metric: "4", label: "Companies" }
 ];
 
 export default function Internships() {
-  const [isFirstTab, setIsFirstTab] = useState(true);
-  const markerRef = useRef(null);
-  const [expIndex, setExpIndex] = useState(0);
-  const [internIndex, setInternIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState("professional");
+  const [selectedItem, setSelectedItem] = useState(0);
+  const tabIndicatorRef = useRef(null);
   
+  // Handle tab switching
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+    setSelectedItem(0);
+  };
+  
+  // Update tab indicator position
   useEffect(() => {
-    // Initialize AOS with settings that prevent reinitialization issues
+    const updateTabIndicator = () => {
+      const activeTabElement = document.querySelector(`.tab-button[data-tab="${activeTab}"]`);
+      if (activeTabElement && tabIndicatorRef.current) {
+        tabIndicatorRef.current.style.left = `${activeTabElement.offsetLeft}px`;
+        tabIndicatorRef.current.style.width = `${activeTabElement.offsetWidth}px`;
+      }
+    };
+    
+    updateTabIndicator();
+    window.addEventListener('resize', updateTabIndicator);
+    
+    return () => window.removeEventListener('resize', updateTabIndicator);
+  }, [activeTab]);
+  
+  // Initialize AOS animation library
+  useEffect(() => {
     AOS.init({
-      once: true, // animate only once
-      mirror: false, // don't animate elements back to their initial state
-      disable: 'mobile' // disable on mobile devices to prevent issues
+      duration: 800,
+      once: true,
+      mirror: false
     });
   }, []);
-
-  const handleTabClick = (event) => {
-    setIsFirstTab(!isFirstTab);
-    
-    // Update marker position
-    if (markerRef.current && event.target) {
-      markerRef.current.style.width = `${event.target.offsetWidth}px`;
-      markerRef.current.style.left = `${event.target.offsetLeft}px`;
-    }
-
-    // Force AOS to refresh after tab change
-    setTimeout(() => {
-      AOS.refresh();
-    }, 300); // Wait for tab transition to complete
+  
+  // Get current data based on active tab
+  const currentData = activeTab === "professional" ? experienceData : internshipData;
+  const currentStats = activeTab === "professional" ? professionalStats : internshipStats;
+  
+  // Navigate through items
+  const handleNext = () => {
+    setSelectedItem((prev) => (prev + 1) % currentData.length);
   };
-
-  useEffect(() => {
-    // Set initial marker position
-    const firstTab = document.querySelector('.tabs-tab');
-    if (firstTab && markerRef.current) {
-      markerRef.current.style.width = `${firstTab.offsetWidth}px`;
-      markerRef.current.style.left = `${firstTab.offsetLeft}px`;
-    }
-  }, []);
-
-  const expHandlers = useSwipeable({
-    onSwipedLeft: () => setExpIndex((prev) => (prev + 1) % experienceData.length),
-    onSwipedRight: () => setExpIndex((prev) => (prev - 1 + experienceData.length) % experienceData.length),
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true
-  });
-
-  const internHandlers = useSwipeable({
-    onSwipedLeft: () => setInternIndex((prev) => (prev + 1) % internshipsData.length),
-    onSwipedRight: () => setInternIndex((prev) => (prev - 1 + internshipsData.length) % internshipsData.length),
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true
-  });
-
+  
+  const handlePrev = () => {
+    setSelectedItem((prev) => (prev - 1 + currentData.length) % currentData.length);
+  };
+  
   return (
-    <section className="component">
-    <div className="container">
-
-      <h2 className="text-light heading" data-aos="fade-up">
-        <span>Experience</span>
-      </h2>
-
-      <div className="experience-container">
-        <div className="experience-main">
-          <div className="tabs-section">
-            <div data-ui-tablist="navigation" className="tabs">
-              <div className="tabs-marker" ref={markerRef}></div>
-              <button 
-                className={`tabs-tab ${isFirstTab ? 'ui-active' : ''}`}
-                onClick={handleTabClick}
-              >Professional Experience</button>
-              <button 
-                className={`tabs-tab ${!isFirstTab ? 'ui-active' : ''}`}
-                onClick={handleTabClick}
-              >Internship</button>
-            </div>
-          </div>
-
-          <div className="tabpanels">
-            <div className={`tabpanel ${isFirstTab ? 'ui-enter-active' : ''}`} 
-                 hidden={!isFirstTab}>
-              <div className="internship d-flex justify-content-center mb-5">
-                <div className="carousel-container" {...expHandlers}>
-                {experienceData.length > 1 &&
-                  <div className="swipe-hint">
-                    <span>← Swipe to explore more →</span>
-                  </div>
-                }
-                  <div 
-                    className="main-carousel"
-                    style={{ transform: `translateX(-${expIndex * 100}%)` }}
-                  >
-                    {experienceData.map((experience, index) => (
-                      <div className="carousel__item py-4" key={index}>
-                        <InternshipCard {...experience} />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="carousel-indicators">
-                    {experienceData.map((_, index) => (
-                      <button
-                        key={index}
-                        className={`indicator ${index === expIndex ? 'active' : ''}`}
-                        onClick={() => setExpIndex(index)}
-                        aria-label={`Go to slide ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={`tabpanel ${!isFirstTab ? 'ui-enter-active' : ''}`}
-                 hidden={isFirstTab}>
-              <div className="internship d-flex justify-content-center mb-5">
-                <div className="carousel-container" {...internHandlers}>
-                  {internshipsData.length > 1 &&
-                  <div className="swipe-hint">
-                    <span>← Swipe to explore more →</span>
-                  </div>
-                }
-                  <div 
-                    className="main-carousel"
-                    style={{ transform: `translateX(-${internIndex * 100}%)` }}
-                  >
-                    {internshipsData.map((internship, index) => (
-                      <div className="carousel__item py-4" key={index}>
-                        <InternshipCard {...internship} />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="carousel-indicators">
-                    {internshipsData.map((_, index) => (
-                      <button
-                        key={index}
-                        className={`indicator ${index === internIndex ? 'active' : ''}`}
-                        onClick={() => setInternIndex(index)}
-                        aria-label={`Go to slide ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
+    <section id="experience" className="experience-section">
+      <div className="container">
+      <div className="workspace-header">
+          <div className="workspace-controls">
+            <div className="workspace-title">
+              <span className="workspace-label">Professional Journey</span>
+              <span className="workspace-path">~/portfolio/experience</span>
             </div>
           </div>
         </div>
-
-        <div className="experience-stats my-lg-5" data-aos="fade-left">
-          <h3 className="stats-title">Experience Overview</h3>
-          <div className="experience-stats-grid">
-
-          {(isFirstTab ? professionalStats : internshipStats).map((stat, index) => (
-            <div 
-              className="stat-item" 
-              key={index}
-              data-aos="fade-left"
-              data-aos-delay={index * 100}
+        
+        <div className="dev-editor">
+          <div className="editor-tabs">
+            <div className="tab-indicator" ref={tabIndicatorRef}></div>
+            <button 
+              className={`tab-button ${activeTab === "professional" ? "active" : ""}`}
+              data-tab="professional"
+              onClick={() => handleTabChange("professional")}
             >
-              <div className="stat-content">
-                <div className="stat-number">{stat.number}</div>
-                <div className="stat-label">{stat.label}</div>
+              <i className="fas fa-briefcase"></i>
+              Professional
+            </button>
+            <button 
+              className={`tab-button ${activeTab === "internship" ? "active" : ""}`}
+              data-tab="internship"
+              onClick={() => handleTabChange("internship")}
+            >
+              <i className="fas fa-graduation-cap"></i>
+              Internships
+            </button>
+          </div>
+
+          <div className="editor-main">
+            <div className="file-explorer">
+              <div className="explorer-header">
+                <span>TIMELINE</span>
+              </div>
+              <div className="explorer-content">
+                {currentData.map((item, index) => (
+                  <div 
+                    key={item.id}
+                    className={`file-item ${selectedItem === index ? 'active' : ''}`}
+                    onClick={() => setSelectedItem(index)}
+                  >
+                    <i className={`fas ${selectedItem === index ? 'fa-folder-open' : 'fa-folder'}`}></i>
+                    <div className="file-details">
+                      <div className="file-name">{item.company}</div>
+                      <div className="file-meta">{item.period}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
+            
+            <div className="editor-content">
+              {currentData.length > 0 ? (
+                <div className="experience-display" key={currentData[selectedItem].id}>
+                  <div className="experience-header" data-aos="fade-up">
+                    <div className="company-logo">
+                      {currentData[selectedItem].logo ? (
+                        <img src={currentData[selectedItem].logo} alt={currentData[selectedItem].company} />
+                      ) : (
+                        <div className="logo-placeholder">
+                          {currentData[selectedItem].company.charAt(0)}
+                        </div>
+                      )}
+                    </div>
+                    <div className="company-info">
+                      <h3>{currentData[selectedItem].company}</h3>
+                      <h4>{currentData[selectedItem].title}</h4>
+                      <div className="period">
+                        <i className="far fa-calendar-alt"></i> {currentData[selectedItem].period}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="experience-body" data-aos="fade-up" data-aos-delay="100">
+                    {activeTab === "professional" ? (
+                      <div className="projects-section">
+                        {currentData[selectedItem].projects.map((project, idx) => (
+                          <div key={idx} className="project-item">
+                            <div className="project-header">
+                              <span className="comment-syntax">{'// '}</span>
+                              {project.name}
+                            </div>
+                            <div className="project-tasks">
+                              {project.tasks.map((task, taskIdx) => (
+                                <div key={taskIdx} className="task-line">
+                                  <span className="line-number">{taskIdx + 1}</span>
+                                  <span className="function-syntax">function</span>
+                                  <span className="task-text">{task}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="internship-description">
+                        <div className="code-block">
+                          {currentData[selectedItem].description.map((desc, idx) => (
+                            <div key={idx} className="code-line">
+                              <span className="line-number">{idx + 1}</span>
+                              <span className="comment-syntax">{'// '}</span>
+                              <span className="description-text">{desc}</span>
+                            </div>
+                          ))}
+                        </div>
+                        
+                        {currentData[selectedItem].repoLink && (
+                          <a 
+                            href={currentData[selectedItem].repoLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="repo-link"
+                          >
+                            <i className="fab fa-github"></i> View Repository
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="experience-footer" data-aos="fade-up" data-aos-delay="200">
+                    <div className="tech-header">
+                      <span className="syntax-keyword">const</span> technologies <span className="syntax-operator">=</span> [
+                    </div>
+                    <div className="tech-stack">
+                      {currentData[selectedItem].technologies.map((tech, idx) => (
+                        <div key={idx} className="tech-badge">
+                          <span className="string-quote">"</span>
+                          <span className="tech-name">{tech}</span>
+                          <span className="string-quote">"</span>
+                          {idx < currentData[selectedItem].technologies.length - 1 && <span className="syntax-comma">,</span>}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="tech-footer">];</div>
+                  </div>
+                </div>
+              ) : (
+                <div className="no-data-message">No experience data available</div>
+              )}
+            </div>
+          </div>
+          
+          <div className="terminal-view">
+            <div className="terminal-header">
+              <span>STATISTICS</span>
+            </div>
+            <div className="terminal-content">
+              <div className="command-line">
+                <span className="prompt">$ </span>
+                <span className="command">stats --show {activeTab}</span>
+              </div>
+              <div className="stats-grid">
+                {currentStats.map((stat, idx) => (
+                  <div key={idx} className="stat-item" data-aos="fade-up" data-aos-delay={idx * 100}>
+                    <div className="stat-value">{stat.metric}</div>
+                    <div className="stat-label">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          <div className="editor-navigation">
+            {currentData.length > 1 && (
+              <>
+                <button 
+                  className="nav-button prev" 
+                  onClick={handlePrev}
+                  aria-label="Previous item"
+                >
+                  <i className="fas fa-chevron-left"></i>
+                </button>
+                <div className="pagination">
+                  {currentData.map((_, idx) => (
+                    <button 
+                      key={idx}
+                      className={`page-dot ${selectedItem === idx ? 'active' : ''}`}
+                      onClick={() => setSelectedItem(idx)}
+                      aria-label={`Item ${idx + 1}`}
+                    ></button>
+                  ))}
+                </div>
+                <button 
+                  className="nav-button next" 
+                  onClick={handleNext}
+                  aria-label="Next item"
+                >
+                  <i className="fas fa-chevron-right"></i>
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
-    </div>
     </section>
   );
 }

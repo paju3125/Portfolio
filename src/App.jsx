@@ -1,4 +1,5 @@
 import "./App.css";
+import './styles/globalScrollbars.css';
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Preloader from "./components/preloader/Preloader";

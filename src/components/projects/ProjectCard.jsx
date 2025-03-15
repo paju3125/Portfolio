@@ -15,12 +15,16 @@ export default function ProjectCard({ img, title, desc, techs, link }) {
           ))}
         </div>
 
+          <div className="project-btn">
+
         <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
           <span>View Project</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          {/* <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" />
-          </svg>
+          </svg> */}
+          <i className={`fab fa-github`}></i>
         </a>
+          </div>
       </div>
     </div>
   );

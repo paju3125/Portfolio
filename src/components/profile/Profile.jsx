@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import About from "../about/About";
 import Skill from "../skills/Skill";
 import Resume from "../resume/Resume";
-import Journey from "../Carousel/Journey";
+import Projects from "../projects/Projects"; // Updated import
 
 export default function Profile() {
   var TxtType = function (el, toRotate, period) {
@@ -94,7 +94,7 @@ export default function Profile() {
       <hr className="text-light" />
       <About />
       <hr className="text-light" />
-      <Journey />
+      <Projects /> {/* Updated component */}
       <hr className="text-light" />
       <Skill />
       <hr className="text-light" />

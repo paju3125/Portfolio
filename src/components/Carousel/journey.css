@@ -90,24 +90,6 @@
     color: #203a43;
 }
 
-.project-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 24px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.3s;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.project-link:hover {
-    background: #0056b3;
-    transform: scale(1.1);
-}
-
 .thumbnail-container {
     display: flex;
     gap: 15px;

@@ -289,9 +289,6 @@ footer .card {
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     position: relative;
     z-index: 1;
     animation: fadeInUp 1s ease-out;
@@ -411,7 +408,7 @@ footer .card {
     font-size: 1.3rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    text-decoration: none;
+    text-decoration: none !important;
     overflow: hidden;
     position: relative;
 }
@@ -613,4 +610,352 @@ footer .card {
     animation-delay: -5s;
     animation-duration: 20s;
     opacity: 0.1;
+}
+
+
+/* Modern terminal-style developer footer */
+
+:root {
+    --footer-bg: #0f172a;
+    --terminal-bg: #1e1e1e;
+    --terminal-header: #323233;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8;
+    --accent-secondary: #5eead4;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --close-btn: #ff5f56;
+    --minimize-btn: #ffbd2e;
+    --maximize-btn: #27c93f;
+    --prompt-color: #3cdf3c;
+    --command-color: #e4e4e4;
+    --output-color: #cccccc;
+    --json-key: #9cdcfe;
+    --json-string: #ce9178;
+    --json-number: #b5cea8;
+    --json-boolean: #569cd6;
+}
+
+
+/* Main footer styling */
+
+.dev-footer {
+    position: relative;
+    background: var(--footer-bg);
+    padding: 4rem 0 1rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-primary);
+}
+
+.terminal-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+/* Terminal window styling */
+
+.terminal-window {
+    background: var(--terminal-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 1rem;
+}
+
+.terminal-header {
+    background: var(--terminal-header);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.term-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.term-btn.close {
+    background: var(--close-btn);
+}
+
+.term-btn.minimize {
+    background: var(--minimize-btn);
+}
+
+.term-btn.maximize {
+    background: var(--maximize-btn);
+}
+
+.terminal-title {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-family: 'Fira Code', monospace;
+    margin: 0 auto;
+}
+
+.terminal-body {
+    padding: 1.5rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+
+/* Footer layout */
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.term-section {
+    margin-bottom: 1.5rem;
+}
+
+
+/* Command line styling */
+
+.command-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
+}
+
+.prompt {
+    color: var(--prompt-color);
+    font-weight: bold;
+}
+
+.command {
+    color: var(--command-color);
+}
+
+.command-output {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    color: var(--output-color);
+    line-height: 1.5;
+}
+
+
+/* JSON output styling */
+
+.json-output {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    white-space: pre-wrap;
+    color: var(--output-color);
+}
+
+.json-output .key {
+    color: var(--json-key);
+}
+
+.json-output .string {
+    color: var(--json-string);
+}
+
+.json-output .number {
+    color: var(--json-number);
+}
+
+.json-output .boolean {
+    color: var(--json-boolean);
+}
+
+
+/* Links styling */
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#footer .social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--output-color);
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+#footer .social-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+#footer .social-link i {
+    color: var(--accent-color);
+}
+
+#footer .social-link:hover i {
+    color: var(--accent-secondary);
+}
+
+.link-name {
+    color: var(--text-primary);
+}
+
+
+/* Footer bottom section */
+
+.footer-bottom {
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.heart {
+    animation: heartPulse 1.5s ease-in-out infinite;
+    color: #ff6b6b;
+}
+
+@keyframes heartPulse {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Cursor animation */
+
+.cursor-line {
+    margin-bottom: 0;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: var(--text-primary);
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Syntax highlighting for JSON */
+
+.terminal-body pre {
+    color: var(--output-color);
+}
+
+.terminal-body pre .string {
+    color: var(--json-string);
+}
+
+.terminal-body pre .number {
+    color: var(--json-number);
+}
+
+.terminal-body pre .boolean {
+    color: var(--json-boolean);
+}
+
+.terminal-body pre .null {
+    color: var(--json-boolean);
+}
+
+.terminal-body pre .key {
+    color: var(--json-key);
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .terminal-body {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+    .json-output {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dev-footer {
+        padding: 3rem 0 1rem;
+    }
+    .terminal-title {
+        font-size: 0.8rem;
+    }
+    .terminal-body {
+        padding: 0.75rem;
+    }
+    .command-output {
+        padding-left: 0.5rem;
+    }
+}
+
+
+/* Animation for appearance */
+
+.terminal-window {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

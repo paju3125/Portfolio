@@ -1,775 +1,804 @@
-/* Add these new styles at the top */
+/* Developer-themed Experience Section */
 
-.modern-card {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 24px;
-    padding: 2rem;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+:root {
+    --editor-bg: #1e1e1e;
+    --editor-border: #323232;
+    --editor-line-number: #6b6b6b;
+    --editor-text: #d4d4d4;
+    --editor-comment: #6a9955;
+    --editor-keyword: #569cd6;
+    --editor-function: #dcdcaa;
+    --editor-string: #ce9178;
+    --editor-variable: #9cdcfe;
+    --editor-number: #b5cea8;
+    --editor-constant: #4fc1ff;
+    --sidebar-bg: #252526;
+    --terminal-bg: #1a1a1a;
+    --active-tab: #0d76a3;
+    --inactive-tab: #2d2d2d;
+    --folder-color: #e8c17d;
+    --file-color: #80dbff;
 }
 
-.modern-card::before {
+
+/* Base section styling */
+
+.experience-section {
+    background-color: var(--bg-color);
+    color: var(--editor-text);
+}
+
+
+/* Section title */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #fff, #a5a5a5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.title-text::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
-    transition: 0.5s;
+    left: 0;
+    bottom: -10px;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), transparent);
+    border-radius: 2px;
 }
 
-.modern-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.1);
+
+/* Main editor container */
+
+.dev-editor {
+    background: var(--editor-bg);
+    border-radius: 8px;
+    border: 1px solid var(--editor-border);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
 }
 
-.modern-card:hover::before {
-    left: 100%;
+
+/* Tab navigation */
+
+.editor-tabs {
+    background: var(--sidebar-bg);
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #000;
 }
 
-.card-top {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.5rem;
+.tab-button {
+    padding: 12px 24px;
+    color: var(--editor-text);
+    background: transparent;
+    border: none;
+    font-size: 0.9rem;
+    font-family: 'Fira Code', monospace;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 2;
+    display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    gap: 8px;
 }
 
-.logo-section {
-    width: 120px;
-    height: 72px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
-    padding: 1rem;
+.tab-button.active {
+    background-color: var(--editor-bg);
+    color: var(--accent-color);
+}
+
+.tab-button i {
+    font-size: 0.9rem;
+}
+
+.tab-indicator {
+    position: absolute;
+    height: 2px;
+    background: var(--accent-color);
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* Main editor layout */
+
+.editor-main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    flex: 1;
+}
+
+
+/* File explorer sidebar */
+
+.file-explorer {
+    background: var(--sidebar-bg);
+    border-right: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.explorer-header {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #858585;
+    background-color: var(--sidebar-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+.explorer-content {
+    padding: 8px 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    color: var(--editor-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.file-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.file-item.active {
+    background: rgba(0, 120, 215, 0.1);
+    border-left-color: var(--accent-color);
+}
+
+.file-item i {
+    color: var(--folder-color);
+    margin-right: 10px;
+    width: 18px;
+    text-align: center;
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-size: 0.9rem;
+}
+
+.file-meta {
+    font-size: 0.75rem;
+    color: #858585;
+    margin-top: 2px;
+}
+
+
+/* Main content area */
+
+.editor-content {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+/* Company header */
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.company-logo {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    padding: 10px;
 }
 
-.logo-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.company-logo img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .logo-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--text-color);
-    position: relative;
-    overflow: hidden;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
 }
 
-.placeholder-blur {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--text-color);
-    filter: blur(20px);
-    opacity: 0.1;
-}
-
-.company-section h3 {
+.company-info h3 {
+    color: var(--accent-color);
     font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 5px;
 }
 
-.company-section h4 {
+.company-info h4 {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0.75rem;
+    color: var(--editor-text);
+    margin-bottom: 5px;
 }
 
-.duration-badge {
+.period {
+    color: var(--editor-comment);
+    font-size: 0.9rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.period i {
+    margin-right: 5px;
+}
+
+
+/* Project listing styling */
+
+.project-item {
+    margin-bottom: 25px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 15px;
+}
+
+.project-header {
+    font-size: 1.1rem;
+    color: var(--editor-keyword);
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 10px;
+}
+
+.comment-syntax {
+    color: var(--editor-comment);
+}
+
+.project-tasks {
+    margin-left: 15px;
+}
+
+.task-line {
+    margin-bottom: 8px;
+    font-family: 'Fira Code', monospace;
+    position: relative;
+    display: flex;
+}
+
+.line-number {
+    color: var(--editor-line-number);
+    width: 30px;
+    text-align: right;
+    margin-right: 15px;
+    user-select: none;
+}
+
+.function-syntax {
+    color: var(--editor-function);
+    margin-right: 10px;
+}
+
+.task-text {
+    color: var(--editor-text);
+}
+
+
+/* Internship description */
+
+.internship-description {
+    margin-top: 20px;
+}
+
+.code-block {
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 20px;
+}
+
+.code-line {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.description-text {
+    color: var(--editor-text);
+}
+
+.repo-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.875rem;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
-.duration-badge svg {
-    width: 16px;
-    height: 16px;
+.repo-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
-.description-section {
-    padding-left: 1rem;
-    border-left: 2px solid rgba(255, 255, 255, 0.05);
-    margin-bottom: 2rem;
+
+/* Technology stack */
+
+.experience-footer {
+    margin-top: 30px;
+    font-family: 'Fira Code', monospace;
 }
 
-.project-section {
-    margin-bottom: 1.5rem;
+.tech-header {
+    margin-bottom: 10px;
+    color: var(--editor-text);
 }
 
-.project-title {
-    color: var(--text-color);
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+.syntax-keyword {
+    color: var(--editor-keyword);
 }
 
-.project-detail,
-.experience-detail {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0.75rem;
-    display: flex;
-    gap: 0.75rem;
-    line-height: 1.6;
+.syntax-operator {
+    color: var(--editor-text);
 }
 
-.bullet {
-    color: var(--text-color);
-}
-
-.project-divider {
-    height: 1rem;
-}
-
-.tech-section {
+.tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 2rem;
+    gap: 10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
 }
 
 .tech-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    padding: 5px 10px;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    font-size: 0.875rem;
-    color: var(--text-color);
     transition: all 0.3s ease;
 }
 
 .tech-badge:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.tech-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: currentColor;
+.string-quote {
+    color: var(--editor-string);
 }
 
-.view-project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    border: 1px solid var(--text-color);
-    border-radius: 20px;
-    color: var(--text-color);
-    font-size: 0.875rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
+.tech-name {
+    color: var(--editor-string);
 }
 
-.view-project-link svg {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.3s ease;
+.syntax-comma {
+    color: var(--editor-text);
+    margin-left: 2px;
 }
 
-.view-project-link:hover {
-    background: var(--text-color);
-    color: #000;
-}
-
-.view-project-link:hover svg {
-    transform: translate(2px, -2px);
-}
-
-@media (max-width: 768px) {
-    .modern-card {
-        padding: 1.5rem;
-    }
-    .card-top {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 1rem;
-    }
-    .logo-section {
-        margin: 0 auto;
-    }
-    .tech-section {
-        justify-content: center;
-    }
-    .view-project-link {
-        width: 100%;
-        justify-content: center;
-    }
+.tech-footer {
+    color: var(--editor-text);
 }
 
 
-/* .row>.col {
-  margin: 0;
+/* Terminal view for statistics */
+
+.terminal-view {
+    background: var(--terminal-bg);
+    border-top: 1px solid #000;
 }
 
-.card {
-  height: 20rem; */
-
-
-/* overflow: hidden; */
-
-
-/* }
-
-.card .card-text {
-  font-size: 0.9rem;
-} */
-
-.internship {
-    user-select: none;
+.terminal-header {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #858585;
+    background: rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
 
-.internship .row {
-    height: max-content;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    justify-content: center;
-    padding: 0 2rem;
+.terminal-content {
+    padding: 16px;
+    font-family: 'Fira Code', monospace;
 }
 
-.internship .card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    max-width: 600px;
-    margin: 0 auto;
+.command-line {
+    color: #dcdcdc;
+    margin-bottom: 16px;
 }
 
-@media (max-width: 768px) {
-    .internship .card {
-        flex: 1 1 100%;
-        max-width: 100%;
-        min-width: unset;
-    }
-}
-
-.internship .carousel__item {
-    width: fit-content;
-    height: 100%;
-    border-radius: 20px;
-    background: #f5f5f5;
-    position: relative;
-    /* padding: 1.8rem; */
-    /* border: 2px solid #c3c6ce; */
-    transition: 0.5s ease-out;
-    /* overflow-y: scroll; */
-    /* From https://css.glass */
-    /* background: rgba(49, 48, 48, 0.6) !important; */
-    background: transparent;
-    border-radius: 16px;
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-    /* backdrop-filter: blur(15px); */
-    /* -webkit-backdrop-filter: blur(5px); */
-    /* border: 1px solid rgba(255, 255, 255, 0.3); */
-    /* z-index: 2; */
-}
-
-.internship .carousel-container {
-    margin-top: 0;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: block;
-}
-
-.main-carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    /* justify-content: center; */
-}
-
-.internship .carousel__item {
-    min-width: 100%;
-    flex-shrink: 0;
-    padding: 1rem;
-}
-
-.internship .card {
-    background: transparent;
-    border: none;
-    box-shadow: 0 4px 12px rgba(219, 166, 34, 0.2);
-}
-
-.internship .card .img {
-    width: 80%;
-    /* background: #6b64f3; */
-    border-radius: 15px;
-    margin: auto;
-    margin-top: 15px;
-}
-
-.internship .card img {
-    width: 100%;
-    max-height: 3.5em
-}
-
-.internship .card-details {
-    color: #f5f5f5;
-    height: 100%;
-    /* gap: .5em; */
-    /* display: grid; */
-    place-content: center;
-}
-
-.internship .card-button {
-    transform: translate(-50%, 125%);
-    /* width: fit-content; */
-    border-radius: 1rem;
-    border: none;
-    background-color: var(--text-color);
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    opacity: 0;
-    transition: 0.3s ease-out;
-}
-
-.internship .text-body,
-.internship .card-text {
-    font-size: 1rem;
-    color: #f5f5f5;
-    margin-top: -5px;
-}
-
-@media (max-width: 1200px) {
-    .internship .text-body,
-    .internship .card-text {
-        font-size: .8rem;
-    }
-}
-
-
-/*Text*/
-
-.internship .text-title {
-    font-size: 1.2em;
+.prompt {
+    color: #3cdf3c;
+    margin-right: 5px;
     font-weight: bold;
-    color: #f5f5f5;
-    text-align: center;
-    width: fit-content;
-    margin: auto;
-    border-bottom: 3px solid var(--text-color);
+}
+
+.command {
+    color: #dcdcdc;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #858585;
+    font-size: 0.85rem;
 }
 
 
-/*Hover*/
+/* Navigation controls */
 
-.internship .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(219, 166, 34, 0.2);
-    border-color: var(--text-color);
-}
-
-.internship .card:hover .card-button {
-    transform: translate(-50%, 50%);
-    opacity: 1;
-}
-
-.tabs {
+.editor-navigation {
     display: flex;
     align-items: center;
-    border-radius: 0.5rem;
-    padding: 0.15rem 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    position: relative;
-    z-index: 1;
-    margin-bottom: 0.75rem;
-    &:has(:focus-visible) {
-        outline: 3px solid rgb(17 21 36 / 50%);
-    }
-}
-
-.tabs-marker {
-    position: absolute;
-    z-index: -1;
-    background: var(--text-color);
-    top: 0.4rem;
-    bottom: 0.4rem;
-    left: 0;
-    border-radius: 0.4rem;
-    transition: 0.15s;
-}
-
-.tabs-tab {
-    display: inline-flex;
     justify-content: center;
-    align-items: center;
-    appearance: none;
-    transition: all 150ms;
-    outline-width: 2px;
-    outline-offset: 2px;
-    padding: 0px;
-    border-width: 0;
-    color: inherit;
-    font-weight: 500;
-    padding: 1rem;
-    color: white;
+    padding: 12px;
+    background: var(--sidebar-bg);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    gap: 20px;
+}
+
+.nav-button {
     background: transparent;
+    border: none;
+    color: var(--editor-text);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
     cursor: pointer;
-    outline: none;
-    font-family: inherit;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.95rem;
-    &:hover {
-        color: rgba(255, 255, 255, 1);
-    }
-    &.ui-active {
-        pointer-events: none;
-        color: rgba(255, 255, 255, 1);
-    }
-}
-
-.tabpanels {
-    /* background-color: white; */
-    border-radius: 0.5rem;
-    width: 100%;
-}
-
-.tabpanel {
-    padding-top: 1rem;
-    /* text-align: center; */
-    /* min-height: 5rem; */
-    /* display: grid;
-    place-content: center; */
-    border-radius: 0.5rem;
-    &:focus-visible {
-        outline: 3px solid rgb(17 21 36 / 50%);
-    }
-    &.ui-enter-active {
-        transition: all 200ms;
-        transform-origin: center top;
-    }
-    &.ui-enter-from {
-        opacity: 0;
-        transform: scale(0.98);
-    }
-}
-
-.internship .card-header {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.internship .company-logo {
-    width: 120px;
-    height: 50px;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.internship .company-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 8px;
-}
-
-.internship .logo-placeholder {
-    font-size: 2rem;
-    color: var(--text-color);
-    font-weight: bold;
-}
-
-.internship .company-info {
-    flex: 1;
-}
-
-.internship .company-name {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    margin-bottom: 0.3rem;
-}
-
-.internship .job-title {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 0.3rem;
-}
-
-.internship .duration {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.internship .card-content {
-    margin: 1.5rem 0;
-    max-height: 400px;
-    overflow-y: auto;
-    padding-right: 10px;
-}
-
-.internship .responsibilities {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem 0;
-    text-align: left;
-}
-
-.internship .responsibilities li {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
-    position: relative;
-    line-height: 1.5;
-}
-
-.internship .responsibilities li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--text-color);
-}
-
-.internship .project-title {
-    color: var(--text-color);
-    font-weight: bold;
-    font-size: 1.1em;
-    margin: 1.5rem 0 1rem 0;
-    padding: 0;
-}
-
-.internship .project-title:first-child {
-    margin-top: 0;
-}
-
-.internship .responsibilities br {
-    display: block;
-    margin: 0.5rem 0;
-    content: "";
-}
-
-.internship .responsibilities li:empty {
-    height: 0.8rem;
-    margin-bottom: 0.3rem;
-    padding: 0;
-}
-
-.internship .responsibilities li[class*="emoji"]::before {
-    content: none;
-}
-
-.internship .responsibilities li:first-child,
-.internship .responsibilities li[class*="emoji"],
-.internship .responsibilities li:matches([data-type="header"]) {
-    color: var(--text-color);
-    font-weight: bold;
-    font-size: 1.1em;
-    margin-bottom: 0.8rem;
-    padding-left: 0;
-}
-
-.internship .responsibilities li:not(:first-child):not([class*="emoji"]):not(:empty):not([data-type="header"])::before {
-    content: "•";
-    color: var(--text-color);
-    position: absolute;
-    left: 0;
-}
-
-.internship .tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.internship .tech-tag {
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.internship .card-footer {
-    margin-top: 1.5rem;
-    text-align: right;
-}
-
-.internship .view-project {
-    background: transparent;
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
 }
 
-.internship .view-project:hover {
-    background: var(--text-color);
-    color: #000;
-}
-
-.swipe-hint {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: fit-content;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+.nav-button:hover {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    animation: fadeInOut 2s infinite;
-    z-index: 10;
 }
 
-@keyframes fadeInOut {
-    0%,
-    100% {
-        opacity: 0.5;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
-.carousel-indicators {
-    position: relative !important;
+.pagination {
     display: flex;
-    justify-content: center;
     gap: 8px;
-    margin-top: 20px;
 }
 
-.indicator {
+.page-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: none;
     background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
+    border: none;
     padding: 0;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.indicator.active {
-    background: var(--text-color);
+.page-dot.active {
+    background: var(--accent-color);
     transform: scale(1.2);
 }
 
 
-/* ...existing styles... */
+/* Responsive design */
 
-.experience-stats-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    background: transparent;
-    max-width: 1200px;
+@media (max-width: 992px) {
+    .editor-main {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .company-logo {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .editor-tabs {
+        justify-content: center;
+    }
+    .tab-button {
+        padding: 12px 16px;
+    }
+    .tech-stack {
+        padding-left: 0;
+    }
+}
+
+
+/* AOS animations enhancement */
+
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+
+/* Remove InternshipCard component as we've integrated its functionality */
+
+
+/* Additional styles to complete the experience section */
+
+
+/* Experience display container styling */
+
+.experience-display {
+    background: rgba(35, 35, 45, 0.4);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    overflow-y: auto;
     position: relative;
+    transition: all 0.3s ease;
+}
+
+
+/* No data message styling */
+
+.no-data-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: var(--editor-line-number);
+    font-family: 'Fira Code', monospace;
+    font-style: italic;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+
+/* Experience body with scrollbar */
+
+.experience-body {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* Improved syntax highlighting */
+
+.function-syntax::before {
+    content: "(";
+    color: var(--editor-text);
+    margin-left: 2px;
+}
+
+.function-syntax::after {
+    content: ") => ";
+    color: var(--editor-text);
+}
+
+
+/* Line number highlight effect */
+
+.line-number::after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.task-line:hover .line-number::after {
+    opacity: 1;
+}
+
+
+/* Code syntax enhancement */
+
+.comment-syntax {
+    opacity: 0.7;
+}
+
+
+/* Terminal typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+.command {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(30, end);
+}
+
+
+/* Glowing effect for active items */
+
+.file-item.active::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--accent-color);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px var(--accent-color);
+    }
+    to {
+        box-shadow: 0 0 15px var(--accent-color);
+    }
+}
+
+
+/* Experience statistics refinements */
+
+.stats-grid {
+    animation: fadeIn 0.5s ease forwards;
 }
 
 .stat-item {
     position: relative;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    padding: 2rem;
-    text-align: left;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.stat-item::before {
+.stat-item::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: radial-gradient( circle at top right, rgba(var(--text-color-rgb), 0.1), transparent 70%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.stat-item:hover::after {
+    transform: translateX(100%);
+}
+
+
+/* Additional responsive fixes */
+
+@media (max-width: 576px) {
+    .editor-tabs {
+        flex-wrap: wrap;
+    }
+    .tab-button {
+        flex: 1;
+        min-width: 130px;
+        text-align: center;
+        justify-content: center;
+    }
+    .tab-indicator {
+        display: none;
+    }
+    .experience-header {
+        text-align: center;
+        align-items: center;
+    }
+    .experience-footer {
+        margin-top: 20px;
+    }
+    .tech-stack {
+        justify-content: center;
+    }
+    .terminal-view {
+        max-height: 300px;
+    }
+}
+
+
+/* Keyboard shortcut indicators */
+
+.file-item::after {
+    content: attr(data-shortcut);
+    position: absolute;
+    right: 10px;
+    color: var(--editor-line-number);
+    font-size: 0.7rem;
+    font-family: 'Fira Code', monospace;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2px 5px;
+    border-radius: 4px;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.2s ease;
 }
 
-.stat-item:hover {
-    transform: translateY(-5px);
+.file-item:hover::after {
+    opacity: 0.7;
 }
 
-.stat-item:hover::before {
-    opacity: 1;
+
+/* Focus states for accessibility */
+
+.tab-button:focus,
+.file-item:focus,
+.nav-button:focus,
+.page-dot:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
-.stat-number {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--text-color), rgba(255, 255, 255, 0.8));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Inter', sans-serif;
+
+/* Smooth transition for content changes */
+
+.experience-display {
+    animation: fadeIn 0.3s ease forwards;
 }
 
-.stat-label {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.4;
-    position: relative;
-}
-
-.stat-item:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.stat-item:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.stat-item:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.stat-item:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-@keyframes slideUp {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -777,681 +806,101 @@
     }
 }
 
-.stat-item {
-    animation: slideUp 0.6s ease forwards;
-}
 
-@media (max-width: 768px) {
-    .stat-item {
-        padding: 1.5rem;
-    }
-    .stat-number {
-        font-size: 2.5rem;
-    }
-    .stat-label {
-        font-size: 0.9rem;
-    }
-}
+/* Make tech badges more interactive */
 
-
-/* ...rest of existing styles... */
-
-
-/* Make hint responsive */
-
-@media (max-width: 768px) {
-    .swipe-hint {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .internship .card {
-        padding: 1rem;
-    }
-    .internship .card-header {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    .internship .company-logo {
-        width: 100px;
-        height: 40px;
-    }
-    .internship .job-title {
-        font-size: 1.1rem;
-    }
-    .internship .company-name {
-        font-size: 1rem;
-    }
-    .internship .duration {
-        font-size: 0.8rem;
-    }
-    .internship .card-content {
-        margin: 1rem 0;
-        max-height: 350px;
-    }
-    .internship .responsibilities li {
-        font-size: 0.9rem;
-        margin-bottom: 0.6rem;
-    }
-    .internship .tech-stack {
-        justify-content: center;
-    }
-    .internship .tech-tag {
-        padding: 0.2rem 0.6rem;
-        font-size: 0.75rem;
-    }
-    .internship .card-footer {
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .internship .row {
-        padding: 0 1rem;
-        gap: 2rem;
-    }
-    .internship .card {
-        padding: 0.8rem;
-    }
-}
-
-.internship-dashboard {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.dashboard-header {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-}
-
-.stat-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient( 45deg, transparent 0%, rgba(255, 255, 255, 0.03) 100%);
-    z-index: 0;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.stat-content {
+.tech-badge {
     position: relative;
     z-index: 1;
 }
 
-.stat-number {
-    font-size: 3rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--text-color), #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-}
-
-.experience-timeline {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
-    overflow-x: auto;
-}
-
-.timeline-item {
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    white-space: nowrap;
+.tech-badge::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--accent-color);
+    border-radius: inherit;
+    opacity: 0;
+    transform: scale(0.8);
     transition: all 0.3s ease;
 }
 
-.timeline-item.active {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-color);
-    font-weight: 500;
+.tech-badge:hover::before {
+    opacity: 0.1;
+    transform: scale(1);
 }
 
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
 
-.experience-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-    padding: 2rem;
-    position: relative;
-    transition: all 0.3s ease;
-}
+/* Loading state for experience display */
 
-.experience-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.card-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.logo-container {
-    width: 64px;
-    height: 64px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
+.experience-display.loading::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 30, 40, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--accent-color);
+    animation: loadingPulse 1.5s infinite;
 }
 
-.company-info h3 {
-    color: var(--text-color);
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.job-title {
-    color: #fff;
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-}
-
-.duration {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.875rem;
-}
-
-.responsibilities {
-    margin: 1.5rem 0;
-    padding-left: 1.5rem;
-    border-left: 2px solid rgba(255, 255, 255, 0.05);
-}
-
-.responsibilities li {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0.75rem;
-    position: relative;
-}
-
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-}
-
-.tech-tag {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    color: var(--text-color);
-    transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
-}
-
-@media (max-width: 1024px) {
-    .dashboard-header {
-        grid-template-columns: repeat(2, 1fr);
+@keyframes loadingPulse {
+    0%,
+    100% {
+        opacity: 0.7;
     }
-}
-
-@media (max-width: 768px) {
-    .internship-dashboard {
-        padding: 1rem;
-    }
-    .experience-grid {
-        grid-template-columns: 1fr;
-    }
-    .stat-number {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .dashboard-header {
-        grid-template-columns: 1fr;
-    }
-    .card-header {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .logo-container {
-        margin: 0 auto;
+    50% {
+        opacity: 0.9;
     }
 }
 
 
-/* New stats layout */
+/* Code scrolling indicator */
 
-.experience-container {
-    display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 1rem;
-    overflow: hidden;
-}
-
-.experience-main {
-    width: 100%;
-    min-width: 0;
-    /* Prevent grid item from expanding */
-    overflow: hidden;
-}
-
-.experience-stats {
-    position: sticky;
-    top: 2rem;
-    /* display: flex;
-    flex-direction: column;
-    gap: 1rem; */
-    height: fit-content;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.stat-item {
-    position: relative;
-    padding: 1.5rem;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.stat-item::before {
-    content: '';
+.experience-body::after {
+    content: "";
     position: absolute;
-    inset: 0;
-    background: radial-gradient( circle at top right, rgba(var(--text-color-rgb), 0.15), transparent 70%);
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 20px;
+    background: linear-gradient(to top, var(--editor-bg) 0%, transparent 100%);
+    pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.stat-item:hover {
-    transform: translateX(-5px);
-    background: rgba(255, 255, 255, 0.04);
-}
-
-.stat-item:hover::before {
+.experience-body:not(.at-bottom):hover::after {
     opacity: 1;
 }
 
-.stat-content {
-    position: relative;
-    z-index: 1;
-}
 
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1;
-    background: linear-gradient(135deg, var(--text-color), rgba(255, 255, 255, 0.9));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.5rem;
-}
+/* Print styles for resume section */
 
-.stat-label {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.4;
-}
-
-.stats-title {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-@media (max-width: 1200px) {
-    .experience-container {
-        grid-template-columns: 1fr 240px;
+@media print {
+    .editor-tabs,
+    .file-explorer,
+    .terminal-view,
+    .editor-navigation {
+        display: none !important;
+    }
+    .editor-content {
+        overflow: visible !important;
+    }
+    .editor-main {
+        grid-template-columns: 1fr !important;
+    }
+    .dev-editor {
+        box-shadow: none !important;
+        border: none !important;
+    }
+    .experience-display {
+        page-break-inside: avoid;
     }
 }
-
-@media (max-width: 992px) {
-    .experience-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .experience-stats {
-        order: -1;
-        margin-bottom: 2rem;
-    }
-    .experience-stats-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-    .experience-main {
-        order: 2;
-    }
-}
-
-@media (max-width: 768px) {
-    .experience-stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .experience-container {
-        padding: 0 0.5rem;
-    }
-    .experience-stats-grid {
-        grid-template-columns: 1fr;
-    }
-    .stat-item:hover {
-        transform: translateY(-5px);
-    }
-}
-
-
-/* ...existing styles... */
-
-
-/* Update carousel and card responsiveness */
-
-.carousel-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.carousel__item {
-    width: 100%;
-    padding: 1rem;
-}
-
-.modern-card {
-    max-width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.description-section {
-    flex: 1;
-    overflow-y: auto;
-    max-height: 400px;
-}
-
-.tech-section {
-    margin-top: auto;
-    padding-top: 1.5rem;
-}
-
-@media (max-width: 992px) {
-    .carousel-container {
-        max-width: 800px;
-    }
-    .card-top {
-        gap: 1rem;
-    }
-    .description-section {
-        max-height: 350px;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-container {
-        max-width: 600px;
-    }
-    .modern-card {
-        padding: 1.5rem;
-    }
-    .description-section {
-        max-height: 300px;
-    }
-    .company-section h3 {
-        font-size: 1.25rem;
-    }
-    .company-section h4 {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .carousel-container {
-        max-width: 100%;
-        padding: 0 0.5rem;
-    }
-    .modern-card {
-        padding: 1.25rem;
-    }
-    .card-top {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .logo-section {
-        margin: 0 auto;
-        width: 120px;
-        height: 60px;
-    }
-    .tech-section {
-        justify-content: center;
-    }
-    .tech-badge {
-        padding: 0.35rem 0.75rem;
-        font-size: 0.8rem;
-    }
-    .view-project-link {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-
-/* Add smooth transitions */
-
-.main-carousel {
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.carousel__item {
-    transition: opacity 0.3s ease;
-}
-
-
-/* Fix tab panel content */
-
-.tabpanel {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-
-/* Adjust internship section padding */
-
-.internship {
-    padding: 0;
-    width: 100%;
-}
-
-
-/* ...rest of existing styles... */
-
-
-/* Fix carousel and responsiveness issues */
-
-.carousel-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.main-carousel {
-    display: flex;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 100%;
-}
-
-.carousel__item {
-    min-width: 100%;
-    width: 100%;
-    flex-shrink: 0;
-    padding: 1rem;
-}
-
-
-/* Ensure cards have consistent sizing */
-
-.modern-card {
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Fix content overflow */
-
-.card-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.description-section {
-    flex: 1;
-    overflow-y: auto;
-    padding-right: 10px;
-    margin-bottom: 1rem;
-}
-
-
-/* Ensure consistent spacing */
-
-.card-top {
-    margin-bottom: 1.5rem;
-}
-
-
-/* Update media queries */
-
-@media (max-width: 1200px) {
-    .carousel-container {
-        max-width: 800px;
-    }
-}
-
-@media (max-width: 992px) {
-    .carousel-container {
-        max-width: 700px;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-container {
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-    .carousel__item {
-        padding: 0.5rem;
-    }
-    .modern-card {
-        padding: 1.5rem;
-    }
-    .description-section {
-        max-height: 350px;
-    }
-}
-
-@media (max-width: 576px) {
-    .carousel-container {
-        padding: 0 0.5rem;
-    }
-    .modern-card {
-        padding: 1rem;
-    }
-    .description-section {
-        max-height: 300px;
-    }
-}
-
-
-/* Remove any conflicting styles */
-
-.internship .carousel__item {
-    width: 100%;
-    min-width: 100%;
-    height: auto;
-    background: transparent;
-}
-
-.internship .carousel-container {
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-/* ...rest of existing styles... */

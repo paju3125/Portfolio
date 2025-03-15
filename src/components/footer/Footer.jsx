@@ -1,78 +1,130 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./footer.css";
 
 export default function Footer() {
+  const [typedContent, setTypedContent] = useState('');
+  // Typing effect for JSON content
+  useEffect(() => {
+    const jsonContent = `{
+  "name": "Prajval Gandhi",
+  "email": "prajvalgandhi483@gmail.com",
+  "phone": "+91-9665656267",
+  "location": "Pune, Maharashtra",
+  "available": true,
+  "willing_to_relocate": true
+}`;
+    
+    let i = 0;
+    const typingInterval = setInterval(() => {
+      if (i < jsonContent.length) {
+        setTypedContent(prev => prev + jsonContent.charAt(i));
+        i++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 20);
+    
+    return () => clearInterval(typingInterval);
+  }, []);
+  
   return (
-    <footer id="footer" className="modern-footer">
-      <div className="footer-waves">
-        <svg className="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28">
-          <defs>
-            <path id="wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-          </defs>
-          <g className="parallax">
-            <use href="#wave" x="48" y="0" />
-            <use href="#wave" x="48" y="3" />
-            <use href="#wave" x="48" y="5" />
-            <use href="#wave" x="48" y="7" />
-          </g>
-        </svg>
+    <footer id="footer" className="dev-footer">
+      <div className="footer-background">
+        <div className="footer-grid"></div>
+        <div className="footer-glow"></div>
       </div>
-
-      <div className="footer-content">
-        <div className="footer-main" data-aos="fade-up">
-          <div className="footer-section contact-section">
-            <h3 className="section-title">Let's Connect</h3>
-            <div className="contact-grid">
-              {[
-                { icon: "envelope", label: "Email", value: "prajvalgandhi483@gmail.com", href: "mailto:prajvalgandhi483@gmail.com" },
-                { icon: "phone", label: "Phone", value: "+91-9665656267", href: "tel:+919665656267" },
-                { icon: "map-marker-alt", label: "Location", value: "Pune, Maharashtra", href: "https://www.google.com/maps?q=Pune,Maharashtra,India" }
-              ].map((contact, index) => (
-                <a key={index} href={contact.href} className="contact-card">
-                  <div className="contact-icon">
-                    <i className={`fas fa-${contact.icon}`}></i>
+      
+      <div className="container">
+        <div className="footer-content">
+          <div className="dev-terminal">
+            {/* <div className="terminal-tabs">
+              <div className="tab active">contact.json</div>
+              <div className="tab">connect.sh</div>
+              <div className="tab">README.md</div>
+            </div> */}
+            
+            <div className="terminal-window">
+              <div className="terminal-header">
+                <div className="terminal-buttons">
+                  <span className="term-btn close"></span>
+                  <span className="term-btn minimize"></span>
+                  <span className="term-btn maximize"></span>
+                </div>
+                <div className="terminal-title">
+                  <span className="user">developer</span>
+                  <span className="separator">@</span>
+                  <span className="machine">portfolio</span>
+                  <span className="path">:~/contact</span>
+                </div>
+              </div>
+              
+              <div className="terminal-body">
+                <div className="terminal-split">
+                  <div className="split-pane">
+                    <div className="terminal-section">
+                      <div className="command-line">
+                        <span className="prompt">$</span>
+                        <span className="command">cat contact.json</span>
+                      </div>
+                      <div className="json-output">
+                        <pre className="output-text">
+                          <span className="typed-content">{typedContent}</span>
+                          {typedContent.length < 140 && <span className="cursor"></span>}
+                        </pre>
+                      </div>
+                    </div>
                   </div>
-                  <div className="contact-details">
-                    <span className="contact-label">{contact.label}</span>
-                    <span className="contact-value">{contact.value}</span>
+                  
+                  <div className="split-pane">
+                    <div className="terminal-section">
+                      <div className="command-line">
+                        <span className="prompt">$</span>
+                        <span className="command">ls -la ./connect</span>
+                      </div>
+                      
+                      <div className="links-container">
+                        {[
+                          { name: "github", icon: "github", url: "https://github.com/paju3125/" },
+                          { name: "linkedin", icon: "linkedin", url: "https://www.linkedin.com/in/prajval-gandhi-648504211/" },
+                          { name: "instagram", icon: "instagram", url: "https://www.instagram.com/prajval_gandhi/" },
+                          { name: "email", icon: "envelope", url: "mailto:prajvalgandhi483@gmail.com" },
+                          { name: "whatsapp", icon: "whatsapp", url: "https://wa.me/9665656267" }
+                        ].map((social, index) => (
+                          <a
+                            key={index}
+                            href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-link"
+                          >
+                            <i className={`${social.name === 'email' ? 'fas' : 'fab'} fa-${social.icon}`}></i>
+                            <span className="link-name">{social.name}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </a>
-              ))}
+                </div>
+                
+                <div className="term-section footer-bottom">
+                  <div className="command-line">
+                    <span className="prompt">$</span>
+                    <span className="command">echo $COPYRIGHT</span>
+                  </div>
+                  <div className="command-output">
+                    <div className="copyright">
+                      Crafted with <span className="heart">❤️</span> by Prajval Gandhi © {new Date().getFullYear()}
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="command-line cursor-line">
+                  <span className="prompt">$</span>
+                  <span className="cursor"></span>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="footer-section social-section">
-            <h3 className="section-title">Social Media</h3>
-            <div className="social-icons">
-              {[
-                { icon: "github", url: "https://github.com/paju3125/", color: "#333" },
-                { icon: "linkedin", url: "https://www.linkedin.com/in/prajval-gandhi-648504211/", color: "#0077b5" },
-                { icon: "instagram", url: "https://www.instagram.com/prajval_gandhi/", color: "#e4405f" },
-                { icon: "facebook", url: "https://www.facebook.com/prajval.gandhi", color: "#1877f2" },
-                { icon: "whatsapp", url: "https://wa.me/9665656267", color: "#25D366" }
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  className="social-icon-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{"--hover-color": social.color}}
-                >
-                  <i className={`fab fa-${social.icon}`}></i>
-                </a>
-              ))}
-            </div>
-          </div>
-
-        </div>
-
-        <div className="footer-bottom">
-          <div className="footer-line"></div>
-          <p className="copyright">
-            <span className="heart">❤️</span>
-            Crafted with passion by Prajval Gandhi © {new Date().getFullYear()}
-          </p>
         </div>
       </div>
     </footer>
