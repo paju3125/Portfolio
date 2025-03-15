@@ -6,10 +6,10 @@ const skills = [
     category: "Frontend Development",
     icon: "🌐",
     items: [
-      { name: "React.js", logo: "/logos/react.svg", level: 90 },
-      { name: "Next.js", logo: "/logos/next-js.svg", level: 85 },
+      { name: "React.js", logo: "/logos/react.svg", level: 85 },
+      { name: "Next.js", logo: "/logos/next-js.svg", level: 75 },
       { name: "TypeScript", logo: "/logos/typescript.svg", level: 80 },
-      { name: "JavaScript", logo: "/logos/javascript.svg", level: 90 },
+      { name: "JavaScript", logo: "/logos/javascript.svg", level: 80 },
       { name: "HTML", logo: "/logos/html.svg", level: 95 },
       { name: "CSS", logo: "/logos/css.svg", level: 90 },
       { name: "Tailwind", logo: "/logos/tailwind.svg", level: 85 },
@@ -21,10 +21,10 @@ const skills = [
     icon: "⚙️",
     items: [
       { name: "Python", logo: "/logos/python.svg", level: 85 },
-      { name: "Django", logo: "/logos/django.svg", level: 80 },
-      { name: "Flask", logo: "/logos/flask.svg", level: 75 },
+      { name: "Django", logo: "/logos/django.svg", level: 70 },
+      { name: "Flask", logo: "/logos/flask.svg", level: 80 },
       { name: "Java", logo: "/logos/java.svg", level: 70 },
-      { name: "C++", logo: "/logos/c.svg", level: 65 },
+      { name: "C++", logo: "/logos/c.svg", level: 80 },
     ],
   },
   {
@@ -41,9 +41,9 @@ const skills = [
     category: "Tools & Technologies",
     icon: "🛠️",
     items: [
-      { name: "Git", logo: "/logos/git.svg", level: 90 },
-      { name: "Ansible", logo: "/logos/ansible.svg", level: 65 },
-      { name: "TensorFlow", logo: "/logos/tensorflow.svg", level: 75 },
+      { name: "Git", logo: "/logos/git.svg", level: 80 },
+      { name: "Ansible", logo: "/logos/ansible.svg", level: 70 },
+      { name: "TensorFlow", logo: "/logos/tensorflow.svg", level: 70 },
     ],
   },
 ];
