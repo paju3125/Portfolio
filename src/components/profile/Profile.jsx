@@ -79,7 +79,7 @@ export default function Profile() {
           data-aos-duration="1500"
         >
           <h3 className="text-secondary text-left w-100 mt-3 mt-md-1" data-aos="fade-right" data-aos-delay="200">
-            Hey folks<span className="wave-emoji">👋</span>
+            Hey there<span className="wave-emoji">👋</span>
           </h3>
           <h2 className="text-left d-inline-flex w-100" data-aos="fade-right" data-aos-delay="400"><p>I'm &nbsp;</p>Prajval Gandhi</h2>
           <p
