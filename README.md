@@ -2,4 +2,4 @@
 ### Used ReactJS
 
 ## Check out the link
-https://prajval-fsd-portfolio.netlify.app/
+https://prajval-dev.netlify.app/
