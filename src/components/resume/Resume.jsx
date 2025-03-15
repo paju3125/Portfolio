@@ -5,7 +5,6 @@ export default function Resume() {
   const [activeSection, setActiveSection] = useState('experience');
   const [lineNumbers, setLineNumbers] = useState(true);
   const [terminalLines, setTerminalLines] = useState([]);
-  const [isScrolling, setIsScrolling] = useState(false);
   
   // Refs for all scrollable elements
   const editorBodyRef = useRef(null);
