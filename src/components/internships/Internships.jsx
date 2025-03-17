@@ -14,7 +14,7 @@ const experienceData = [
       {
         name: "AI Chatbot",
         tasks: [
-          "Designed and implemented a chatbot using React and Bootstrap",
+          "Contributed to the development of a chatbot using Python, React and Bootstrap",
           "Integrated external AI endpoints and internal databases",
           "Utilized Markdown for rendering user-friendly output"
         ]
@@ -22,10 +22,10 @@ const experienceData = [
       {
         name: "Chaturji - AI-Based Companion",
         tasks: [
-          "Built and improved browser extension and PWA interface",
+          "Contributed to the development and optimization of the Chaturji AI-based web application",
           "Implemented real-time chat and knowledge base features",
           "Optimized routing reducing load time by 55%",
-          "Maintained web vital standards for responsive UX"
+          "Maintained web vital standards for responsive UX",
         ]
       },
       {
@@ -38,7 +38,7 @@ const experienceData = [
       }
     ],
     technologies: [
-      "React", "Next.js", "JavaScript", "Python", "Flask", "AWS", "HTML", "CSS"
+      "React", "Next.js", "Python", "Flask", "AWS", "Tailwind", "SQL"
     ]
   }
 ];
@@ -261,7 +261,7 @@ export default function Internships() {
                               {project.tasks.map((task, taskIdx) => (
                                 <div key={taskIdx} className="task-line">
                                   <span className="line-number">{taskIdx + 1}</span>
-                                  <span className="function-syntax">function</span>
+                                  <span className="function-syntax"></span>
                                   <span className="task-text">{task}</span>
                                 </div>
                               ))}

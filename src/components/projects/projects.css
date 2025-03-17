@@ -271,7 +271,7 @@
 
 /* File explorer styling */
 
-.file-explorer {
+#projects .file-explorer {
     background: var(--sidebar-bg);
     border-right: 1px solid var(--editor-border);
     overflow-y: auto;
@@ -1029,7 +1029,7 @@
     .explorer-toggle {
         display: flex;
     }
-    .file-explorer {
+    #projects .file-explorer {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -1040,10 +1040,10 @@
         box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .file-explorer.hidden {
+    #projects .file-explorer.hidden {
         transform: translateX(-100%);
     }
-    .file-explorer.visible {
+    #projects .file-explorer.visible {
         transform: translateX(0);
     }
     .mobile-backdrop {
@@ -1110,7 +1110,7 @@
         justify-content: center;
         padding: 10px;
     }
-    .file-explorer {
+    #projects .file-explorer {
         width: 85%;
     }
 }
@@ -1180,7 +1180,7 @@
         display: flex;
         margin-left: auto;
     }
-    .file-explorer {
+    #projects .file-explorer {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -1191,10 +1191,10 @@
         box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .file-explorer.hidden {
+    #projects .file-explorer.hidden {
         transform: translateX(-100%);
     }
-    .file-explorer.visible {
+    #projects .file-explorer.visible {
         transform: translateX(0);
     }
     .mobile-backdrop {
@@ -1211,7 +1211,7 @@
 }
 
 @media (max-width: 576px) {
-    .file-explorer {
+    #projects .file-explorer {
         width: 85%;
     }
 }
@@ -1233,7 +1233,7 @@
         pointer-events: none;
         transition: opacity 0.3s ease;
     }
-    .file-explorer.visible+.editor-pane::before {
+    #projects .file-explorer.visible+.editor-pane::before {
         content: '';
         position: fixed;
         top: 0;
@@ -1288,7 +1288,7 @@
         padding: 10px 16px;
     }
     /* Make the file-explorer wider and add a stronger shadow */
-    .file-explorer {
+    #projects .file-explorer {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -1297,10 +1297,10 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
         transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .file-explorer.hidden {
+    #projects .file-explorer.hidden {
         transform: translateX(-100%);
     }
-    .file-explorer.visible {
+    #projects .file-explorer.visible {
         transform: translateX(0);
     }
     .editor-pane {

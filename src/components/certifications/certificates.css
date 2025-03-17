@@ -85,43 +85,394 @@
     font-size: 1.2rem;
 }
 
-.modal-content {
-    background: rgba(20, 20, 30, 0.95) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 24px !important;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 3px 10px rgba(255, 255, 255, 0.05), inset 0 0 40px rgba(255, 255, 255, 0.02) !important;
-    color: #fff !important;
+.component.dev-certificates {
+    background: #121212;
+    padding: 2rem 0;
+}
+
+.component.dev-certificates .certifications .card {
+    width: 100%;
+    height: 30rem;
+    z-index: 1;
+    background: #1e1e1e;
+    border: 1px solid rgba(100, 210, 255, 0.2);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+    transform: none;
+}
+
+.component.dev-certificates .certifications .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.9);
+}
+
+.component.dev-certificates .certifications .card .card-header {
+    height: 20%;
+    font-weight: 700;
+    background: #252526;
+    border-bottom: 1px solid rgba(100, 210, 255, 0.1);
+    color: #64D2FF;
+    font-family: 'Fira Code', monospace;
+    border-radius: 12px 12px 0 0;
+}
+
+.component.dev-certificates .certifications .card .card-body {
+    height: 60%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.component.dev-certificates .certifications .card .card-footer {
+    height: 20%;
+    background: #252526;
+    border-top: 1px solid rgba(100, 210, 255, 0.1);
+    color: #d0d0d0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Fira Code', monospace;
+    border-radius: 0 0 12px 12px;
+}
+
+.component.dev-certificates .certifications .certificate-card {
+    width: 100%;
+    height: 30rem;
+    z-index: 1;
+    background: #1e1e1e;
+    border: 1px solid rgba(100, 210, 255, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transform: none;
+}
+
+.component.dev-certificates .certifications .certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.9);
+}
+
+.component.dev-certificates .certifications .certificate-card .card-header {
+    background: #252526;
+    padding: 1rem;
     text-align: center;
 }
 
-.modal-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+.component.dev-certificates .certifications .certificate-card .certificate-img {
+    max-width: 100%;
+    max-height: 120px;
+    object-fit: contain;
 }
 
-.modal-header button {
-    color: var(--text-color) !important;
-    background-color: var(--text-color) !important;
-    opacity: 1;
+.component.dev-certificates .certifications .certificate-card .card-body {
+    padding: 1rem;
+    font-family: 'Fira Code', monospace;
+    color: #d4d4d4;
+    text-align: center;
+}
+
+.component.dev-certificates .certifications .certificate-card .certificate-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #64D2FF;
+}
+
+.component.dev-certificates .certifications .certificate-card .certificate-org {
+    font-size: 0.9rem;
+    color: #9cdcfe;
+}
+
+
+/* VS Code-themed certificate section */
+
+.component.dev-certificates {
+    background-color: #1e1e1e;
+    min-height: 100vh;
+    padding: 3rem 0;
+}
+
+
+/* VS Code explorer container */
+
+.vscode-explorer {
+    background: #1e1e1e;
+    border: 1px solid #383838;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+
+/* Explorer window header */
+
+.vscode-explorer-header {
+    background: #252526;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-bottom: 1px solid #1e1e1e;
+    height: 36px;
+}
+
+.vscode-explorer-header .actions {
+    display: flex;
+    gap: 6px;
+    margin-right: 20px;
+}
+
+.vscode-explorer-header .action {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: opacity 0.2s ease;
+}
+
+.vscode-explorer-header .action:hover {
+    opacity: 0.8;
+}
+
+.vscode-explorer-header .action.red {
+    background: #ff5f56;
+}
+
+.vscode-explorer-header .action.yellow {
+    background: #ffbd2e;
+}
+
+.vscode-explorer-header .action.green {
+    background: #27c93f;
+}
+
+.vscode-explorer-header .title {
+    font-family: 'Segoe UI', -apple-system, system-ui, sans-serif;
+    color: #cccccc;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* Certificate grid container */
+
+.component.dev-certificates .certifications {
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* File explorer section title */
+
+.explorer-section-title {
+    color: #6c6c6c;
+    font-size: 11px;
+    font-family: 'Segoe UI', -apple-system, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px 24px 8px;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.explorer-section-title::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23cccccc' d='M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z'/%3E%3C/svg%3E");
+    background-size: contain;
+    opacity: 0.7;
+}
+
+
+/* Make row spacing more consistent */
+
+.row.certificate-row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+    margin-right: calc(var(--bs-gutter-x) * -0.5);
+    margin-left: calc(var(--bs-gutter-x) * -0.5);
+    margin-top: 0.5rem;
+}
+
+
+/* Clean, minimal certificate card */
+
+.certificate-card {
+    background: #252526;
+    border: 1px solid #3e3e42;
+    border-radius: 3px;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border-color: #0e639c;
+}
+
+
+/* File icon for certificates */
+
+.certificate-card::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c5c5c5' d='M13.85 4.44l-3.28-3.3-.35-.14H2.5l-.5.5v13l.5.5h11l.5-.5V4.8l-.15-.36zm-.85 9.06h-10V2.5h6v2.96l.5.5H13v7.54z'/%3E%3C/svg%3E");
+    background-size: contain;
+    opacity: 0.5;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+}
+
+.certificate-card:hover::after {
+    opacity: 0.8;
+}
+
+.certificate-card .card-header {
+    background: #252526;
+    border-bottom: 1px solid #3e3e42;
+    padding: 1rem;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-card .certificate-img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover .certificate-img {
+    transform: scale(1.05);
+}
+
+.certificate-card .card-body {
+    padding: 1rem;
+    font-family: 'Segoe UI', -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 24px;
+}
+
+.certificate-card .certificate-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.certificate-card .certificate-org {
+    color: #858585;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.certificate-card .certificate-org::before {
+    content: "by";
+    margin-right: 5px;
+    color: #6c6c6c;
+    opacity: 0.7;
+}
+
+
+/* Desktop optimization */
+
+@media (min-width: 992px) {
+    .certificate-card {
+        min-height: 300px;
+    }
+    .explorer-section-title {
+        padding-left: 32px;
+    }
+    .certificate-card .card-header {
+        height: 200px;
+    }
+    .certificate-card .certificate-img {
+        max-height: 160px;
+    }
+    .row.certificate-row {
+        --bs-gutter-x: 2rem;
+        --bs-gutter-y: 2rem;
+        padding: 0 1rem;
+    }
+}
+
+
+/* Modal styling for certificate view */
+
+.modal-content {
+    background: #252526 !important;
+    border: 1px solid #3e3e42 !important;
+    border-radius: 4px !important;
+}
+
+.modal-header {
+    background: #252526;
+    border-bottom: 1px solid #3e3e42 !important;
+    padding: 0.75rem 1rem;
+}
+
+.modal-header .modal-title {
+    color: #cccccc;
+    font-size: 1rem;
+    font-family: 'Segoe UI', -apple-system, sans-serif;
+}
+
+.modal-header .btn-close {
+    color: #cccccc !important;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23cccccc'%3E%3Cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3E%3C/svg%3E") center/1em auto no-repeat !important;
+    opacity: 0.7;
 }
 
 .modal-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: 1px solid #3e3e42 !important;
+    padding: 0.75rem;
 }
 
-.modal-footer button {
-    color: var(--text-color) !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    transition: all 0.3s ease !important;
-    background-color: var(--bg-color) !important;
+.modal-footer .btn-secondary {
+    background: #0e639c !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2px;
 }
 
-.modal-footer button:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+.modal-footer .btn-secondary:hover {
+    background: #1177bb !important;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .component.dev-certificates .certifications {
+        padding: 10px;
+    }
+    .row>.col {
+        padding: 0.4rem;
+    }
 }

@@ -12,15 +12,15 @@ export default function Preloader() {
         const newProgress = prevProgress + Math.random() * 10;
         
         // Update status text based on progress
-        if (newProgress > 80) {
+        if (newProgress > 35) {
           setStatusText('Almost ready...');
-        } else if (newProgress > 40) {
+        } else if (newProgress > 20) {
           setStatusText('Loading components...');
         }
         
-        if (newProgress >= 100) {
+        if (newProgress >= 50) {
           clearInterval(loadingInterval);
-          return 100;
+          return 50;
         }
         
         return newProgress;

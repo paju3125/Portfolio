@@ -310,7 +310,7 @@ footer .card {
     text-align: start;
 }
 
-.section-title::after {
+.footer-content .section-title::after {
     content: '';
     position: absolute;
     left: 0;

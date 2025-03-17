@@ -5,14 +5,17 @@ export default function Footer() {
   const [typedContent, setTypedContent] = useState('');
   // Typing effect for JSON content
   useEffect(() => {
-    const jsonContent = `{
-  "name": "Prajval Gandhi",
-  "email": "prajvalgandhi483@gmail.com",
-  "phone": "+91-9665656267",
-  "location": "Pune, Maharashtra",
-  "available": true,
-  "willing_to_relocate": true
-}`;
+    const jsonContent = 
+    `
+    {
+      "name": "Prajval Gandhi",
+      "email": "prajvalgandhi483@gmail.com",
+      "phone": "+91-9665656267",
+      "location": "Pune, Maharashtra",
+      "available": true,
+      "willing_to_relocate": true
+    }
+    `;
     
     let i = 0;
     const typingInterval = setInterval(() => {
