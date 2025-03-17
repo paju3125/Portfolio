@@ -504,6 +504,7 @@
 .floating-nav-button {
     position: fixed;
     top: 50%;
+    transform: translateY(-50%);
     left: 0;
     z-index: 1000;
 }

@@ -99,6 +99,10 @@ export default function Profile() {
       <Skill />
       <hr className="text-light" />
       <Resume />
+      {/* Updated sticky animated banner with a developer finish */}
+      <div className="availability-sticky" data-aos="fade-up" data-aos-delay="1000">
+        Open for Dev Opportunities <span className="dev-icon">⌨️</span>
+      </div>
     </>
   );
 }

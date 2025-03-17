@@ -433,7 +433,6 @@
 
 #stats,
 .count-particles {
-    -webkit-user-select: none;
     margin-top: 5px;
     margin-left: 5px;
 }
@@ -489,4 +488,82 @@ hr.text-light {
     box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
     margin: 2rem auto;
     width: 80%;
+}
+
+.availability {
+    font-size: 1.2rem;
+    color: #61dafb;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+
+/* If needed, add keyframes (optional if not already defined) */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.availability-sticky {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    padding: 6px 12px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64D2FF;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(100, 210, 255, 0.5);
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.availability-sticky:hover {
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+/* Optional: styling for the developer icon */
+
+.dev-icon {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.availability-sticky:hover {
+    animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+    0%,
+    100% {
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
 }
