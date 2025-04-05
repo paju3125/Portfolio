@@ -158,21 +158,21 @@ export default function Profile() {
             </div>
           </div>
           
-          <div className="floating-tech-stack">
+          {/* <div className="floating-tech-stack">
             <div className="tech-icon html" data-aos="zoom-in" data-aos-delay="400"><img src="/logos/react.svg" alt="" width={50} /></div>
             <div className="tech-icon css" data-aos="zoom-in" data-aos-delay="500"><img src="/logos/next-js.svg" alt="" width={50} /></div>
             <div className="tech-icon javascript" data-aos="zoom-in" data-aos-delay="600"><img src="/logos/python.svg" alt="" width={50} /></div>
             <div className="tech-icon react" data-aos="zoom-in" data-aos-delay="700"><img src="/logos/mysql.svg" alt="" width={50} /></div>
             <div className="tech-icon node" data-aos="zoom-in" data-aos-delay="800"><img src="/logos/aws.svg" alt="" width={50} /></div>
-          </div>
+          </div> */}
         </div>
         
-        <div className="scroll-indicator" data-aos="fade-up" data-aos-delay="2000">
+        {/* <div className="scroll-indicator" data-aos="fade-up" data-aos-delay="2000">
           <div className="mouse">
             <div className="wheel"></div>
           </div>
           <div className="scroll-text">Scroll to explore</div>
-        </div>
+        </div> */}
       </section>
       
       <hr className="text-light" />
