@@ -626,7 +626,7 @@
     margin: 0;
 }
 
-.code-line {
+#resume .code-line {
     position: relative;
     padding-left: 3rem;
     white-space: pre;

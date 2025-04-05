@@ -86,7 +86,6 @@
 }
 
 .component.dev-certificates {
-    background: #121212;
     padding: 2rem 0;
 }
 
@@ -188,7 +187,6 @@
 /* VS Code-themed certificate section */
 
 .component.dev-certificates {
-    background-color: #1e1e1e;
     min-height: 100vh;
     padding: 3rem 0;
 }
@@ -197,7 +195,6 @@
 /* VS Code explorer container */
 
 .vscode-explorer {
-    background: #1e1e1e;
     border: 1px solid #383838;
     border-radius: 4px;
     overflow: hidden;

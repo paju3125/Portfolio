@@ -6,6 +6,12 @@ body {
     animation: bg-scrolling 2s infinite linear;
 }
 
+#root {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+}
+
 @keyframes bg-scrolling {
     100% {
         background-position: 0px 3px;
@@ -23,19 +29,6 @@ body {
     /* user-select: none; */
     font-family: "Lexend", sans-serif;
     width: 100vw;
-}
-
-#hero p {
-    color: #fff;
-    margin-bottom: 50px;
-    font-size: 26px;
-    font-family: "Poppins", sans-serif;
-}
-
-#hero p span {
-    color: var(--text-color);
-    padding-bottom: 4px;
-    letter-spacing: 1px;
 }
 
 .name-title {

@@ -12,30 +12,38 @@ const experienceData = [
     logo: "/ignite_logo.png",
     projects: [
       {
-        name: "AI Chatbot",
+        name: "Energy Management Platform",
         tasks: [
-          "Contributed to the development of a chatbot using Python, React and Bootstrap",
-          "Integrated external AI endpoints and internal databases",
-          "Utilized Markdown for rendering user-friendly output"
+          "Contributed to a energy distribution platform using React and Flask.",
+          "Enhanced functionality and performance through feature updates and bug fixes.",
+          "Developed a new feature for detailed meter-level energy consumption breakdown.",
+          "Managed end-to-end development, including frontend, backend, and deployment processes."
         ]
       },
       {
         name: "Chaturji - AI-Based Companion",
         tasks: [
-          "Contributed to the development and optimization of the Chaturji AI-based web application",
-          "Implemented real-time chat and knowledge base features",
-          "Optimized routing reducing load time by 55%",
-          "Maintained web vital standards for responsive UX",
+          "Optimized and enhanced the Chaturji AI-based web application for real-time interaction.",
+          "Implemented features such as real-time chat and a knowledge base for improved user engagement.",
+          "Reduced load time by 55% through routing optimization and maintained web vital standards for responsive UX."
         ]
       },
       {
         name: "Pathology Web Platform",
         tasks: [
-          "Developed UI using Next.js and React for medical professionals",
-          "Designed interface for high-resolution pathology slides",
-          "Implemented SSR and optimized data fetching"
+          "Designed and developed a user interface using Next.js and React tailored for medical professionals.",
+          "Created an interface for high-resolution pathology slide analysis.",
+          "Implemented server-side rendering (SSR) and optimized data fetching for performance."
         ]
-      }
+      },
+      {
+        name: "AI Chatbot",
+        tasks: [
+          "Developed a chatbot leveraging Python, React, and Bootstrap for seamless user interaction.",
+          "Integrated external AI APIs and internal databases to enhance functionality.",
+          "Utilized Markdown for rendering user-friendly and structured output."
+        ]
+      },
     ],
     technologies: [
       "React", "Next.js", "Python", "Flask", "AWS", "Tailwind", "SQL"

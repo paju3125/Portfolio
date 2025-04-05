@@ -22,7 +22,7 @@ function App() {
   const particlesConfig = {
     particles: {
       number: {
-        value: 150,
+        value: 80,
         density: {
           enable: true,
           value_area: 800
@@ -35,11 +35,11 @@ function App() {
         type: "circle"
       },
       opacity: {
-        value: 0.2,
+        value: 1,
         random: false
       },
       size: {
-        value: 1,
+        value: 2,
         random: true
       },
       line_linked: {
